@@ -1,0 +1,138 @@
+# 🧠 Aether Nexus - AI Tools Directory
+# 🤖 Premium robots.txt configuration for maximum SEO + protection
+# 📅 Generated: December 2, 2025
+# 🔗 https://aether-nexus.vercel.app/
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /*?*
+Disallow: /*.json$
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /private/
+Disallow: /dashboard/
+Disallow: /search?*
+Disallow: /*/edit/
+Disallow: /*/delete/
+
+# 🔍 Special Instructions for Major Search Engines
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Crawl-delay: 0.5
+Clean-param: ref /search/
+Clean-param: session /tools/
+
+User-agent: Googlebot-Image
+Allow: /public/images/
+Disallow: /private/images/
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Crawl-delay: 1
+Request-rate: 10/1m
+
+User-agent: Applebot
+Allow: /
+Crawl-delay: 2
+
+# 🤖 AI & Research Bots
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /api/
+Crawl-delay: 1
+
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 1
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 0.5
+
+# 🚫 Bad Bots - Block These
+User-agent: AhrefsBot
+Disallow: /
+User-agent: SEMrushBot
+Disallow: /
+User-agent: MJ12bot
+Disallow: /
+User-agent: DotBot
+Disallow: /
+User-agent: YandexBot
+Disallow: /
+User-agent: Baiduspider
+Disallow: /
+User-agent: Sogou
+Disallow: /
+
+# 🤖 AI & Research Bots - Allow with limits
+User-agent: CCBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Anthropic-ai
+Allow: /
+Crawl-delay: 1
+
+# 📱 Mobile Crawlers
+User-agent: Googlebot-Mobile
+Allow: /
+Disallow: /admin/
+
+User-agent: Twitterbot
+Allow: /
+Crawl-delay: 1
+
+# 🔗 Social Media Bots
+User-agent: facebookexternalhit
+Allow: /
+Crawl-delay: 2
+
+User-agent: LinkedInBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Pinterest
+Allow: /
+Crawl-delay: 2
+
+# 🛡️ Security & Monitoring Bots
+User-agent: Cloudflare
+Allow: /
+User-agent: security.txt
+Allow: /
+
+# 📊 Analytics & SEO Tools (Limited Access)
+User-agent: Screaming Frog SEO Spider
+Disallow: /
+User-agent: Moz
+Disallow: /
+
+# 🧪 Development & Testing
+User-agent: *
+Disallow: /test/
+Disallow: /staging/
+Disallow: /dev/
+Disallow: /localhost/
+Disallow: /*/preview/
+
+# 🎯 SITEMAP DECLARATIONS
+Sitemap: https://aether-nexus.vercel.app/sitemap.xml
+Sitemap: https://aether-nexus.vercel.app/sitemap-tools.xml
+Sitemap: https://aether-nexus.vercel.app/sitemap-categories.xml
+Sitemap: https://aether-nexus.vercel.app/sitemap-blog.xml
