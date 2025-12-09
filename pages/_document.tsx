@@ -29,6 +29,8 @@ export default function Document() {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         
+        {/* AdSense Verification */}
+<meta name="google-adsense-account" content="ca-pub-8040019263366199" />
         {/* Primary Meta Tags */}
         <meta name="title" content={siteName} />
         <meta name="description" content={description} />
@@ -102,10 +104,6 @@ export default function Document() {
         {/* Bing Webmaster Tools Verification */}
         <meta name="msvalidate.01" content="843BA93192F072AE3F606EF8C86137D2" />
         
-        {/* Google AdSense */}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2894915343289598"
-          crossOrigin="anonymous"></script>
-        
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={siteUrl} />
@@ -136,9 +134,6 @@ export default function Document() {
         <link rel="canonical" href={siteUrl} />
         
         {/* Preconnect to important domains */}
-        <link rel="preconnect" href="https://www.google-analytics.com" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        
         {/* Structured Data */}
         <script
           type="application/ld+json"
@@ -149,25 +144,6 @@ export default function Document() {
         <Main />
         <NextScript />
         
-        {/* Google Analytics Script */}
-        <Script
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-TX7MKTQ49E`}
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-TX7MKTQ49E', {
-                page_path: window.location.pathname,
-              });
-            `,
-          }}
-        />
       </body>
     </Html>
   );

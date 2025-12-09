@@ -2,6 +2,7 @@
 const path = require('path');
 const webpack = require('webpack');
 
+// Security headers configuration
 const securityHeaders = [
   {
     key: 'X-DNS-Prefetch-Control',
@@ -32,23 +33,26 @@ const securityHeaders = [
     value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
   },
   {
-    key: 'Cache-Control',
-    value: 'public, max-age=31536000, immutable',
-  },
+    key: 'Content-Security-Policy',
+    value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';"
+  }
 ];
 
 const nextConfig = {
+  // Core optimizations
   reactStrictMode: true,
   swcMinify: true,
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
+  
+  // Image optimization
   images: {
-    minimumCacheTTL: 60 * 60 * 24 * 7, // 1 week
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
+    deviceSizes: [640, 750, 828, 1080, 1200, 1440, 1920, 2048, 2560, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    formats: ['image/webp'],
-    domains: ['www.google.com'],
+    formats: ['image/webp', 'image/avif'],
+    domains: ['www.google.com', 'images.unsplash.com'],
     remotePatterns: [
       {
         protocol: 'https',
@@ -61,28 +65,95 @@ const nextConfig = {
       },
     ],
   },
+
+  // Performance optimizations
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
-    optimizePackageImports: ['three', 'd3', 'framer-motion'],
+    optimizePackageImports: [
+      'three', 
+      'd3', 
+      'framer-motion',
+      '@heroicons/react',
+      'react-icons'
+    ]
   },
-  swcMinify: true,
-  // Enable static optimization for all pages
-  reactStrictMode: true,
-  // Enable production browser source maps
-  productionBrowserSourceMaps: true,
+
+  // Compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
-    styledComponents: true,
+    styledComponents: {
+      ssr: true,
+      displayName: true
+    },
   },
-  // Increase static generation timeout and limit concurrent builds
-  staticPageGenerationTimeout: 300, // 5 minutes
-  // Remove the webpack configuration that's causing conflicts with Turbopack
+
+  // Static generation and build settings
+  staticPageGenerationTimeout: 600, // 10 minutes
+  output: 'standalone',
+  productionBrowserSourceMaps: false, // Disable in production for better performance
+  
+  // Webpack configuration for additional optimizations
+  webpack: (config, { dev, isServer }) => {
+    // Add polyfills for Node.js modules
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        net: false,
+        tls: false,
+        dns: false,
+        child_process: false,
+        module: false,
+      };
+    }
+
+    // Add environment variables
+    config.plugins.push(
+      new webpack.EnvironmentPlugin({
+        NODE_ENV: process.env.NODE_ENV,
+        NEXT_PUBLIC_GA_TRACKING_ID: process.env.NEXT_PUBLIC_GA_TRACKING_ID || '',
+      })
+    );
+
+    // Optimize moment.js locales
+    config.plugins.push(
+      new webpack.IgnorePlugin({
+        resourceRegExp: /^moment\/locale\/(en|es|fr|de|it|ja|zh-cn|zh-tw)$/,
+      })
+    );
+
+    // Optimize lodash imports
+    if (!dev) {
+      config.optimization.minimize = true;
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        maxInitialRequests: 25,
+        minSize: 20000,
+        maxSize: 244000,
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name(module) {
+              const packageName = module.context.match(
+                /[\\/]node_modules[\\/](.*?)([\\/]|$)/
+              )[1];
+              return `npm.${packageName.replace('@', '')}`;
+            },
+          },
+        },
+      };
+    }
+
+    return config;
+  },
+
+  // Security headers and CORS
   async headers() {
     return [
       // Security headers for all routes
       {
-        source: '/:path*',
+        source: '/(.*)',
         headers: securityHeaders,
       },
       // API CORS headers
@@ -92,10 +163,59 @@ const nextConfig = {
           { key: 'Access-Control-Allow-Credentials', value: 'true' },
           { key: 'Access-Control-Allow-Origin', value: '*' },
           { key: 'Access-Control-Allow-Methods', value: 'GET,OPTIONS,PATCH,DELETE,POST,PUT' },
-        ]
-      }
-    ]
-  }
-}
+          { key: 'Access-Control-Allow-Headers', value: 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version' },
+        ],
+      },
+      // Cache static assets
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      {
+        source: '/static/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+    ];
+  },
 
-module.exports = nextConfig
+  // Environment variables
+  env: {
+    SITE_URL: process.env.SITE_URL || 'https://aitoolsdirectory.com',
+  },
+
+  // Redirects and rewrites
+  async redirects() {
+    return [
+      {
+        source: '/privacy',
+        destination: '/privacy-policy',
+        permanent: true,
+      },
+      {
+        source: '/tos',
+        destination: '/terms-of-service',
+        permanent: true,
+      },
+    ];
+  },
+
+  // Internationalization (i18n) configuration
+  i18n: {
+    locales: ['en'],
+    defaultLocale: 'en',
+  },
+};
+
+// Bundle analyzer for production builds
+if (process.env.ANALYZE === 'true') {
+  const withBundleAnalyzer = require('@next/bundle-analyzer')({
+    enabled: process.env.ANALYZE === 'true',
+  });
+  module.exports = withBundleAnalyzer(nextConfig);
+} else {
+  module.exports = nextConfig;
+}

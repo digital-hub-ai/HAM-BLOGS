@@ -11,21 +11,7 @@ type SearchEvent = {
 export function useUserBehavior() {
   const router = useRouter();
 
-  useEffect(() => {
-    const handleRouteChange = (url: string) => {
-      // Track page views
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'page_view', {
-          page_path: url,
-        });
-      }
-    };
-
-    router.events.on('routeChangeComplete', handleRouteChange);
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
-    };
-  }, [router.events]);
+  // Page view tracking removed
 
   const trackSearch = (query: string, results: Array<{ id: string; title: string }>) => {
     const searchEvent: SearchEvent = {
@@ -39,13 +25,7 @@ export function useUserBehavior() {
     searchHistory.unshift(searchEvent);
     sessionStorage.setItem('searchHistory', JSON.stringify(searchHistory.slice(0, 10)));
 
-    // Send to analytics if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'search', {
-        search_term: query,
-        result_count: results.length,
-      });
-    }
+    // Analytics tracking removed
   };
 
   const trackResultClick = (query: string, resultId: string, resultTitle: string) => {
