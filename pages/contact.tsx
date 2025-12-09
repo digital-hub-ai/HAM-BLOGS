@@ -16,7 +16,7 @@ export default function Contact() {
   const [submitError, setSubmitError] = useState('');
   const [activeTab, setActiveTab] = useState('contact'); // 'contact' or 'faq'
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
