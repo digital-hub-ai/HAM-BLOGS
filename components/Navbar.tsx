@@ -60,7 +60,7 @@ export default function Navbar() {
       // Set a new timeout
       searchTimeoutRef.current = setTimeout(() => {
         router.push({
-          pathname: '/search',
+          pathname: '/blog',
           query: { q: query },
         });
         
@@ -129,7 +129,7 @@ export default function Navbar() {
     
     // Perform search with the selected suggestion
     router.push({
-      pathname: '/search',
+      pathname: '/blog',
       query: { q: query },
     });
     
@@ -198,22 +198,14 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="text-xl font-extrabold tracking-tight">
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">AI Tools Directory</span>
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Premium Blog Platform</span>
             </Link>
           </div>
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center space-x-6">
             <Link href="/" className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Home</Link>
-            <Link href="/ai-tools" className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Categories</Link>
-            <Link href="/best-tools" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1.5 rounded-md text-sm font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-sm">
-              Best Tools
-            </Link>
-            <Link href="/new-tools" className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">New Tools</Link>
-            <Link href="/compare" className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Compare</Link>
-            <Link href="/favorites" className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Favorites</Link>
             <Link href="/blog" className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Blog</Link>
-            <Link href="/ai-updates" className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">AI Updates</Link>
             <Link href="/about" className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">About</Link>
             <Link href="/contact" className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Contact</Link>
           </div>
@@ -318,7 +310,7 @@ export default function Navbar() {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search tools..."
+                placeholder="Search articles..."
                 className="flex-1 bg-transparent border-none text-sm text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none"
               />
               {searchQuery && (
@@ -346,13 +338,7 @@ export default function Navbar() {
             </div>
           </form>
           <Link href="/" onClick={closeMenu} className="block px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">Home</Link>
-          <Link href="/ai-tools" onClick={closeMenu} className="block px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">Categories</Link>
-          <Link href="/best-tools" onClick={closeMenu} className="block px-3 py-2 rounded-md text-sm text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">Best Tools</Link>
-          <Link href="/new-tools" onClick={closeMenu} className="block px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">New Tools</Link>
-          <Link href="/compare" onClick={closeMenu} className="block px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">Compare</Link>
-          <Link href="/favorites" onClick={closeMenu} className="block px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">Favorites</Link>
           <Link href="/blog" onClick={closeMenu} className="block px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">Blog</Link>
-          <Link href="/ai-updates" onClick={closeMenu} className="block px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">AI Updates</Link>
           <Link href="/about" onClick={closeMenu} className="block px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">About</Link>
           <Link href="/contact" onClick={closeMenu} className="block px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">Contact</Link>
 

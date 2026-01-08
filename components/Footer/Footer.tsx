@@ -36,10 +36,10 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-bold text-gray-900 dark:text-white flex items-center">
               <FontAwesomeIcon icon={faRocket} className="w-5 h-5 text-blue-500" fixedWidth />
-              AI Tools Directory
+              Premium Blog Platform
             </h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm">
-              Discover and compare the best AI tools to boost your productivity and creativity.
+              The world's premier destination for premium content and expert insights across all topics.
             </p>
             <div className="flex space-x-4">
               <a 
@@ -68,10 +68,10 @@ const Footer = () => {
             <h4 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li><Link href="/" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 text-sm transition-colors">Home</Link></li>
-              <li><Link href="/tools" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 text-sm transition-colors">All Tools</Link></li>
+              <li><Link href="/blog" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 text-sm transition-colors">Blog</Link></li>
               <li><Link href="/categories" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 text-sm transition-colors">Categories</Link></li>
-              <li><Link href="/favorites" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 text-sm transition-colors">My Favorites</Link></li>
-              <li><Link href="/api-docs" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 text-sm transition-colors">API</Link></li>
+              <li><Link href="/authors" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 text-sm transition-colors">Authors</Link></li>
+              <li><Link href="/trending" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 text-sm transition-colors">Trending</Link></li>
             </ul>
           </div>
           
@@ -81,8 +81,8 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link href="/blog" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 text-sm transition-colors">Blog</Link></li>
               <li><Link href="/tutorials" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 text-sm transition-colors">Tutorials</Link></li>
-              <li><Link href="/documentation" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 text-sm transition-colors">Documentation</Link></li>
-              <li><Link href="/guides" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 text-sm transition-colors">Guides</Link></li>
+              <li><Link href="/writing-tips" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 text-sm transition-colors">Writing Tips</Link></li>
+              <li><Link href="/blog-guidelines" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 text-sm transition-colors">Guidelines</Link></li>
             </ul>
           </div>
           
@@ -98,8 +98,8 @@ const Footer = () => {
               </li>
               <li className="text-gray-600 dark:text-gray-300 text-sm">
                 <button className="flex items-center text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors">
-                  <FontAwesomeIcon icon={faTools} className="w-5 h-5 text-blue-500" fixedWidth />
-                  Submit a Tool
+                  <FontAwesomeIcon icon={faBookOpen} className="w-5 h-5 text-blue-500" fixedWidth />
+                  Write for Us
                 </button>
               </li>
             </ul>
@@ -110,7 +110,7 @@ const Footer = () => {
         <div className="border-t border-gray-200 dark:border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              © {currentYear} AI Tools Directory. All rights reserved.
+              © {currentYear} Premium Blog Platform. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/privacy" className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors">
@@ -127,7 +127,7 @@ const Footer = () => {
           
           <div className="mt-4 text-center md:text-left">
             <p className="text-xs text-gray-400 dark:text-gray-500">
-              Made with ❤️ for the AI community | Version 1.0.0
+              Made with ❤️ for the global community | Version 1.0.0
             </p>
           </div>
         </div>

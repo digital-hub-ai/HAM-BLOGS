@@ -1,10 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faXmark, faFilter } from '@fortawesome/free-solid-svg-icons';
+import type { FC } from 'react';
 
-type BlogSearchProps = {
+interface BlogSearchProps {
   onSearch: (query: string) => void;
   onCategoryFilter: (category: string) => void;
   onTagFilter: (tag: string) => void;
@@ -12,9 +11,9 @@ type BlogSearchProps = {
   tags: string[];
   activeCategory?: string;
   activeTag?: string;
-};
+}
 
-export default function BlogSearch({ 
+const BlogSearch: React.FC<BlogSearchProps> = ({ 
   onSearch, 
   onCategoryFilter, 
   onTagFilter, 
@@ -22,7 +21,7 @@ export default function BlogSearch({
   tags, 
   activeCategory, 
   activeTag 
-}: BlogSearchProps) {
+}) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
 
@@ -61,7 +60,9 @@ export default function BlogSearch({
       {/* Search Bar */}
       <div className="relative">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <FontAwesomeIcon icon={faSearch} className="h-5 w-5 text-gray-400" />
+          <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
         </div>
         <input
           type="text"
@@ -75,7 +76,9 @@ export default function BlogSearch({
             onClick={handleClearSearch}
             className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
           >
-            <FontAwesomeIcon icon={faXmark} className="w-4 h-4" />
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
           </button>
         )}
       </div>
@@ -87,7 +90,9 @@ export default function BlogSearch({
           className="inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           onClick={() => setIsFiltersOpen(!isFiltersOpen)}
         >
-          <FontAwesomeIcon icon={faFilter} className="mr-2 w-4 h-4" />
+          <svg className="mr-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+          </svg>
           {isFiltersOpen ? 'Hide Filters' : 'Show Filters'}
         </button>
       </div>
@@ -146,4 +151,6 @@ export default function BlogSearch({
       </div>
     </div>
   );
-}
+};
+
+export default BlogSearch;

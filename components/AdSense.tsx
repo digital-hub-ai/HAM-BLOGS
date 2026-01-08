@@ -18,8 +18,14 @@ const AdSense = () => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.adsbygoogle = window.adsbygoogle || [];
-      window.adsbygoogle.push({});
-      console.log('AdSense initialized');
+      // Only initialize if in production
+      if (process.env.NODE_ENV === 'production') {
+        try {
+          (window.adsbygoogle as any).push({});
+        } catch (e) {
+          console.error('AdSense error:', e);
+        }
+      }
     }
   }, []);
 

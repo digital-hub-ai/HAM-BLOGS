@@ -1,7 +1,5 @@
 'use client';
 
-'use client';
-
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faUser, faCheck, faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
@@ -16,7 +14,7 @@ interface NewsletterProps {
 
 const Newsletter: React.FC<NewsletterProps> = ({
   title = 'Stay Updated',
-  description = 'Subscribe to our newsletter for the latest AI tools and updates.',
+  description = 'Subscribe to our newsletter for the latest articles, insights, and premium content.',
   className = '',
 }) => {
   const [email, setEmail] = useState('');
