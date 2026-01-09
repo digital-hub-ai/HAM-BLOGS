@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { NextSeo } from 'next-seo';
 
 type SEOProps = {
   title: string;
@@ -47,68 +46,49 @@ export const SEO: React.FC<SEOProps> = ({
   };
 
   return (
-    <>
-      <NextSeo
-        title={`${title} | ${siteName}`}
-        description={description}
-        canonical={canonical || pageUrl}
-        openGraph={{
-          type: article ? 'article' : 'website',
-          url: pageUrl,
-          title: `${title} | ${siteName}`,
-          description,
-          images: [
-            {
-              url: defaultImage,
-              width: 1200,
-              height: 630,
-              alt: title,
-            },
-          ],
-          site_name: siteName,
-        }}
-        twitter={{
-          handle: '@yourtwitter',
-          site: '@yoursite',
-          cardType: 'summary_large_image',
-        }}
-        additionalMetaTags={[
-          {
-            name: 'keywords',
-            content: keywords.join(', '),
-          },
-          {
-            name: 'author',
-            content: author || siteName,
-          },
-          {
-            name: 'viewport',
-            content: 'width=device-width, initial-scale=1.0',
-          },
-          {
-            name: 'robots',
-            content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
-          },
-        ]}
-      />
+    <Head>
+      <title>{`${title} | ${siteName}`}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="author" content={author || siteName} />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      
+      {/* Open Graph Tags */}
+      <meta property="og:type" content={article ? 'article' : 'website'} />
+      <meta property="og:url" content={pageUrl} />
+      <meta property="og:title" content={`${title} | ${siteName}`} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={defaultImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={title} />
+      <meta property="og:site_name" content={siteName} />
+      
+      {/* Twitter Card Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@yoursite" />
+      <meta name="twitter:creator" content="@yourtwitter" />
+      
+      {/* Canonical Link */}
+      <link rel="canonical" href={canonical || pageUrl} />
       
       {/* Structured Data */}
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(schema || defaultSchema),
-          }}
-        />
-        {publishDate && (
-          <meta property="article:published_time" content={publishDate} />
-        )}
-        {modifiedDate && (
-          <meta property="article:modified_time" content={modifiedDate} />
-        )}
-        <link rel="canonical" href={canonical || pageUrl} />
-      </Head>
-    </>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema || defaultSchema),
+        }}
+      />
+      
+      {publishDate && (
+        <meta property="article:published_time" content={publishDate} />
+      )}
+      
+      {modifiedDate && (
+        <meta property="article:modified_time" content={modifiedDate} />
+      )}
+    </Head>
   );
 };
 
