@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import SEO from "../../components/Seo/SEO";
 
 export default function OmniverseLibrary() {
   const [hoveredReality, setHoveredReality] = useState<string | null>(null);
@@ -75,14 +76,10 @@ export default function OmniverseLibrary() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 overflow-hidden relative">
-      <Head>
-        <title>THE OMNIVERSE LIBRARY - Master Blog Hub</title>
-        <meta name="description" content="Navigate infinite knowledge dimensions in THE OMNIVERSE LIBRARY" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="keywords" content="blog, omniverse, library, knowledge, realities, dimensions" />
-        <meta name="author" content="THE OMNIVERSE LIBRARY" />
-        <link rel="canonical" href="https://chronosphere.com/blog" />
-      </Head>
+    <SEO
+      title="HAM BLOGS - World's Largest Premium Blogging Platform"
+      description="Explore the world's largest premium blogging platform featuring cutting-edge technology, AI insights, and expert knowledge."
+    />
 
       {/* Cosmic Background Elements */}
       <div className="fixed inset-0 pointer-events-none z-0">

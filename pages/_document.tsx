@@ -3,23 +3,26 @@ import { Html, Head, Main, NextScript } from 'next/document';
 import Script from 'next/script';
 
 export default function Document() {
-  const siteUrl = 'https://aether-nexus.vercel.app';
-  const siteName = 'AI Vault - Discover & Compare AI Tools';
-  const description = 'Comprehensive directory of AI tools with detailed comparisons...';
+  const siteUrl = 'https://ham-blogs.vercel.app';
+  const siteName = 'HAM BLOGS - World\'s Largest Premium Blogging Platform';
+  const description = 'Explore the world\'s largest premium blogging platform featuring cutting-edge technology, AI insights, and expert knowledge.';
   const defaultImage = `${siteUrl}/images/og-default.jpg`;
-  const twitterHandle = '@yourhandle';
+  const twitterHandle = '@ham_blogs';
 
   // JSON-LD structured data
   const structuredData = {
     '@context': 'https://schema.org',
-    '@type': 'WebSite',
+    '@type': 'Blog',
     name: siteName,
     url: siteUrl,
     description: description,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: `${siteUrl}/search?q={search_term_string}`,
-      'query-input': 'required name=search_term_string'
+    publisher: {
+      '@type': 'Organization',
+      name: 'HAM BLOGS',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteUrl}/logo.jpg`
+      }
     }
   };
 
@@ -34,6 +37,7 @@ export default function Document() {
         <meta name="description" content={description} />
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#111827" />
+        <meta name="google-site-verification" content="LBIeQN0P9NmMDc52HgxtMo-SAhmjBB3REjrhiK6yb3k" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />

@@ -27,10 +27,10 @@ export const SEO: React.FC<SEOProps> = ({
   schema,
 }) => {
   const router = useRouter();
-  const siteUrl = 'https://yourwebsite.com'; // Replace with your actual domain
+  const siteUrl = 'https://ham-blogs.vercel.app';
   const pageUrl = `${siteUrl}${router.asPath}`;
   const defaultImage = `${siteUrl}${image}`;
-  const siteName = 'AI Tools Hub'; // Replace with your site name
+  const siteName = 'HAM BLOGS';
 
   // Default schema for organization
   const defaultSchema = {
