@@ -125,6 +125,9 @@ export default function OmniverseLibrary() {
                 <Link href="/" className="text-blue-200 hover:text-white px-2 py-1 md:px-3 md:py-2 rounded-md text-sm font-medium transition-colors duration-200">
                   Home
                 </Link>
+                <Link href="/categories" className="text-blue-200 hover:text-white px-2 py-1 md:px-3 md:py-2 rounded-md text-sm font-medium transition-colors duration-200">
+                  Categories
+                </Link>
                 <Link href="/blog" className="text-blue-200 hover:text-white px-2 py-1 md:px-3 md:py-2 rounded-md text-sm font-medium transition-colors duration-200">
                   Blog
                 </Link>
