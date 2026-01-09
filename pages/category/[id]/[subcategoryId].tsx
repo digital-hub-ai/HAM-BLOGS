@@ -107,8 +107,7 @@ export default function SubcategoryPage() {
         { id: "6", slug: "wireless-protocols-bluetooth-wifi-zigbee", title: "Wireless Protocols: Bluetooth, WiFi, Zigbee", date: "2026-01-03", readTime: "9 min read", excerpt: "Comparing wireless protocols for different IoT applications..." },
         { id: "7", slug: "iot-device-management-scaling-solutions", title: "IoT Device Management and Scaling Solutions", date: "2026-01-02", readTime: "11 min read", excerpt: "Managing and scaling IoT deployments across multiple devices..." },
         { id: "8", slug: "ai-machine-learning-iot-applications", title: "AI and Machine Learning in IoT Applications", date: "2026-01-01", readTime: "10 min read", excerpt: "Implementing AI and ML algorithms in IoT systems for smarter decisions..." }
-      ]
-    },
+      ],
     // Add more subcategories as needed...
   }
   
