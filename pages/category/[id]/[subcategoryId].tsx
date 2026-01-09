@@ -15,47 +15,57 @@ export default function SubcategoryPage() {
       name: "Artificial Intelligence",
       description: "Exploring the latest developments in AI, machine learning, and neural networks",
       articles: [
-        { id: "1", title: "The Future of Generative AI in Creative Industries", date: "2026-01-08", readTime: "8 min read", excerpt: "How generative AI is transforming creative workflows across industries..." },
-        { id: "2", title: "Understanding Transformer Architecture", date: "2026-01-07", readTime: "12 min read", excerpt: "Deep dive into the transformer architecture that powers modern LLMs..." },
-        { id: "3", title: "Ethical Considerations in AI Development", date: "2026-01-06", readTime: "10 min read", excerpt: "Examining the moral implications of AI deployment in society..." },
-        { id: "4", title: "AI in Healthcare: Revolutionizing Diagnostics", date: "2026-01-05", readTime: "9 min read", excerpt: "How AI is transforming medical diagnosis and patient care..." },
-        { id: "5", title: "The Rise of Multimodal AI Systems", date: "2026-01-04", readTime: "11 min read", excerpt: "Exploring AI systems that can process multiple types of data simultaneously..." }
+        { id: "1", slug: "the-future-of-generative-ai-in-creative-industries", title: "The Future of Generative AI in Creative Industries", date: "2026-01-08", readTime: "8 min read", excerpt: "How generative AI is transforming creative workflows across industries..." },
+        { id: "2", slug: "understanding-transformer-architecture", title: "Understanding Transformer Architecture", date: "2026-01-07", readTime: "12 min read", excerpt: "Deep dive into the transformer architecture that powers modern LLMs..." },
+        { id: "3", slug: "ethical-considerations-in-ai-development", title: "Ethical Considerations in AI Development", date: "2026-01-06", readTime: "10 min read", excerpt: "Examining the moral implications of AI deployment in society..." },
+        { id: "4", slug: "ai-in-healthcare-revolutionizing-diagnostics", title: "AI in Healthcare: Revolutionizing Diagnostics", date: "2026-01-05", readTime: "9 min read", excerpt: "How AI is transforming medical diagnosis and patient care..." },
+        { id: "5", slug: "the-rise-of-multimodal-ai-systems", title: "The Rise of Multimodal AI Systems", date: "2026-01-04", readTime: "11 min read", excerpt: "Exploring AI systems that can process multiple types of data simultaneously..." }
       ]
     },
     quantum: {
       name: "Quantum Computing",
       description: "Delving into quantum mechanics, qubits, and the future of computation",
       articles: [
-        { id: "1", title: "Quantum Supremacy: Achievements and Challenges", date: "2026-01-08", readTime: "10 min read", excerpt: "Reviewing the milestones achieved in quantum supremacy and remaining challenges..." },
-        { id: "2", title: "Quantum Algorithms Explained", date: "2026-01-07", readTime: "9 min read", excerpt: "Understanding how quantum algorithms differ from classical counterparts..." },
-        { id: "3", title: "Building Stable Qubits", date: "2026-01-06", readTime: "12 min read", excerpt: "The engineering challenges in creating reliable quantum bits..." }
+        { id: "1", slug: "quantum-supremacy-achievements-and-challenges", title: "Quantum Supremacy: Achievements and Challenges", date: "2026-01-08", readTime: "10 min read", excerpt: "Reviewing the milestones achieved in quantum supremacy and remaining challenges..." },
+        { id: "2", slug: "quantum-algorithms-explained-deep-dive", title: "Quantum Algorithms Explained", date: "2026-01-07", readTime: "9 min read", excerpt: "Understanding how quantum algorithms differ from classical counterparts..." },
+        { id: "3", slug: "building-stable-qubits-engineering-challenges", title: "Building Stable Qubits", date: "2026-01-06", readTime: "12 min read", excerpt: "The engineering challenges in creating reliable quantum bits..." },
+        { id: "4", slug: "quantum-error-correction-methods", title: "Quantum Error Correction Methods", date: "2026-01-05", readTime: "11 min read", excerpt: "Advanced techniques for correcting errors in quantum computing systems..." },
+        { id: "5", slug: "quantum-computing-applications-finance", title: "Quantum Computing Applications in Finance", date: "2026-01-04", readTime: "10 min read", excerpt: "How quantum computing is transforming financial modeling and trading..." },
+        { id: "6", slug: "quantum-machine-learning-potential", title: "Quantum Machine Learning: The Potential Revolution", date: "2026-01-03", readTime: "12 min read", excerpt: "Exploring the intersection of quantum computing and machine learning..." },
+        { id: "7", slug: "quantum-cryptography-security", title: "Quantum Cryptography and Security", date: "2026-01-02", readTime: "10 min read", excerpt: "Understanding quantum-safe encryption and quantum key distribution..." },
+        { id: "8", slug: "quantum-simulation-chemistry", title: "Quantum Simulation in Chemistry", date: "2026-01-01", readTime: "11 min read", excerpt: "How quantum computers are revolutionizing molecular modeling..." }
       ]
     },
     blockchain: {
       name: "Blockchain",
       description: "Exploring distributed ledgers, cryptocurrencies, and decentralized systems",
       articles: [
-        { id: "1", title: "Beyond Bitcoin: Emerging Blockchain Use Cases", date: "2026-01-08", readTime: "8 min read", excerpt: "How blockchain technology is being applied beyond cryptocurrency..." },
-        { id: "2", title: "Smart Contracts: Security Best Practices", date: "2026-01-07", readTime: "10 min read", excerpt: "Essential security considerations for developing smart contracts..." },
-        { id: "3", title: "Decentralized Finance (DeFi) Trends", date: "2026-01-06", readTime: "9 min read", excerpt: "Analyzing the latest developments in the DeFi ecosystem..." }
+        { id: "1", slug: "beyond-bitcoin-emerging-blockchain-use-cases", title: "Beyond Bitcoin: Emerging Blockchain Use Cases", date: "2026-01-08", readTime: "8 min read", excerpt: "How blockchain technology is being applied beyond cryptocurrency..." },
+        { id: "2", slug: "smart-contracts-security-best-practices", title: "Smart Contracts: Security Best Practices", date: "2026-01-07", readTime: "10 min read", excerpt: "Essential security considerations for developing smart contracts..." },
+        { id: "3", slug: "decentralized-finance-defi-trends-analysis", title: "Decentralized Finance (DeFi) Trends", date: "2026-01-06", readTime: "9 min read", excerpt: "Analyzing the latest developments in the DeFi ecosystem..." },
+        { id: "4", slug: "blockchain-scalability-solutions", title: "Blockchain Scalability Solutions", date: "2026-01-05", readTime: "10 min read", excerpt: "Examining Layer 2 solutions and consensus mechanisms for scaling blockchain networks..." },
+        { id: "5", slug: "non-fungible-tokens-market-evolution", title: "Non-Fungible Tokens: Market Evolution", date: "2026-01-04", readTime: "9 min read", excerpt: "Understanding the growth and impact of NFTs across various industries..." },
+        { id: "6", slug: "enterprise-blockchain-adoption", title: "Enterprise Blockchain Adoption", date: "2026-01-03", readTime: "11 min read", excerpt: "How businesses are integrating blockchain technology into their operations..." },
+        { id: "7", slug: "regulatory-landscape-cryptocurrency", title: "Regulatory Landscape for Cryptocurrency", date: "2026-01-02", readTime: "10 min read", excerpt: "Global perspectives on cryptocurrency regulation and compliance..." },
+        { id: "8", slug: "interoperability-cross-chain-protocols", title: "Interoperability: Cross-Chain Protocols", date: "2026-01-01", readTime: "12 min read", excerpt: "Connecting different blockchain networks for seamless asset transfer..." }
       ]
     },
     luxury: {
       name: "Luxury Travel",
       description: "Premium destinations, exclusive experiences, and high-end travel tips",
       articles: [
-        { id: "1", title: "Top Luxury Resorts in the Maldives 2026", date: "2026-01-08", readTime: "7 min read", excerpt: "Curated list of the most exclusive resorts in paradise islands..." },
-        { id: "2", title: "Private Jet Charter Guide", date: "2026-01-07", readTime: "8 min read", excerpt: "Everything you need to know about chartering private jets..." },
-        { id: "3", title: "Michelin Star Dining Around the World", date: "2026-01-06", readTime: "9 min read", excerpt: "Guide to the world's finest dining experiences..." }
+        { id: "1", slug: "top-luxury-resorts-maldives-2026-guide", title: "Top Luxury Resorts in the Maldives 2026", date: "2026-01-08", readTime: "7 min read", excerpt: "Curated list of the most exclusive resorts in paradise islands..." },
+        { id: "2", slug: "private-jet-charter-guide-ultimate", title: "Private Jet Charter Guide", date: "2026-01-07", readTime: "8 min read", excerpt: "Everything you need to know about chartering private jets..." },
+        { id: "3", slug: "michelin-star-dining-around-world", title: "Michelin Star Dining Around the World", date: "2026-01-06", readTime: "9 min read", excerpt: "Guide to the world's finest dining experiences..." }
       ]
     },
     fashion: {
       name: "Fashion & Style",
       description: "Trend reports, designer profiles, and style guides",
       articles: [
-        { id: "1", title: "Spring 2026 Fashion Week Highlights", date: "2026-01-08", readTime: "6 min read", excerpt: "Key trends from the major fashion weeks around the globe..." },
-        { id: "2", title: "Sustainable Luxury Fashion Brands", date: "2026-01-07", readTime: "8 min read", excerpt: "Exploring eco-conscious luxury fashion labels making a difference..." },
-        { id: "3", title: "Building a Capsule Wardrobe", date: "2026-01-06", readTime: "7 min read", excerpt: "How to curate a timeless and versatile wardrobe..." }
+        { id: "1", slug: "spring-2026-fashion-week-highlights-trends", title: "Spring 2026 Fashion Week Highlights", date: "2026-01-08", readTime: "6 min read", excerpt: "Key trends from the major fashion weeks around the globe..." },
+        { id: "2", slug: "sustainable-luxury-fashion-brands-guide", title: "Sustainable Luxury Fashion Brands", date: "2026-01-07", readTime: "8 min read", excerpt: "Exploring eco-conscious luxury fashion labels making a difference..." },
+        { id: "3", slug: "building-capsule-wardrobe-essentials", title: "Building a Capsule Wardrobe", date: "2026-01-06", readTime: "7 min read", excerpt: "How to curate a timeless and versatile wardrobe..." }
       ]
     },
     // Add more subcategories as needed...
@@ -143,7 +153,7 @@ export default function SubcategoryPage() {
                 transitionDelay: `${index * 100}ms`
               }}
             >
-              <Link href={`/blog/${article.id}`}>
+              <Link href={`/blog/${article.slug}`}>
                 <div className="group bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 hover:bg-white/20 transition-all duration-300 cursor-pointer">
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="text-xl font-bold text-white group-hover:text-yellow-400 transition-colors">
