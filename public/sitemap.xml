@@ -91,6 +91,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ham-blogs.vercel.appblog\serverless-architecture-benefits-challenges</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ham-blogs.vercel.appblog\regulatory-landscape-cryptocurrency</loc>
     <lastmod>2026-01-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -145,6 +151,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ham-blogs.vercel.appblog\multi-cloud-strategy-enterprise-adoption</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ham-blogs.vercel.appblog\interoperability-cross-chain-protocols</loc>
     <lastmod>2026-01-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -169,7 +181,37 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ham-blogs.vercel.appblog\edge-computing-cloud-integration</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ham-blogs.vercel.appblog\decentralized-finance-defi-trends-analysis</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ham-blogs.vercel.appblog\containerization-docker-kubernetes-deployment</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ham-blogs.vercel.appblog\cloud-security-best-practices</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ham-blogs.vercel.appblog\cloud-native-application-development</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ham-blogs.vercel.appblog\cloud-cost-optimization-strategies</loc>
     <lastmod>2026-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -188,6 +230,12 @@
   </url>
   <url>
     <loc>https://ham-blogs.vercel.appblog\beyond-bitcoin-emerging-blockchain-use-cases</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ham-blogs.vercel.appblog\aws-azure-google-cloud-platform-comparison</loc>
     <lastmod>2026-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -253,6 +301,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ham-blogs.vercel.app/blog/serverless-architecture-benefits-challenges</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ham-blogs.vercel.app/blog/regulatory-landscape-cryptocurrency</loc>
     <lastmod>2026-01-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -307,6 +361,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ham-blogs.vercel.app/blog/multi-cloud-strategy-enterprise-adoption</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ham-blogs.vercel.app/blog/interoperability-cross-chain-protocols</loc>
     <lastmod>2026-01-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -325,7 +385,37 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ham-blogs.vercel.app/blog/edge-computing-cloud-integration</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ham-blogs.vercel.app/blog/decentralized-finance-defi-trends-analysis</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ham-blogs.vercel.app/blog/containerization-docker-kubernetes-deployment</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ham-blogs.vercel.app/blog/cloud-security-best-practices</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ham-blogs.vercel.app/blog/cloud-native-application-development</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ham-blogs.vercel.app/blog/cloud-cost-optimization-strategies</loc>
     <lastmod>2026-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -344,6 +434,12 @@
   </url>
   <url>
     <loc>https://ham-blogs.vercel.app/blog/beyond-bitcoin-emerging-blockchain-use-cases</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ham-blogs.vercel.app/blog/aws-azure-google-cloud-platform-comparison</loc>
     <lastmod>2026-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
