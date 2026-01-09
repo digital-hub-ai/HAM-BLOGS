@@ -7,10 +7,7 @@ import Script from 'next/script';
 // Add type definitions for adsbygoogle
 declare global {
   interface Window {
-    adsbygoogle?: {
-      loaded?: boolean;
-      push: (params: Record<string, unknown>) => void;
-    }[];
+    adsbygoogle?: any[];
   }
 }
 
