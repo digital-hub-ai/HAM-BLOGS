@@ -81,21 +81,7 @@ export default function SubcategoryPage() {
         { id: "2", slug: "sustainable-luxury-fashion-brands-guide", title: "Sustainable Luxury Fashion Brands", date: "2026-01-07", readTime: "8 min read", excerpt: "Exploring eco-conscious luxury fashion labels making a difference..." },
         { id: "3", slug: "building-capsule-wardrobe-essentials", title: "Building a Capsule Wardrobe", date: "2026-01-06", readTime: "7 min read", excerpt: "How to curate a timeless and versatile wardrobe..." }
       ]
-    },
-    cloud: {
-      name: "Cloud Computing",
-      description: "Exploring cloud infrastructure, services, and deployment strategies",
-      articles: [
-        { id: "1", slug: "aws-azure-google-cloud-platform-comparison", title: "AWS vs Azure vs Google Cloud Platform: A Comprehensive Comparison", date: "2026-01-08", readTime: "12 min read", excerpt: "Detailed analysis of the three major cloud platforms and their offerings..." },
-        { id: "2", slug: "serverless-architecture-benefits-challenges", title: "Serverless Architecture: Benefits and Challenges", date: "2026-01-07", readTime: "10 min read", excerpt: "Understanding the advantages and limitations of serverless computing..." },
-        { id: "3", slug: "containerization-docker-kubernetes-deployment", title: "Containerization with Docker and Kubernetes Deployment", date: "2026-01-06", readTime: "11 min read", excerpt: "Best practices for containerizing applications and orchestrating with Kubernetes..." },
-        { id: "4", slug: "multi-cloud-strategy-enterprise-adoption", title: "Multi-Cloud Strategy for Enterprise Adoption", date: "2026-01-05", readTime: "10 min read", excerpt: "How enterprises are leveraging multiple cloud providers for resilience and flexibility..." },
-        { id: "5", slug: "edge-computing-cloud-integration", title: "Edge Computing and Cloud Integration", date: "2026-01-04", readTime: "9 min read", excerpt: "Bridging edge computing with cloud infrastructure for optimal performance..." },
-        { id: "6", slug: "cloud-security-best-practices", title: "Cloud Security Best Practices", date: "2026-01-03", readTime: "11 min read", excerpt: "Essential security considerations for cloud deployments..." },
-        { id: "7", slug: "cloud-cost-optimization-strategies", title: "Cloud Cost Optimization Strategies", date: "2026-01-02", readTime: "10 min read", excerpt: "Techniques to optimize cloud spending while maintaining performance..." },
-        { id: "8", slug: "cloud-native-application-development", title: "Cloud-Native Application Development", date: "2026-01-01", readTime: "12 min read", excerpt: "Building applications specifically designed for cloud environments..." }
-      ]
-    },
+
     cybersecurity: {
       name: "Cybersecurity",
       description: "Protecting systems, networks, and data from digital attacks and threats",

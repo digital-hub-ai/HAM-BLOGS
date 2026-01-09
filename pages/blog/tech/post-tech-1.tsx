@@ -5,7 +5,7 @@ export default function TechBlogPost1() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 overflow-hidden relative">
       <Head>
-        <title>Revolutionary AI Breakthroughs in 2025 - Quantum Codex</title>
+        <title>Revolutionary AI Breakthroughs in 2026 - Quantum Codex</title>
         <meta name="description" content="Exploring the latest revolutionary AI breakthroughs that are shaping our future" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="AI, artificial intelligence, machine learning, technology, innovation" />
