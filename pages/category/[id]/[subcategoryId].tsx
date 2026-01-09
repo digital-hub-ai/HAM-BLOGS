@@ -96,9 +96,37 @@ export default function SubcategoryPage() {
         { id: "8", slug: "cloud-native-application-development", title: "Cloud-Native Application Development", date: "2026-01-01", readTime: "12 min read", excerpt: "Building applications specifically designed for cloud environments..." }
       ]
     },
+    cybersecurity: {
+      name: "Cybersecurity",
+      description: "Protecting systems, networks, and data from digital attacks and threats",
+      articles: [
+        { id: "1", slug: "zero-trust-architecture-implementation-guide", title: "Zero Trust Architecture: Implementation Guide", date: "2026-01-08", readTime: "12 min read", excerpt: "Comprehensive approach to implementing zero trust security models..." },
+        { id: "2", slug: "artificial-intelligence-in-cybersecurity-defense", title: "Artificial Intelligence in Cybersecurity Defense", date: "2026-01-07", readTime: "10 min read", excerpt: "How AI is transforming threat detection and response capabilities..." },
+        { id: "3", slug: "ransomware-protection-best-practices", title: "Ransomware Protection: Best Practices", date: "2026-01-06", readTime: "11 min read", excerpt: "Strategies to prevent, detect, and recover from ransomware attacks..." },
+        { id: "4", slug: "identity-access-management-enterprise-strategies", title: "Identity and Access Management: Enterprise Strategies", date: "2026-01-05", readTime: "10 min read", excerpt: "Modern approaches to managing user identities and access controls..." },
+        { id: "5", slug: "endpoint-security-modern-threats", title: "Endpoint Security: Modern Threats", date: "2026-01-04", readTime: "9 min read", excerpt: "Protecting endpoints in the era of remote work and mobile devices..." },
+        { id: "6", slug: "network-security-firewall-technologies", title: "Network Security: Firewall Technologies", date: "2026-01-03", readTime: "11 min read", excerpt: "Evolution of firewall technologies and next-generation security..." },
+        { id: "7", slug: "data-privacy-regulations-compliance", title: "Data Privacy Regulations and Compliance", date: "2026-01-02", readTime: "10 min read", excerpt: "Navigating GDPR, CCPA, and other privacy regulations..." },
+        { id: "8", slug: "incident-response-playbooks-automation", title: "Incident Response Playbooks and Automation", date: "2026-01-01", readTime: "12 min read", excerpt: "Building effective incident response capabilities with automation..." }
+      ]
+    },
+    iot: {
+      name: "Internet of Things",
+      description: "Connecting physical devices to the internet for smart automation and data collection",
+      articles: [
+        { id: "1", slug: "iot-security-standards-and-protocols", title: "IoT Security Standards and Protocols", date: "2026-01-08", readTime: "11 min read", excerpt: "Essential security standards and protocols for protecting IoT ecosystems..." },
+        { id: "2", slug: "edge-computing-iot-device-processing", title: "Edge Computing and IoT Device Processing", date: "2026-01-07", readTime: "10 min read", excerpt: "Processing data closer to the source for improved IoT performance..." },
+        { id: "3", slug: "smart-home-automation-systems-integration", title: "Smart Home Automation Systems Integration", date: "2026-01-06", readTime: "9 min read", excerpt: "Integrating IoT devices for comprehensive home automation solutions..." },
+        { id: "4", slug: "industrial-iot-iiot-sensors-monitoring", title: "Industrial IoT (IIoT) Sensors and Monitoring", date: "2026-01-05", readTime: "12 min read", excerpt: "Transforming manufacturing with IIoT sensors and monitoring systems..." },
+        { id: "5", slug: "iot-data-analytics-big-data-processing", title: "IoT Data Analytics and Big Data Processing", date: "2026-01-04", readTime: "10 min read", excerpt: "Processing and analyzing massive volumes of IoT-generated data..." },
+        { id: "6", slug: "wireless-protocols-bluetooth-wifi-zigbee", title: "Wireless Protocols: Bluetooth, WiFi, Zigbee", date: "2026-01-03", readTime: "9 min read", excerpt: "Comparing wireless protocols for different IoT applications..." },
+        { id: "7", slug: "iot-device-management-scaling-solutions", title: "IoT Device Management and Scaling Solutions", date: "2026-01-02", readTime: "11 min read", excerpt: "Managing and scaling IoT deployments across multiple devices..." },
+        { id: "8", slug: "ai-machine-learning-iot-applications", title: "AI and Machine Learning in IoT Applications", date: "2026-01-01", readTime: "10 min read", excerpt: "Implementing AI and ML algorithms in IoT systems for smarter decisions..." }
+      ]
+    },
     // Add more subcategories as needed...
-  };
-
+  }
+  
   // Staggered article loading effect
   useEffect(() => {
     if (!subcategoryId) return;
@@ -114,11 +142,26 @@ export default function SubcategoryPage() {
     const timer3 = setTimeout(() => {
       setLoadedArticles([0, 1, 2, 3, 4]);
     }, 400);
+    
+    const timer4 = setTimeout(() => {
+      setLoadedArticles([0, 1, 2, 3, 4, 5]);
+    }, 600);
+    
+    const timer5 = setTimeout(() => {
+      setLoadedArticles([0, 1, 2, 3, 4, 5, 6]);
+    }, 800);
+    
+    const timer6 = setTimeout(() => {
+      setLoadedArticles([0, 1, 2, 3, 4, 5, 6, 7]);
+    }, 1000);
 
     return () => {
       clearTimeout(timer);
       clearTimeout(timer2);
       clearTimeout(timer3);
+      clearTimeout(timer4);
+      clearTimeout(timer5);
+      clearTimeout(timer6);
     };
   }, [subcategoryId]);
 

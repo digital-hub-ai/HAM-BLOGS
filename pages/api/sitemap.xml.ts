@@ -132,7 +132,23 @@ function getAllBlogPostSlugs() {
       'the-low-code-arena-developers-brutally-honest-review-bubble-webflow-adalo',
       'notion-vs-coda-vs-anytype-quest-one-true-workspace',
       'the-invisible-interface-how-ai-agents-will-make-apps-websites-obsolete',
-      'pricing-page-teardown-how-top-100-saas-companies-structure-their-plans'
+      'pricing-page-teardown-how-top-100-saas-companies-structure-their-plans',
+      'zero-trust-architecture-implementation-guide',
+      'artificial-intelligence-in-cybersecurity-defense',
+      'ransomware-protection-best-practices',
+      'identity-access-management-enterprise-strategies',
+      'endpoint-security-modern-threats',
+      'network-security-firewall-technologies',
+      'data-privacy-regulations-compliance',
+      'incident-response-playbooks-automation',
+      'iot-security-standards-and-protocols',
+      'edge-computing-iot-device-processing',
+      'smart-home-automation-systems-integration',
+      'industrial-iot-iiot-sensors-monitoring',
+      'iot-data-analytics-big-data-processing',
+      'wireless-protocols-bluetooth-wifi-zigbee',
+      'iot-device-management-scaling-solutions',
+      'ai-machine-learning-iot-applications'
     ];
   } catch (error) {
     console.error('Error reading blog directory:', error);
