@@ -81,6 +81,7 @@ export default function SubcategoryPage() {
         { id: "2", slug: "sustainable-luxury-fashion-brands-guide", title: "Sustainable Luxury Fashion Brands", date: "2026-01-07", readTime: "8 min read", excerpt: "Exploring eco-conscious luxury fashion labels making a difference..." },
         { id: "3", slug: "building-capsule-wardrobe-essentials", title: "Building a Capsule Wardrobe", date: "2026-01-06", readTime: "7 min read", excerpt: "How to curate a timeless and versatile wardrobe..." }
       },
+    },
     cybersecurity: {
       name: "Cybersecurity",
       description: "Protecting systems, networks, and data from digital attacks and threats",
