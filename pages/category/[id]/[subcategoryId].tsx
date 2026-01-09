@@ -81,7 +81,6 @@ export default function SubcategoryPage() {
         { id: "2", slug: "sustainable-luxury-fashion-brands-guide", title: "Sustainable Luxury Fashion Brands", date: "2026-01-07", readTime: "8 min read", excerpt: "Exploring eco-conscious luxury fashion labels making a difference..." },
         { id: "3", slug: "building-capsule-wardrobe-essentials", title: "Building a Capsule Wardrobe", date: "2026-01-06", readTime: "7 min read", excerpt: "How to curate a timeless and versatile wardrobe..." }
       },
-    },
     cybersecurity: {
       name: "Cybersecurity",
       description: "Protecting systems, networks, and data from digital attacks and threats",
@@ -109,6 +108,7 @@ export default function SubcategoryPage() {
         { id: "7", slug: "iot-device-management-scaling-solutions", title: "IoT Device Management and Scaling Solutions", date: "2026-01-02", readTime: "11 min read", excerpt: "Managing and scaling IoT deployments across multiple devices..." },
         { id: "8", slug: "ai-machine-learning-iot-applications", title: "AI and Machine Learning in IoT Applications", date: "2026-01-01", readTime: "10 min read", excerpt: "Implementing AI and ML algorithms in IoT systems for smarter decisions..." }
       ],
+    },
     // Add more subcategories as needed...
   }
   
