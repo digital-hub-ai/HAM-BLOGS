@@ -1,0 +1,262 @@
+import { GetServerSideProps } from 'next';
+import { ReadStream, createReadStream, statSync } from 'fs';
+import { join } from 'path';
+
+// Function to get all blog post slugs from the blog directory
+function getAllBlogPostSlugs() {
+  // Return all the blog post slugs that we know exist
+  return [
+    'no-code-low-code-revolution-2025',
+    'data-science-workstation-2025',
+    'ai-powered-content-creation-stack-2025',
+    'one-person-game-dev-arsenal-2025',
+    'full-stack-web3-developer-kit-2025',
+    'beyond-rag-agentic-search-stack',
+    'gpu-poor-guide-ai-training',
+    'llm-ops-stack-guide',
+    'model-kitchen-revolution-fine-tune-open-source-ai',
+    'ai-coding-assistants-2025',
+    'ai-mental-health-2025',
+    'ai-automation-business',
+    'ai-design-tools-2024',
+    'ai-development-tools-2024',
+    'ai-marketing-tools-2024',
+    'ai-productivity-tools-2024',
+    'ai-tools-comparison-2024',
+    'future-of-artificial-intelligence',
+    'machine-learning-beginners-guide',
+    'top-10-ai-tools-content-creation-2024',
+    'ai-transforming-software-development',
+    'future-ai-business-analytics',
+    'ai-business-analytics-guide',
+    'ai-ethics-2024',
+    'ai-healthcare-revolution',
+    'we-used-ai-to-build-startup-48-hours-stack-cost-reality',
+    'beyond-chatgpt-atlas-neo-guide-niche-ai-tools-youve-never-heard-of',
+    'ai-education-future',
+    'ai-finance-2025',
+    'ai-education-2025',
+    'ai-cybersecurity-2025',
+    'ai-marketing-2025',
+    'ai-customer-service-2025',
+    'ai-supply-chain-2025',
+    'ai-sports-2025',
+    'ai-tourism-2025',
+    'ai-food-beverage-2025',
+    'ai-construction-2025',
+    'ai-government-2025',
+    'ai-insurance-2025',
+    'ai-telecommunications-2025',
+    'ai-banking-2025',
+    'ai-logistics-2025',
+    'ai-hospitality-2025',
+    'ai-cybersecurity-2024',
+    'ai-content-creation-2024',
+    'ai-ecommerce-2024',
+    'ai-finance-2024',
+    'ai-data-science-2024',
+    'ai-healthcare-2024',
+    'ai-manufacturing-2024',
+    'ai-agriculture-2024',
+    'ai-transportation-2024',
+    'ai-real-estate-2024',
+    'ai-legal-services-2024',
+    'ai-human-resources-2024',
+    'ai-retail-2024',
+    'ai-energy-2024',
+    'ai-entertainment-2024',
+    'ai-healthcare-2025',
+    'ai-manufacturing-2025',
+    'ai-agriculture-2025',
+    'ai-transportation-2025',
+    'ai-real-estate-2025',
+    'ai-legal-services-2025',
+    'ai-human-resources-2025',
+    'ai-retail-2025',
+    'ai-energy-2025',
+    'ai-entertainment-2025',
+    'ai-media-2025',
+    'ai-sports-analytics-2025',
+    'ai-fashion-2025',
+    'ai-music-2025',
+    'ai-gaming-2025',
+    'ai-construction-2025',
+    'ai-utilities-2025',
+    'ai-mining-2025',
+    'ai-aviation-2025',
+    'ai-maritime-2025',
+    'ai-financial-technology-2025',
+    'ai-future-technologies-2025',
+    'ai-space-exploration-2025',
+    'ai-robotics-2025',
+    'ai-quantum-computing-2025',
+    'ai-biotechnology-2025',
+    'ai-climate-change-2025',
+    'ai-smart-cities-2025',
+    'ai-defense-2025',
+    'ai-agriculture-technology-2025',
+    'ai-environmental-science-2025',
+    'ai-renewable-energy-2025',
+    'ai-food-technology-2025',
+    'ai-water-management-2025',
+    'ai-waste-management-2025',
+    'ai-forestry-2025',
+    'ai-oceanography-2025',
+    'ai-philosophy-2025',
+    'ai-history-2025',
+    'ai-literature-2025',
+    'ai-meteorology-2025',
+    'ai-geology-2025',
+    'ai-archaeology-2025',
+    'ai-linguistics-2025',
+    'ai-psychology-2025',
+    'ai-sociology-2025',
+    'ai-anthropology-2025',
+    'the-state-of-open-source-2025-funding-fragmentation-future',
+    'the-great-consolidation-which-saas-categories-are-dying-and-which-are-thriving',
+    'our-aws-bill-was-50-000-how-we-fixed-it-a-cloud-cost-optimization-playbook',
+    'the-ultimate-guide-to-developer-onboarding-the-tools-that-make-new-hires-productive-in-day-1',
+    'your-team-is-drowning-in-notifications-heres-a-systematic-framework-for-digital-wellness',
+    'tool-darwinism-why-the-best-product-doesnt-always-win',
+    'the-composability-imperative-why-your-future-stack-will-be-built-like-lego-blocks',
+    'the-ethics-of-code-a-developers-guide-to-responsible-tool-selection',
+    'from-monolith-to-micro-saas-the-unstoppable-fragmentation-of-software',
+    'the-atlas-neo-manifesto-why-the-world-needs-a-smarter-map-of-the-digital-toolscape',
+    'the-2025-developers-stack-architectural-blueprint-building-at-scale',
+    'beyond-feature-lists-executives-framework-strategic-saas-procurement',
+    'the-tool-selection-paradox-why-more-choice-kills-productivity-how-to-fix-it',
+    'figma-vs-sketch-vs-penpot-2025-ultimate-ui-ux-platform-showdown',
+    'the-low-code-arena-developers-brutally-honest-review-bubble-webflow-adalo',
+    'notion-vs-coda-vs-anytype-quest-one-true-workspace',
+    'the-invisible-interface-how-ai-agents-will-make-apps-websites-obsolete',
+    'pricing-page-teardown-how-top-100-saas-companies-structure-their-plans',
+    'zero-trust-architecture-implementation-guide',
+    'artificial-intelligence-in-cybersecurity-defense',
+    'ransomware-protection-best-practices',
+    'identity-access-management-enterprise-strategies',
+    'endpoint-security-modern-threats',
+    'network-security-firewall-technologies',
+    'data-privacy-regulations-compliance',
+    'incident-response-playbooks-automation',
+    'iot-security-standards-and-protocols',
+    'edge-computing-iot-device-processing',
+    'smart-home-automation-systems-integration',
+    'industrial-iot-iiot-sensors-monitoring',
+    'iot-data-analytics-big-data-processing',
+    'wireless-protocols-bluetooth-wifi-zigbee',
+    'iot-device-management-scaling-solutions',
+    'ai-machine-learning-iot-applications',
+    'safari-lodges-africa-most-exclusive-experiences',
+    'swiss-alps-luxury-ski-resorts-comparison',
+    'private-villa-rentals-caribbean-paradise',
+    'wine-country-getaways-napa-valley-luxury',
+    'yacht-charters-mediterranean-2026-guide',
+    'top-luxury-resorts-maldives-2026-guide',
+    'private-jet-charter-guide-ultimate',
+    'michelin-star-dining-around-world',
+    'best-extreme-sports-destinations-2026',
+    'hiking-trails-most-breathtaking-views',
+    'mountain-climbing-essential-gear-guide',
+    'scuba-diving-most-incredible-underwater-sites',
+    'safari-adventures-beyond-african-territory',
+    'backpacking-through-remote-destinations',
+    'adventure-travel-safety-tips-experts',
+    'multi-sport-adventure-races-around-world',
+    'ancient-temples-hidden-archaeological-wonders',
+    'traditional-festivals-around-world-cultural-celebrations',
+    'world-heritage-sites-preserving-human-history',
+    'ancient-trade-routes-cultural-exchange-pathways',
+    'tradition-crafts-endangered-art-forms',
+    'oral-traditions-stories-passed-down-through-generations',
+    'cultural-etiquette-travel-guidelines-respectful-tourism',
+    'intangible-heritage-unesco-list-cultural-practices',
+    'hidden-gems-off-the-beaten-path-destinations',
+    'luxury-travel-destinations-2026-ultra-premium',
+    'adventure-travel-destinations-2026-thrill-seekers',
+    'romantic-getaways-destinations-couples',
+    'family-travel-destinations-kids-friendly',
+    'budget-travel-destinations-affordable-options',
+    'solo-travel-destinations-safe-solo',
+    'eco-tourism-destinations-sustainable-travel',
+    'culinary-journeys-around-world',
+    'street-food-adventures-global',
+    'wine-regions-tourism-guide',
+    'cooking-classes-cultural-immersion',
+    'food-festivals-cultural-celebrations',
+    'farm-to-table-experiences',
+    'food-markets-cultural-hubs',
+    'fine-dining-cultural-experiences',
+    'tropical-paradise-beaches-2026',
+    'secluded-beaches-hidden-coastal-gems',
+    'luxury-beach-resorts-ultimate-experiences',
+    'surfing-destinations-best-waves-world',
+    'family-friendly-beaches-kids-safe',
+    'romantic-beach-getaways-couples',
+    'adventure-beaches-water-sports-activities',
+    'eco-beaches-sustainable-coastal-tourism',
+    'luxury-city-breaks-ultra-premium',
+    'family-friendly-city-breaks',
+    'adventure-city-breaks-active-urban',
+    'cultural-city-breaks-arts-culture',
+    'foodie-city-breaks-culinary-destinations',
+    'romantic-city-breaks-love-connections',
+    'budget-city-breaks-affordable-urban',
+    'solo-city-breaks-independent-travel',
+  ];
+}
+
+const staticPages = [
+  { url: '/', priority: '1.0', changefreq: 'daily' },
+  { url: '/blog', priority: '0.9', changefreq: 'daily' },
+  { url: '/neural-stream', priority: '0.9', changefreq: 'daily' },
+  { url: '/ai-tools', priority: '0.8', changefreq: 'weekly' },
+  { url: '/compare', priority: '0.8', changefreq: 'weekly' },
+  { url: '/new-tools', priority: '0.8', changefreq: 'daily' },
+  { url: '/suggest-tool', priority: '0.7', changefreq: 'monthly' },
+  { url: '/favorites', priority: '0.7', changefreq: 'weekly' },
+  { url: '/about', priority: '0.6', changefreq: 'monthly' },
+  { url: '/contact', priority: '0.5', changefreq: 'monthly' },
+  { url: '/terms', priority: '0.4', changefreq: 'yearly' },
+  { url: '/privacy', priority: '0.4', changefreq: 'yearly' }
+];
+
+export default function Sitemap() {}
+
+export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+  const baseUrl = 'https://ham-blogs.vercel.app';
+  const currentDate = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
+  
+  let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+  xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+
+  // Add static pages
+  staticPages.forEach(page => {
+    xml += '  <url>\n';
+    xml += `    <loc>${baseUrl}${page.url}</loc>\n`;
+    xml += `    <lastmod>${currentDate}</lastmod>\n`;
+    xml += `    <changefreq>${page.changefreq}</changefreq>\n`;
+    xml += `    <priority>${page.priority}</priority>\n`;
+    xml += '  </url>\n';
+  });
+
+  // Add blog posts
+  const blogSlugs = getAllBlogPostSlugs();
+  blogSlugs.forEach(slug => {
+    xml += '  <url>\n';
+    xml += `    <loc>${baseUrl}/blog/${slug}</loc>\n`;
+    xml += `    <lastmod>${currentDate}</lastmod>\n`;
+    xml += '    <changefreq>weekly</changefreq>\n';
+    xml += '    <priority>0.8</priority>\n';
+    xml += '  </url>\n';
+  });
+
+  xml += '</urlset>';
+
+  res.setHeader('Content-Type', 'text/xml');
+  res.write(xml);
+  res.end();
+
+  return {
+    props: {},
+  };
+};
