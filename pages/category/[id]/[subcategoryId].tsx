@@ -56,8 +56,13 @@ export default function SubcategoryPage() {
       articles: [
         { id: "1", slug: "top-luxury-resorts-maldives-2026-guide", title: "Top Luxury Resorts in the Maldives 2026", date: "2026-01-08", readTime: "7 min read", excerpt: "Curated list of the most exclusive resorts in paradise islands..." },
         { id: "2", slug: "private-jet-charter-guide-ultimate", title: "Private Jet Charter Guide", date: "2026-01-07", readTime: "8 min read", excerpt: "Everything you need to know about chartering private jets..." },
-        { id: "3", slug: "michelin-star-dining-around-world", title: "Michelin Star Dining Around the World", date: "2026-01-06", readTime: "9 min read", excerpt: "Guide to the world's finest dining experiences..." }
-      ]
+        { id: "3", slug: "michelin-star-dining-around-world", title: "Michelin Star Dining Around the World", date: "2026-01-06", readTime: "9 min read", excerpt: "Guide to the world's finest dining experiences..." },
+        { id: "4", slug: "safari-lodges-africa-most-exclusive-experiences", title: "Safari Lodges: Africa's Most Exclusive Experiences", date: "2026-01-05", readTime: "10 min read", excerpt: "Discover the most luxurious safari lodges offering unparalleled wildlife experiences..." },
+        { id: "5", slug: "swiss-alps-luxury-ski-resorts-comparison", title: "Swiss Alps: Luxury Ski Resorts Comparison", date: "2026-01-04", readTime: "8 min read", excerpt: "A comprehensive guide to the most prestigious ski resorts in the Swiss Alps..." },
+        { id: "6", slug: "private-villa-rentals-caribbean-paradise", title: "Private Villa Rentals: Caribbean Paradise", date: "2026-01-03", readTime: "9 min read", excerpt: "Exclusive private villas offering ultimate luxury and privacy in the Caribbean..." },
+        { id: "7", slug: "wine-country-getaways-napa-valley-luxury", title: "Wine Country Getaways: Napa Valley Luxury", date: "2026-01-02", readTime: "7 min read", excerpt: "Indulgent wine country experiences in Napa Valley's most prestigious estates..." },
+        { id: "8", slug: "yacht-charters-mediterranean-2026-guide", title: "Yacht Charters: Mediterranean 2026 Guide", date: "2026-01-01", readTime: "11 min read", excerpt: "Ultimate luxury yacht charters exploring the Mediterranean's most stunning coastlines..." }
+      ],
     },
     cloud: {
       name: "Cloud Computing",
@@ -109,6 +114,90 @@ export default function SubcategoryPage() {
         { id: "7", slug: "iot-device-management-scaling-solutions", title: "IoT Device Management and Scaling Solutions", date: "2026-01-02", readTime: "11 min read", excerpt: "Managing and scaling IoT deployments across multiple devices..." },
         { id: "8", slug: "ai-machine-learning-iot-applications", title: "AI and Machine Learning in IoT Applications", date: "2026-01-01", readTime: "10 min read", excerpt: "Implementing AI and ML algorithms in IoT systems for smarter decisions..." }
       ]
+    },
+    adventure: {
+      name: "Adventure",
+      description: "Thrilling outdoor experiences, extreme sports, and exotic destinations for adrenaline seekers",
+      articles: [
+        { id: "1", slug: "best-extreme-sports-destinations-2026", title: "Best Extreme Sports Destinations 2026", date: "2026-01-08", readTime: "8 min read", excerpt: "Top locations worldwide for skydiving, bungee jumping, and other adrenaline-pumping activities..." },
+        { id: "2", slug: "hiking-trails-most-breathtaking-views", title: "Hiking Trails with the Most Breathtaking Views", date: "2026-01-07", readTime: "9 min read", excerpt: "Unforgettable trekking experiences through the world's most spectacular landscapes..." },
+        { id: "3", slug: "mountain-climbing-essential-gear-guide", title: "Mountain Climbing Essential Gear Guide", date: "2026-01-06", readTime: "10 min read", excerpt: "Complete equipment checklist for safe and successful mountain expeditions..." },
+        { id: "4", slug: "scuba-diving-most-incredible-underwater-sites", title: "Scuba Diving: Most Incredible Underwater Sites", date: "2026-01-05", readTime: "8 min read", excerpt: "Discover the world's most spectacular dive sites teeming with marine life..." },
+        { id: "5", slug: "safari-adventures-beyond-african-territory", title: "Safari Adventures Beyond African Territory", date: "2026-01-04", readTime: "9 min read", excerpt: "Wildlife adventures in Asia, South America, and other exotic locations..." },
+        { id: "6", slug: "backpacking-through-remote-destinations", title: "Backpacking Through Remote Destinations", date: "2026-01-03", readTime: "11 min read", excerpt: "Guide to exploring the world's most isolated and untouched places..." },
+        { id: "7", slug: "adventure-travel-safety-tips-experts", title: "Adventure Travel Safety Tips from Experts", date: "2026-01-02", readTime: "10 min read", excerpt: "Essential safety measures for extreme adventures and wilderness exploration..." },
+        { id: "8", slug: "multi-sport-adventure-races-around-world", title: "Multi-Sport Adventure Races Around the World", date: "2026-01-01", readTime: "9 min read", excerpt: "Challenging competitions combining multiple outdoor disciplines in stunning locations..." }
+      ],
+    },
+    culture: {
+      name: "Culture & Heritage",
+      description: "Exploring traditions, customs, and historical treasures from around the world",
+      articles: [
+        { id: "1", slug: "ancient-temples-hidden-archaeological-wonders", title: "Ancient Temples: Hidden Archaeological Wonders", date: "2026-01-08", readTime: "10 min read", excerpt: "Discovering lesser-known temples and archaeological sites that hold fascinating historical secrets..." },
+        { id: "2", slug: "traditional-festivals-around-world-cultural-celebrations", title: "Traditional Festivals Around the World: Cultural Celebrations", date: "2026-01-07", readTime: "9 min read", excerpt: "Immersing in vibrant festivals that showcase unique cultural traditions and customs..." },
+        { id: "3", slug: "world-heritage-sites-preserving-human-history", title: "World Heritage Sites: Preserving Human History", date: "2026-01-06", readTime: "11 min read", excerpt: "Exploring UNESCO World Heritage sites and their significance in preserving our shared history..." },
+        { id: "4", slug: "ancient-trade-routes-cultural-exchange-pathways", title: "Ancient Trade Routes: Cultural Exchange Pathways", date: "2026-01-05", readTime: "10 min read", excerpt: "Following historic trade routes that facilitated cultural exchange between civilizations..." },
+        { id: "5", slug: "traditional-crafts-endangered-art-forms", title: "Traditional Crafts: Endangered Art Forms", date: "2026-01-04", readTime: "8 min read", excerpt: "Preserving ancient craftsmanship techniques passed down through generations..." },
+        { id: "6", slug: "oral-traditions-stories-passed-down-through-generations", title: "Oral Traditions: Stories Passed Down Through Generations", date: "2026-01-03", readTime: "9 min read", excerpt: "The importance of storytelling and oral histories in preserving cultural identity..." },
+        { id: "7", slug: "cultural-etiquette-travel-guidelines-respectful-tourism", title: "Cultural Etiquette: Travel Guidelines for Respectful Tourism", date: "2026-01-02", readTime: "8 min read", excerpt: "Understanding cultural norms and practicing respectful tourism in diverse societies..." },
+        { id: "8", slug: "intangible-heritage-unesco-list-cultural-practices", title: "Intangible Heritage: UNESCO List of Cultural Practices", date: "2026-01-01", readTime: "10 min read", excerpt: "Celebrating performing arts, rituals, and social practices that define cultures..." }
+      ],
+    },
+    destinations: {
+      name: "Destinations",
+      description: "Exploring the world's most fascinating and diverse travel destinations",
+      articles: [
+        { id: "1", slug: "hidden-gems-off-the-beaten-path-destinations", title: "Hidden Gems: Off the Beaten Path Destinations", date: "2026-01-08", readTime: "8 min read", excerpt: "Discover extraordinary destinations that remain untouched by mass tourism, offering authentic experiences and pristine beauty..." },
+        { id: "2", slug: "luxury-travel-destinations-2026-ultra-premium", title: "Luxury Travel Destinations 2026: Ultra Premium Experiences", date: "2026-01-07", readTime: "9 min read", excerpt: "Explore the most exclusive and luxurious destinations offering unparalleled experiences for discerning travelers in 2026..." },
+        { id: "3", slug: "adventure-travel-destinations-2026-thrill-seekers", title: "Adventure Travel Destinations 2026: For Thrill Seekers", date: "2026-01-06", readTime: "8 min read", excerpt: "Discover the most exhilarating adventure destinations that will challenge your limits and provide unforgettable experiences in 2026..." },
+        { id: "4", slug: "romantic-getaways-destinations-couples", title: "Romantic Getaways: Perfect Destinations for Couples", date: "2026-01-05", readTime: "8 min read", excerpt: "Discover the most romantic destinations around the world that will strengthen your bond and create unforgettable memories for couples..." },
+        { id: "5", slug: "family-travel-destinations-kids-friendly", title: "Family Travel Destinations: Kid-Friendly Adventures", date: "2026-01-04", readTime: "8 min read", excerpt: "Explore the best destinations that offer fun, educational, and safe experiences for families traveling with children of all ages..." },
+        { id: "6", slug: "budget-travel-destinations-affordable-options", title: "Budget Travel Destinations: Affordable Options Worldwide", date: "2026-01-03", readTime: "8 min read", excerpt: "Discover amazing destinations that offer incredible experiences without breaking the bank, proving that great travel doesn't have to cost a fortune..." },
+        { id: "7", slug: "solo-travel-destinations-safe-solo", title: "Solo Travel Destinations: Safe and Welcoming Places", date: "2026-01-02", readTime: "8 min read", excerpt: "Discover the safest and most welcoming destinations for solo travelers, offering opportunities for personal growth and adventure..." },
+        { id: "8", slug: "eco-tourism-destinations-sustainable-travel", title: "Eco-Tourism Destinations: Sustainable Travel Experiences", date: "2026-01-01", readTime: "8 min read", excerpt: "Explore destinations that prioritize environmental conservation and sustainable tourism practices while offering incredible natural experiences..." }
+      ],
+    },
+    culinary: {
+      name: "Culinary Tourism",
+      description: "Exploring the world's food cultures, culinary traditions, and gastronomic experiences",
+      articles: [
+        { id: "1", slug: "culinary-journeys-around-world", title: "Culinary Journeys: Exploring Food Cultures Around the World", date: "2026-01-08", readTime: "8 min read", excerpt: "Embark on a global culinary adventure exploring diverse food cultures, traditions, and flavors from every corner of the world..." },
+        { id: "2", slug: "street-food-adventures-global", title: "Street Food Adventures: Global Street Food Experiences", date: "2026-01-07", readTime: "8 min read", excerpt: "Discover the world's best street food scenes and authentic local flavors from bustling markets to roadside vendors..." },
+        { id: "3", slug: "wine-regions-tourism-guide", title: "Wine Region Tourism: A Complete Guide to Viticultural Destinations", date: "2026-01-06", readTime: "8 min read", excerpt: "Explore the world's premier wine regions offering exceptional tasting experiences, vineyard tours, and culinary pairings..." },
+        { id: "4", slug: "cooking-classes-cultural-immersion", title: "Cooking Classes: Cultural Immersion Through Culinary Education", date: "2026-01-05", readTime: "8 min read", excerpt: "Discover how cooking classes around the world offer deep cultural immersion and authentic culinary experiences..." },
+        { id: "5", slug: "food-festivals-cultural-celebrations", title: "Food Festivals: Cultural Celebrations and Culinary Events", date: "2026-01-04", readTime: "8 min read", excerpt: "Explore the world's most exciting food festivals that celebrate culinary traditions and bring communities together..." },
+        { id: "6", slug: "farm-to-table-experiences", title: "Farm-to-Table Experiences: Connecting with Agricultural Origins", date: "2026-01-03", readTime: "8 min read", excerpt: "Discover farm-to-table experiences that connect travelers with agricultural origins and sustainable food practices..." },
+        { id: "7", slug: "food-markets-cultural-hubs", title: "Food Markets: Cultural Hubs of Culinary Traditions", date: "2026-01-02", readTime: "8 min read", excerpt: "Explore the world's most vibrant food markets that serve as cultural hubs of culinary traditions and local life..." },
+        { id: "8", slug: "fine-dining-cultural-experiences", title: "Fine Dining Cultural Experiences: Gastronomic Excellence and Cultural Expression", date: "2026-01-01", readTime: "8 min read", excerpt: "Discover how fine dining establishments serve as cultural expressions of regional identity and culinary artistry..." }
+      ],
+    },
+    beach: {
+      name: "Beach Destinations",
+      description: "Discover the world's most beautiful beaches, coastal resorts, and seaside experiences",
+      articles: [
+        { id: "1", slug: "tropical-paradise-beaches-2026", title: "Tropical Paradise Beaches: Ultimate Island Getaways 2026", date: "2026-01-08", readTime: "8 min read", excerpt: "Explore the most stunning tropical beaches offering crystal-clear waters, pristine sands, and luxury resort experiences..." },
+        { id: "2", slug: "secluded-beaches-hidden-coastal-gems", title: "Secluded Beaches: Hidden Coastal Gems Off the Beaten Path", date: "2026-01-07", readTime: "8 min read", excerpt: "Discover exclusive beach destinations that remain untouched by mass tourism, offering pristine beauty and tranquility..." },
+        { id: "3", slug: "luxury-beach-resorts-ultimate-experiences", title: "Luxury Beach Resorts: Ultimate Coastal Experiences", date: "2026-01-06", readTime: "8 min read", excerpt: "Experience the world's most exclusive beachfront properties offering unparalleled luxury and personalized services..." },
+        { id: "4", slug: "surfing-destinations-best-waves-world", title: "Surfing Destinations: Best Waves Around the World", date: "2026-01-05", readTime: "8 min read", excerpt: "Find the perfect waves at the world's top surfing destinations catering to all skill levels..." },
+        { id: "5", slug: "family-friendly-beaches-kids-safe", title: "Family-Friendly Beaches: Safe Coastal Adventures for Kids", date: "2026-01-04", readTime: "8 min read", excerpt: "Discover beaches that offer safe swimming, kid-friendly activities, and family-oriented amenities..." },
+        { id: "6", slug: "romantic-beach-getaways-couples", title: "Romantic Beach Getaways: Perfect Coastal Escapes for Couples", date: "2026-01-03", readTime: "8 min read", excerpt: "Explore intimate beach destinations ideal for honeymoons, anniversaries, and romantic retreats..." },
+        { id: "7", slug: "adventure-beaches-water-sports-activities", title: "Adventure Beaches: Water Sports and Coastal Activities", date: "2026-01-02", readTime: "8 min read", excerpt: "Experience beaches offering thrilling water sports, diving, snorkeling, and other aquatic adventures..." },
+        { id: "8", slug: "eco-beaches-sustainable-coastal-tourism", title: "Eco Beaches: Sustainable Coastal Tourism Experiences", date: "2026-01-01", readTime: "8 min read", excerpt: "Visit environmentally conscious beaches committed to conservation and sustainable tourism practices..." }
+      ],
+    },
+    "city-breaks": {
+      name: "City Breaks",
+      description: "Short urban escapes, metropolitan adventures, and cultural city experiences",
+      articles: [
+        { id: "1", slug: "luxury-city-breaks-ultra-premium", title: "Luxury City Breaks: Ultra Premium Urban Experiences", date: "2026-01-08", readTime: "8 min read", excerpt: "Indulge in the most exclusive city experiences with premium accommodations, fine dining, and VIP access..." },
+        { id: "2", slug: "family-friendly-city-breaks", title: "Family-Friendly City Breaks: Urban Adventures for All Ages", date: "2026-01-07", readTime: "7 min read", excerpt: "Discover cities that offer engaging activities, attractions, and amenities perfect for family vacations..." },
+        { id: "3", slug: "adventure-city-breaks-active-urban", title: "Adventure City Breaks: Active Urban Exploration", date: "2026-01-06", readTime: "8 min read", excerpt: "Experience cities through an adventurous lens with urban hiking, cycling, and active exploration..." },
+        { id: "4", slug: "cultural-city-breaks-arts-culture", title: "Cultural City Breaks: Arts, Museums, and Cultural Immersion", date: "2026-01-05", readTime: "9 min read", excerpt: "Immerse yourself in the rich cultural offerings of world-class cities with museums, galleries, and performances..." },
+        { id: "5", slug: "foodie-city-breaks-culinary-destinations", title: "Foodie City Breaks: Culinary Destinations and Gastronomy", date: "2026-01-04", readTime: "8 min read", excerpt: "Savor the flavors of cosmopolitan cities through food tours, local cuisine, and culinary experiences..." },
+        { id: "6", slug: "romantic-city-breaks-love-connections", title: "Romantic City Breaks: Love and Connection in Urban Settings", date: "2026-01-03", readTime: "7 min read", excerpt: "Find romance in the heart of cities with intimate restaurants, scenic views, and couple-friendly activities..." },
+        { id: "7", slug: "budget-city-breaks-affordable-urban", title: "Budget City Breaks: Affordable Urban Getaways", date: "2026-01-02", readTime: "7 min read", excerpt: "Explore cities on a budget with free attractions, affordable accommodations, and value experiences..." },
+        { id: "8", slug: "solo-city-breaks-independent-travel", title: "Solo City Breaks: Independent Urban Travel Experiences", date: "2026-01-01", readTime: "8 min read", excerpt: "Navigate cities as a solo traveler with safety tips, social opportunities, and enriching experiences..." }
+      ],
     }
     // Add more subcategories as needed...
   }

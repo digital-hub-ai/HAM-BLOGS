@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const baseUrl = 'https://aether-nexus.vercel.app';
+    const baseUrl = 'https://ham-blogs.vercel.app/';
     const currentDate = new Date().toISOString();
     
     // Generate XML sitemap index

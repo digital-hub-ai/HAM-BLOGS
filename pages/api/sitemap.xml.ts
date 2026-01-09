@@ -148,7 +148,66 @@ function getAllBlogPostSlugs() {
       'iot-data-analytics-big-data-processing',
       'wireless-protocols-bluetooth-wifi-zigbee',
       'iot-device-management-scaling-solutions',
-      'ai-machine-learning-iot-applications'
+      'ai-machine-learning-iot-applications',
+      'safari-lodges-africa-most-exclusive-experiences',
+      'swiss-alps-luxury-ski-resorts-comparison',
+      'private-villa-rentals-caribbean-paradise',
+      'wine-country-getaways-napa-valley-luxury',
+      'yacht-charters-mediterranean-2026-guide',
+      'top-luxury-resorts-maldives-2026-guide',
+      'private-jet-charter-guide-ultimate',
+      'michelin-star-dining-around-world',
+      'best-extreme-sports-destinations-2026',
+      'hiking-trails-most-breathtaking-views',
+      'mountain-climbing-essential-gear-guide',
+      'scuba-diving-most-incredible-underwater-sites',
+      'safari-adventures-beyond-african-territory',
+      'backpacking-through-remote-destinations',
+      'adventure-travel-safety-tips-experts',
+      'multi-sport-adventure-races-around-world',
+      'ancient-temples-hidden-archaeological-wonders',
+      'traditional-festivals-around-world-cultural-celebrations',
+      'world-heritage-sites-preserving-human-history',
+      'ancient-trade-routes-cultural-exchange-pathways',
+      'tradition-crafts-endangered-art-forms',
+      'oral-traditions-stories-passed-down-through-generations',
+      'cultural-etiquette-travel-guidelines-respectful-tourism',
+      'intangible-heritage-unesco-list-cultural-practices',
+      'hidden-gems-off-the-beaten-path-destinations',
+      'luxury-travel-destinations-2026-ultra-premium',
+      'adventure-travel-destinations-2026-thrill-seekers',
+      'romantic-getaways-destinations-couples',
+      'family-travel-destinations-kids-friendly',
+      'budget-travel-destinations-affordable-options',
+      'solo-travel-destinations-safe-solo',
+      'eco-tourism-destinations-sustainable-travel',
+      'culinary-journeys-around-world',
+      'street-food-adventures-global',
+      'wine-regions-tourism-guide',
+      'cooking-classes-cultural-immersion',
+      'food-festivals-cultural-celebrations',
+      'farm-to-table-experiences',
+      'food-markets-cultural-hubs',
+      'fine-dining-cultural-experiences',
+      'tropical-paradise-beaches-2026',
+      'secluded-beaches-hidden-coastal-gems',
+      'luxury-beach-resorts-ultimate-experiences',
+      'surfing-destinations-best-waves-world',
+      'family-friendly-beaches-kids-safe',
+      'romantic-beach-getaways-couples',
+      'adventure-beaches-water-sports-activities',
+      'eco-beaches-sustainable-coastal-tourism',
+      'luxury-city-breaks-ultra-premium',
+      'family-friendly-city-breaks',
+      'adventure-city-breaks-active-urban',
+      'cultural-city-breaks-arts-culture',
+      'foodie-city-breaks-culinary-destinations',
+      'romantic-city-breaks-love-connections',
+      'budget-city-breaks-affordable-urban',
+      'solo-city-breaks-independent-travel',
+      'oral-traditions-stories-passed-down-through-generations',
+      'cultural-etiquette-travel-guidelines-respectful-tourism',
+      'intangible-heritage-unesco-list-cultural-practices'
     ];
   } catch (error) {
     console.error('Error reading blog directory:', error);
@@ -216,7 +275,7 @@ function getAllCategoriesAndSubcategories() {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const baseUrl = 'https://aether-nexus.vercel.app';
+    const baseUrl = 'https://ham-blogs.vercel.app/';
     const currentDate = new Date().toISOString();
     
     // Generate XML sitemap
