@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function BlogPost() {
   const router = useRouter();
   const [bookmarked, setBookmarked] = useState(false);
-  const [relatedArticles, setRelatedArticles] = useState([]);
+  const [relatedArticles, setRelatedArticles] = useState<{ id: string; title: string; slug: string; excerpt: string; }[]>([]);
 
   useEffect(() => {
     // Check if article is bookmarked
