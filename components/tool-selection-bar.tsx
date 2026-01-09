@@ -24,8 +24,8 @@ export default function ToolSelectionBar({
   const [searchTerm, setSearchTerm] = useState('');
   const [showSuggestions, setShowSuggestions] = useState(false);
 
-  const selectedToolData = availableTools.filter(tool => tool !== undefined && tools.includes(tool.name)) as Tool[];
-  const filteredSuggestions = availableTools.filter(tool => tool !== undefined && 
+  const selectedToolData = availableTools.filter(tool => tool !== undefined && tool.name && tools.includes(tool.name)) as Tool[];
+  const filteredSuggestions = availableTools.filter(tool => tool !== undefined && tool.name && 
     !tools.includes(tool.name) &&
     tool.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
     tools.length < maxTools
