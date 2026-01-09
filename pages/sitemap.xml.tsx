@@ -1,6 +1,4 @@
 import { GetServerSideProps } from 'next';
-import { ReadStream, createReadStream, statSync } from 'fs';
-import { join } from 'path';
 
 // Function to get all blog post slugs from the blog directory
 function getAllBlogPostSlugs() {
