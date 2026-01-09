@@ -28,7 +28,7 @@ export default function FocusCrystal() {
     const favoriteTools: Tool[] = [];
     favorites.forEach(favId => {
       const tool = tools.find(t => t && t.id === favId);
-      if (tool) {
+      if (tool && tool.name) {
         favoriteTools.push(tool);
       }
     });
