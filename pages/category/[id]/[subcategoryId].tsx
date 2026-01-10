@@ -4,6 +4,32 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import SEO from "../../../components/Seo/SEO";
 
+// Map category IDs to their respective blog paths
+const getCategoryPath = (categoryId: string): string => {
+  const categoryPaths: Record<string, string> = {
+    fashion: 'blog/fashion-style',
+    ai: 'blog',
+    quantum: 'blog',
+    blockchain: 'blog',
+    luxury: 'blog',
+    cloud: 'blog',
+    cybersecurity: 'blog',
+    iot: 'blog',
+    adventure: 'blog',
+    culture: 'blog',
+    destinations: 'blog',
+    culinary: 'blog',
+    beach: 'blog',
+    'city-breaks': 'blog',
+    home: 'blog',
+    wellness: 'blog',
+    mindfulness: 'blog',
+    productivity: 'blog'
+  };
+  
+  return categoryPaths[categoryId] || 'blog';
+};
+
 export default function SubcategoryPage() {
   const router = useRouter();
   const { id, subcategoryId } = router.query;
@@ -82,9 +108,14 @@ export default function SubcategoryPage() {
       name: "Fashion & Style",
       description: "Trend reports, designer profiles, and style guides",
       articles: [
-        { id: "1", slug: "spring-2026-fashion-week-highlights-trends", title: "Spring 2026 Fashion Week Highlights", date: "2026-01-08", readTime: "6 min read", excerpt: "Key trends from the major fashion weeks around the globe..." },
-        { id: "2", slug: "sustainable-luxury-fashion-brands-guide", title: "Sustainable Luxury Fashion Brands", date: "2026-01-07", readTime: "8 min read", excerpt: "Exploring eco-conscious luxury fashion labels making a difference..." },
-        { id: "3", slug: "building-capsule-wardrobe-essentials", title: "Building a Capsule Wardrobe", date: "2026-01-06", readTime: "7 min read", excerpt: "How to curate a timeless and versatile wardrobe..." }
+        { id: "1", slug: "spring-2026-fashion-week-highlights", title: "Spring 2026 Fashion Week Highlights", date: "2026-01-08", readTime: "6 min read", excerpt: "Key trends from the major fashion weeks around the globe..." },
+        { id: "2", slug: "sustainable-luxury-fashion-brands", title: "Sustainable Luxury Fashion Brands", date: "2026-01-07", readTime: "8 min read", excerpt: "Exploring eco-conscious luxury fashion labels making a difference..." },
+        { id: "3", slug: "building-a-capsule-wardrobe", title: "Building a Capsule Wardrobe", date: "2026-01-06", readTime: "7 min read", excerpt: "How to curate a timeless and versatile wardrobe..." },
+        { id: "4", slug: "minimalist-fashion-less-is-more-philosophy", title: "Minimalist Fashion: Less is More Philosophy", date: "2026-01-05", readTime: "8 min read", excerpt: "Embracing simplicity and quality over quantity in fashion choices..." },
+        { id: "5", slug: "street-style-evolution-sidewalks-runways", title: "Street Style Evolution: From Sidewalks to Runways", date: "2026-01-04", readTime: "7 min read", excerpt: "How urban fashion influences high-end design and runway trends..." },
+        { id: "6", slug: "psychology-of-color-in-fashion", title: "The Psychology of Color in Fashion", date: "2026-01-03", readTime: "6 min read", excerpt: "How colors influence mood, perception, and personal expression..." },
+        { id: "7", slug: "rise-circular-fashion-renting-reselling", title: "The Rise of Circular Fashion: Renting and Reselling", date: "2026-01-02", readTime: "8 min read", excerpt: "Exploring the growing trend of sustainable fashion consumption..." },
+        { id: "8", slug: "ethical-fashion-certifications-what-to-look-for", title: "Ethical Fashion Certifications: What to Look For", date: "2026-01-01", readTime: "7 min read", excerpt: "Understanding certifications that guarantee ethical production standards..." }
       ],
     },
     cybersecurity: {
@@ -198,6 +229,62 @@ export default function SubcategoryPage() {
         { id: "7", slug: "budget-city-breaks-affordable-urban", title: "Budget City Breaks: Affordable Urban Getaways", date: "2026-01-02", readTime: "7 min read", excerpt: "Explore cities on a budget with free attractions, affordable accommodations, and value experiences..." },
         { id: "8", slug: "solo-city-breaks-independent-travel", title: "Solo City Breaks: Independent Urban Travel Experiences", date: "2026-01-01", readTime: "8 min read", excerpt: "Navigate cities as a solo traveler with safety tips, social opportunities, and enriching experiences..." }
       ],
+    },
+    home: {
+      name: "Home & Interior",
+      description: "Design inspiration, interior decorating tips, and home improvement ideas",
+      articles: [
+        { id: "1", slug: "maximizing-small-spaces-apartment-living-tips", title: "Maximizing Small Spaces: Apartment Living Tips", date: "2026-01-08", readTime: "7 min read", excerpt: "Creative solutions for making the most of compact living spaces..." },
+        { id: "2", slug: "sustainable-home-design-eco-friendly-choices", title: "Sustainable Home Design: Eco-Friendly Choices", date: "2026-01-07", readTime: "8 min read", excerpt: "How to create an environmentally conscious living space..." },
+        { id: "3", slug: "minimalist-interior-design-principles", title: "Minimalist Interior Design Principles", date: "2026-01-06", readTime: "6 min read", excerpt: "Embracing simplicity and functionality in home design..." },
+        { id: "4", slug: "smart-home-automation-integration-guide", title: "Smart Home Automation: Integration Guide", date: "2026-01-05", readTime: "9 min read", excerpt: "Complete guide to integrating technology into your living space..." },
+        { id: "5", slug: "color-psychology-in-home-decor", title: "Color Psychology in Home Decor", date: "2026-01-04", readTime: "7 min read", excerpt: "How colors affect mood and behavior in different rooms..." },
+        { id: "6", slug: "seasonal-decor-tips-transitional-design", title: "Seasonal Decor Tips: Transitional Design", date: "2026-01-03", readTime: "6 min read", excerpt: "Easy ways to update your home decor with the changing seasons..." },
+        { id: "7", slug: "budget-home-makeover-ideas", title: "Budget Home Makeover Ideas", date: "2026-01-02", readTime: "8 min read", excerpt: "Transform your space without breaking the bank..." },
+        { id: "8", slug: "indoor-plants-air-quality-benefits", title: "Indoor Plants and Air Quality Benefits", date: "2026-01-01", readTime: "7 min read", excerpt: "Choosing the right plants to improve your home environment..." }
+      ],
+    },
+    wellness: {
+      name: "Wellness",
+      description: "Holistic health, mental well-being, and life balance strategies",
+      articles: [
+        { id: "1", slug: "morning-routines-setting-positive-tone", title: "Morning Routines: Setting a Positive Tone", date: "2026-01-08", readTime: "6 min read", excerpt: "Start your day with practices that promote mental clarity and focus..." },
+        { id: "2", slug: "mindfulness-meditation-beginners-guide", title: "Mindfulness Meditation: Beginner's Guide", date: "2026-01-07", readTime: "7 min read", excerpt: "Essential techniques for developing a sustainable meditation practice..." },
+        { id: "3", slug: "sleep-hygiene-improving-rest-quality", title: "Sleep Hygiene: Improving Rest Quality", date: "2026-01-06", readTime: "8 min read", excerpt: "Strategies for achieving deeper, more restorative sleep..." },
+        { id: "4", slug: "nutritional-wellness-balanced-eating-habits", title: "Nutritional Wellness: Balanced Eating Habits", date: "2026-01-05", readTime: "9 min read", excerpt: "Developing sustainable approaches to healthy eating..." },
+        { id: "5", slug: "physical-fitness-integrating-into-daily-life", title: "Physical Fitness: Integrating Into Daily Life", date: "2026-01-04", readTime: "7 min read", excerpt: "Simple exercises and movement practices for busy schedules..." },
+        { id: "6", slug: "stress-management-techniques-modern-life", title: "Stress Management Techniques for Modern Life", date: "2026-01-03", readTime: "8 min read", excerpt: "Effective strategies for managing stress in our fast-paced world..." },
+        { id: "7", slug: "digital-detox-benefits-and-strategies", title: "Digital Detox: Benefits and Strategies", date: "2026-01-02", readTime: "7 min read", excerpt: "Reclaiming mental space by reducing digital overload..." },
+        { id: "8", slug: "building-resilience-personal-growth", title: "Building Resilience Through Personal Growth", date: "2026-01-01", readTime: "9 min read", excerpt: "Developing emotional strength and adaptability for life challenges..." }
+      ],
+    },
+    mindfulness: {
+      name: "Mindfulness",
+      description: "Practical guidance on meditation, awareness, and mindful living practices",
+      articles: [
+        { id: "1", slug: "introduction-to-mindfulness-meditation", title: "Introduction to Mindfulness Meditation", date: "2026-01-08", readTime: "6 min read", excerpt: "Learn the fundamentals of mindfulness meditation and its transformative benefits..." },
+        { id: "2", slug: "breathing-techniques-for-stress-relief", title: "Breathing Techniques for Stress Relief", date: "2026-01-07", readTime: "7 min read", excerpt: "Essential breathing exercises to calm your mind and reduce anxiety..." },
+        { id: "3", slug: "mindful-eating-practices", title: "Mindful Eating Practices", date: "2026-01-06", readTime: "8 min read", excerpt: "How to cultivate awareness and appreciation during meals..." },
+        { id: "4", slug: "body-scan-meditation-guide", title: "Body Scan Meditation: A Complete Guide", date: "2026-01-05", readTime: "9 min read", excerpt: "Step-by-step instructions for this powerful awareness technique..." },
+        { id: "5", slug: "mindfulness-in-daily-activities", title: "Mindfulness in Daily Activities", date: "2026-01-04", readTime: "7 min read", excerpt: "Integrate mindfulness into routine tasks like walking, cleaning, and working..." },
+        { id: "6", slug: "loving-kindness-meditation-practice", title: "Loving-Kindness Meditation Practice", date: "2026-01-03", readTime: "8 min read", excerpt: "Cultivate compassion for yourself and others through this practice..." },
+        { id: "7", slug: "mindfulness-for-better-sleep", title: "Mindfulness for Better Sleep", date: "2026-01-02", readTime: "7 min read", excerpt: "Techniques to quiet your mind and prepare for restful sleep..." },
+        { id: "8", slug: "developing-regular-mindfulness-habit", title: "Developing a Regular Mindfulness Habit", date: "2026-01-01", readTime: "9 min read", excerpt: "Strategies to maintain a consistent mindfulness practice in daily life..." }
+      ],
+    },
+    productivity: {
+      name: "Productivity",
+      description: "Strategies and techniques for optimizing performance, time management, and goal achievement",
+      articles: [
+        { id: "1", slug: "time-blocking-mastery-maximizing-focus", title: "Time Blocking Mastery: Maximizing Focus and Output", date: "2026-01-08", readTime: "8 min read", excerpt: "Learn how to structure your day for peak performance using time-blocking techniques..." },
+        { id: "2", slug: "pomodoro-technique-optimized-work-sessions", title: "Pomodoro Technique: Optimized Work Sessions", date: "2026-01-07", readTime: "7 min read", excerpt: "Master the art of focused work intervals with strategic breaks..." },
+        { id: "3", slug: "priority-frameworks-eisenhower-matrix", title: "Priority Frameworks: Eisenhower Matrix and Beyond", date: "2026-01-06", readTime: "9 min read", excerpt: "Discover proven systems for distinguishing urgent from important tasks..." },
+        { id: "4", slug: "habit-stacking-building-productive-routines", title: "Habit Stacking: Building Productive Routines", date: "2026-01-05", readTime: "8 min read", excerpt: "Learn how to chain positive behaviors for compound productivity gains..." },
+        { id: "5", slug: "digital-minimalism-eliminating-distractions", title: "Digital Minimalism: Eliminating Distractions", date: "2026-01-04", readTime: "10 min read", excerpt: "Strategies for reducing digital noise and increasing focused work time..." },
+        { id: "6", slug: "energy-management-not-time-management", title: "Energy Management, Not Time Management", date: "2026-01-03", readTime: "9 min read", excerpt: "Optimize your work schedule according to your natural energy rhythms..." },
+        { id: "7", slug: "goal-setting-smart-objectives-achievement", title: "Goal Setting: SMART Objectives Achievement", date: "2026-01-02", readTime: "8 min read", excerpt: "Framework for setting and accomplishing meaningful goals efficiently..." },
+        { id: "8", slug: "workflow-optimization-streamlining-tasks", title: "Workflow Optimization: Streamlining Daily Tasks", date: "2026-01-01", readTime: "10 min read", excerpt: "Methods for eliminating inefficiencies and automating routine processes..." }
+      ],
     }
     // Add more subcategories as needed...
   }
@@ -299,7 +386,7 @@ export default function SubcategoryPage() {
                 transitionDelay: `${index * 100}ms`
               }}
             >
-              <Link href={`/blog/${article.slug}`}>
+              <Link href={`/${getCategoryPath(id as string)}/${article.slug}`}>
                 <div className="group bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 hover:bg-white/20 transition-all duration-300 cursor-pointer">
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="text-xl font-bold text-white group-hover:text-yellow-400 transition-colors">
