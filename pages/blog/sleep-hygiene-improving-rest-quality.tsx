@@ -186,7 +186,7 @@ export default function BlogPost() {
           </p>
           
           <p className="mb-6 text-gray-200">
-            If you must use electronic devices before bed, dim the brightness and maintain a distance from the screen. Many devices now have "night mode" settings that reduce blue light emission.
+            If you must use electronic devices before bed, dim the brightness and maintain a distance from the screen. Many devices now have &quot;night mode&quot; settings that reduce blue light emission.
           </p>
 
           <h2 className="text-2xl font-bold text-white mt-12 mb-6">Diet and Sleep Considerations</h2>
@@ -216,7 +216,33 @@ export default function BlogPost() {
           <p className="mb-6 text-gray-200">
             Consistency in exercise timing can help regulate your circadian rhythm. If possible, try to exercise at the same time daily to reinforce your natural sleep-wake cycle.
           </p>
-
+          
+          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6 mt-8">
+            <h3 className="text-xl font-bold text-white mb-3">Key Considerations</h3>
+            <ul className="text-gray-300 space-y-2">
+              <li className="flex items-start">
+                <span className="text-yellow-400 mr-2">•</span>
+                Start with small, manageable changes to your sleep routine
+              </li>
+              <li className="flex items-start">
+                <span className="text-yellow-400 mr-2">•</span>
+                Be consistent with your sleep schedule, even on weekends
+              </li>
+              <li className="flex items-start">
+                <span className="text-yellow-400 mr-2">•</span>
+                Create a comfortable sleep environment
+              </li>
+              <li className="flex items-start">
+                <span className="text-yellow-400 mr-2">•</span>
+                Limit exposure to screens before bedtime
+              </li>
+              <li className="flex items-start">
+                <span className="text-yellow-400 mr-2">•</span>
+                Consider professional help if sleep problems persist
+              </li>
+            </ul>
+          </div>
+          
           <h2 className="text-2xl font-bold text-white mt-12 mb-6">Conclusion</h2>
           
           <p className="mb-6 text-gray-200">
