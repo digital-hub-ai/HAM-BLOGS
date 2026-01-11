@@ -43,7 +43,7 @@ export default function RothIRAVsTraditionalIRAFStockInvestment() {
       <SEO
         title="Roth IRA vs Traditional IRA for Stock Investment - HAM BLOGS"
         description="Understanding retirement account options for maximizing stock investment returns and choosing the right account for your financial situation."
-        canonicalUrl="https://ham-blogs.vercel.app/blog/stocks/roth-ira-vs-traditional-ira-stock-investment"
+        canonical="https://ham-blogs.vercel.app/blog/stocks/roth-ira-vs-traditional-ira-stock-investment"
       />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-12">

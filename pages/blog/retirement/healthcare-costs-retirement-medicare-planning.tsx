@@ -43,7 +43,7 @@ export default function HealthcareCostsRetirementMedicarePlanning() {
       <SEO
         title="Healthcare Costs in Retirement: Medicare Planning - HAM BLOGS"
         description="Understanding healthcare expenses in retirement and how to plan for medical costs."
-        canonicalUrl="https://ham-blogs.vercel.app/blog/retirement/healthcare-costs-retirement-medicare-planning"
+        canonical="https://ham-blogs.vercel.app/blog/retirement/healthcare-costs-retirement-medicare-planning"
       />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-12">

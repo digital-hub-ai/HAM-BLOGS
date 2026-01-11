@@ -43,7 +43,7 @@ export default function EstatePlanningRetirementLegacyConsiderations() {
       <SEO
         title="Estate Planning for Retirement: Legacy Considerations - HAM BLOGS"
         description="How to plan your estate to protect your assets and provide for your heirs."
-        canonicalUrl="https://ham-blogs.vercel.app/blog/retirement/estate-planning-retirement-legacy-considerations"
+        canonical="https://ham-blogs.vercel.app/blog/retirement/estate-planning-retirement-legacy-considerations"
       />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-12">

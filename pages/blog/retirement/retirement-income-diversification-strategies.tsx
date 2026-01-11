@@ -43,7 +43,7 @@ export default function RetirementIncomeDiversificationStrategies() {
       <SEO
         title="Retirement Income Diversification Strategies - HAM BLOGS"
         description="Creating multiple streams of income to ensure financial security throughout retirement."
-        canonicalUrl="https://ham-blogs.vercel.app/blog/retirement/retirement-income-diversification-strategies"
+        canonical="https://ham-blogs.vercel.app/blog/retirement/retirement-income-diversification-strategies"
       />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-12">

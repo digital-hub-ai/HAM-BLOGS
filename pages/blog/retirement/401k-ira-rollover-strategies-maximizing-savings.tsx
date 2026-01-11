@@ -43,7 +43,7 @@ export default function FourOOneKRolloverStrategiesMaximizingSavings() {
       <SEO
         title="401(k) and IRA Rollover Strategies for Maximizing Savings - HAM BLOGS"
         description="Understanding the best approaches for managing your retirement accounts and optimizing your investment returns."
-        canonicalUrl="https://ham-blogs.vercel.app/blog/retirement/401k-ira-rollover-strategies-maximizing-savings"
+        canonical="https://ham-blogs.vercel.app/blog/retirement/401k-ira-rollover-strategies-maximizing-savings"
       />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-12">

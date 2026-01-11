@@ -43,7 +43,7 @@ export default function TechnicalAnalysisToolsChartPatternsTrading() {
       <SEO
         title="Technical Analysis: Tools and Chart Patterns for Trading - HAM BLOGS"
         description="Essential technical indicators and chart patterns every trader should know to make informed trading decisions."
-        canonicalUrl="https://ham-blogs.vercel.app/blog/stocks/technical-analysis-tools-chart-patterns-trading"
+        canonical="https://ham-blogs.vercel.app/blog/stocks/technical-analysis-tools-chart-patterns-trading"
       />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-12">

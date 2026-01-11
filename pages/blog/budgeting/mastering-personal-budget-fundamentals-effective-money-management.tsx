@@ -43,7 +43,7 @@ export default function MasteringPersonalBudgetFundamentalsEffectiveMoneyManagem
       <SEO
         title="Mastering Personal Budget: Fundamentals of Effective Money Management - HAM BLOGS"
         description="Essential principles and strategies for creating and maintaining a successful personal budget."
-        canonicalUrl="https://ham-blogs.vercel.app/blog/budgeting/mastering-personal-budget-fundamentals-effective-money-management"
+        canonical="https://ham-blogs.vercel.app/blog/budgeting/mastering-personal-budget-fundamentals-effective-money-management"
       />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-12">

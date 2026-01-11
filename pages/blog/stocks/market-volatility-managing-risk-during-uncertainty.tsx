@@ -43,7 +43,7 @@ export default function MarketVolatilityManagingRiskDuringUncertainty() {
       <SEO
         title="Market Volatility: Managing Risk During Uncertain Times - HAM BLOGS"
         description="Strategies for navigating market turbulence and protecting your investments during periods of uncertainty and volatility."
-        canonicalUrl="https://ham-blogs.vercel.app/blog/stocks/market-volatility-managing-risk-during-uncertainty"
+        canonical="https://ham-blogs.vercel.app/blog/stocks/market-volatility-managing-risk-during-uncertainty"
       />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-12">

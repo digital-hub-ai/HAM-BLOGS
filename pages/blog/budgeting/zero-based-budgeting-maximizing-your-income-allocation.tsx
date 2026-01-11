@@ -43,7 +43,7 @@ export default function ZeroBasedBudgetingMaximizingYourIncomeAllocation() {
       <SEO
         title="Zero-Based Budgeting: Maximizing Your Income Allocation - HAM BLOGS"
         description="A comprehensive approach to budgeting where every dollar is assigned a specific purpose."
-        canonicalUrl="https://ham-blogs.vercel.app/blog/budgeting/zero-based-budgeting-maximizing-your-income-allocation"
+        canonical="https://ham-blogs.vercel.app/blog/budgeting/zero-based-budgeting-maximizing-your-income-allocation"
       />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-12">

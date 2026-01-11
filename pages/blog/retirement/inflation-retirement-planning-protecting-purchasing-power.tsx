@@ -43,7 +43,7 @@ export default function InflationRetirementPlanningProtectingPurchasingPower() {
       <SEO
         title="Inflation and Retirement Planning: Protecting Purchasing Power - HAM BLOGS"
         description="Strategies to protect your retirement savings from the eroding effects of inflation."
-        canonicalUrl="https://ham-blogs.vercel.app/blog/retirement/inflation-retirement-planning-protecting-purchasing-power"
+        canonical="https://ham-blogs.vercel.app/blog/retirement/inflation-retirement-planning-protecting-purchasing-power"
       />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-12">

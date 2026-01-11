@@ -43,7 +43,7 @@ export default function SocialSecurityOptimizationWhenToClaimBenefits() {
       <SEO
         title="Social Security Optimization: When to Claim Benefits - HAM BLOGS"
         description="Strategic timing for claiming Social Security benefits to maximize your lifetime income."
-        canonicalUrl="https://ham-blogs.vercel.app/blog/retirement/social-security-optimization-when-to-claim-benefits"
+        canonical="https://ham-blogs.vercel.app/blog/retirement/social-security-optimization-when-to-claim-benefits"
       />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-12">

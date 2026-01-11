@@ -43,7 +43,7 @@ export default function FiftyThirtyTwentyRuleApplyingSimpleBudgetingFormula() {
       <SEO
         title="50/30/20 Rule: Applying the Simple Budgeting Formula - HAM BLOGS"
         description="How to use the popular budgeting method that divides your income into three simple categories."
-        canonicalUrl="https://ham-blogs.vercel.app/blog/budgeting/50-30-20-rule-applying-simple-budgeting-formula"
+        canonical="https://ham-blogs.vercel.app/blog/budgeting/50-30-20-rule-applying-simple-budgeting-formula"
       />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-12">

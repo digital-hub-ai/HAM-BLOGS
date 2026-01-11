@@ -43,7 +43,7 @@ export default function BeginnersGuideStockMarketInvesting2026() {
       <SEO
         title="Beginner's Guide to Stock Market Investing in 2026 - HAM BLOGS"
         description="Essential fundamentals for new investors entering the stock market in 2026. Learn key concepts, strategies, and common mistakes to avoid."
-        canonicalUrl="https://ham-blogs.vercel.app/blog/stocks/beginners-guide-stock-market-investing-2026"
+        canonical="https://ham-blogs.vercel.app/blog/stocks/beginners-guide-stock-market-investing-2026"
       />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-12">
