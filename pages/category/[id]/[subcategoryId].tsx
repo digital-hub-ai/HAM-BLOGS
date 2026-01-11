@@ -24,7 +24,15 @@ const getCategoryPath = (categoryId: string): string => {
     home: 'blog',
     wellness: 'blog',
     mindfulness: 'blog',
-    productivity: 'blog'
+    productivity: 'blog',
+    crypto: 'blog/crypto',
+    investing: 'blog',
+    'real-estate': 'blog/real-estate',
+    stocks: 'blog/stocks',
+    retirement: 'blog/retirement',
+    budgeting: 'blog/budgeting',
+    tech: 'blog/tech',
+    finance: 'blog'
   };
   
   return categoryPaths[categoryId] || 'blog';
@@ -285,7 +293,105 @@ export default function SubcategoryPage() {
         { id: "7", slug: "goal-setting-smart-objectives-achievement", title: "Goal Setting: SMART Objectives Achievement", date: "2026-01-02", readTime: "8 min read", excerpt: "Framework for setting and accomplishing meaningful goals efficiently..." },
         { id: "8", slug: "workflow-optimization-streamlining-tasks", title: "Workflow Optimization: Streamlining Daily Tasks", date: "2026-01-01", readTime: "10 min read", excerpt: "Methods for eliminating inefficiencies and automating routine processes..." }
       ],
-    }
+    },
+    investing: {
+      name: "Investing",
+      description: "Strategic investment approaches, portfolio management, and wealth building techniques",
+      articles: [
+        { id: "1", slug: "long-term-investment-strategies-wealth-building", title: "Long-Term Investment Strategies for Wealth Building", date: "2026-01-08", readTime: "10 min read", excerpt: "Understanding buy-and-hold strategies and compound interest for building long-term wealth..." },
+        { id: "2", slug: "diversification-portfolio-risk-management", title: "Diversification: Portfolio Risk Management", date: "2026-01-07", readTime: "9 min read", excerpt: "How to spread investments across different asset classes to minimize risk..." },
+        { id: "3", slug: "value-investing-warren-buffett-approach", title: "Value Investing: Warren Buffett Approach", date: "2026-01-06", readTime: "11 min read", excerpt: "Deep dive into the value investing principles of one of history's greatest investors..." },
+        { id: "4", slug: "growth-investing-technology-stocks", title: "Growth Investing: Technology Stocks", date: "2026-01-05", readTime: "8 min read", excerpt: "Strategies for identifying and investing in high-growth technology companies..." },
+        { id: "5", slug: "index-fund-investing-low-cost-strategy", title: "Index Fund Investing: Low-Cost Strategy", date: "2026-01-04", readTime: "9 min read", excerpt: "Why index funds are an excellent choice for long-term portfolio growth..." },
+        { id: "6", slug: "dollar-cost-averaging-effective-approach", title: "Dollar Cost Averaging: An Effective Approach", date: "2026-01-03", readTime: "8 min read", excerpt: "How systematic investing can reduce timing risk and smooth market volatility..." },
+        { id: "7", slug: "emerging-markets-investment-opportunities", title: "Emerging Markets: Investment Opportunities", date: "2026-01-02", readTime: "10 min read", excerpt: "Exploring investment potential in rapidly developing economies worldwide..." },
+        { id: "8", slug: "esg-investing-sustainable-portfolio", title: "ESG Investing: Building a Sustainable Portfolio", date: "2026-01-01", readTime: "9 min read", excerpt: "How environmental, social, and governance factors can impact investment returns..." }
+      ],
+    },
+    crypto: {
+      name: "Cryptocurrency",
+      description: "Digital assets, blockchain technology, and decentralized finance innovations",
+      articles: [
+        { id: "1", slug: "bitcoin-halving-implications-market-dynamics", title: "Bitcoin Halving: Implications for Market Dynamics", date: "2026-01-08", readTime: "10 min read", excerpt: "Understanding the impact of Bitcoin's programmed supply reduction on market cycles..." },
+        { id: "2", slug: "ethereum-roadmap-transition-proof-stake", title: "Ethereum Roadmap: Transition to Proof of Stake", date: "2026-01-07", readTime: "9 min read", excerpt: "Exploring Ethereum's evolution from proof of work to a more sustainable consensus mechanism..." },
+        { id: "3", slug: "stablecoins-role-digital-economy", title: "Stablecoins: Role in the Digital Economy", date: "2026-01-06", readTime: "8 min read", excerpt: "How stable digital currencies bridge traditional and cryptocurrency markets..." },
+        { id: "4", slug: "decentralized-finance-defi-opportunities-risks", title: "Decentralized Finance: Opportunities and Risks", date: "2026-01-05", readTime: "11 min read", excerpt: "Examining the revolutionary potential and inherent risks of DeFi protocols..." },
+        { id: "5", slug: "nft-marketplace-evolution-digital-ownership", title: "NFT Marketplace Evolution: Digital Ownership", date: "2026-01-04", readTime: "9 min read", excerpt: "How non-fungible tokens are reshaping digital ownership and creator economies..." },
+        { id: "6", slug: "central-bank-digital-currencies-cbdcs-impact", title: "Central Bank Digital Currencies: CBDCs Impact", date: "2026-01-03", readTime: "10 min read", excerpt: "Government-backed digital currencies and their implications for financial systems..." },
+        { id: "7", slug: "regulatory-landscape-crypto-compliance", title: "Regulatory Landscape: Crypto Compliance", date: "2026-01-02", readTime: "12 min read", excerpt: "Navigating the evolving regulatory environment for cryptocurrency investments..." },
+        { id: "8", slug: "web3-technology-empowering-user-ownership", title: "Web3 Technology: Empowering User Ownership", date: "2026-01-01", readTime: "11 min read", excerpt: "How blockchain technology is enabling decentralized internet and user-controlled data..." }
+      ]
+    },
+    "real-estate": {
+      name: "Real Estate",
+      description: "Property investment, market trends, and real estate strategies",
+      articles: [
+        { id: "1", slug: "real-estate-market-trends-2026-investment-opportunities", title: "Real Estate Market Trends 2026: Investment Opportunities", date: "2026-01-08", readTime: "10 min read", excerpt: "Analyzing emerging trends in the real estate market and identifying profitable investment opportunities for 2026..." },
+        { id: "2", slug: "commercial-real-estate-investment-strategies", title: "Commercial Real Estate: Investment Strategies", date: "2026-01-07", readTime: "9 min read", excerpt: "Exploring different approaches to commercial real estate investment and maximizing returns..." },
+        { id: "3", slug: "residential-property-flipping-pros-cons", title: "Residential Property Flipping: Pros and Cons", date: "2026-01-06", readTime: "8 min read", excerpt: "A comprehensive guide to property flipping, including costs, risks, and potential profits..." },
+        { id: "4", slug: "real-estate-crowdfunding-platforms-rental-income", title: "Real Estate Crowdfunding Platforms for Rental Income", date: "2026-01-05", readTime: "11 min read", excerpt: "How to invest in real estate through crowdfunding platforms and generate rental income..." },
+        { id: "5", slug: "international-real-estate-investment-considerations", title: "International Real Estate Investment: Key Considerations", date: "2026-01-04", readTime: "10 min read", excerpt: "Understanding the complexities and opportunities of investing in foreign real estate markets..." },
+        { id: "6", slug: "real-estate-tech-innovation-prop-tech-trends", title: "Real Estate Tech Innovation: PropTech Trends", date: "2026-01-03", readTime: "9 min read", excerpt: "How technology is transforming real estate transactions, management, and investment strategies..." },
+        { id: "7", slug: "first-time-home-buyers-guide-mortgage-options", title: "First-Time Home Buyers Guide: Mortgage Options", date: "2026-01-02", readTime: "8 min read", excerpt: "Navigating mortgage options and financing strategies for first-time home buyers..." },
+        { id: "8", slug: "real-estate-tax-strategies-maximizing-deductions", title: "Real Estate Tax Strategies: Maximizing Deductions", date: "2026-01-01", readTime: "12 min read", excerpt: "Effective tax strategies for real estate investors to minimize liabilities and maximize deductions..." }
+      ],
+    },
+    stocks: {
+      name: "Stock Market",
+      description: "Investment strategies, market analysis, and stock trading insights",
+      articles: [
+        { id: "1", slug: "beginners-guide-stock-market-investing-2026", title: "Beginner's Guide to Stock Market Investing in 2026", date: "2026-01-08", readTime: "10 min read", excerpt: "Essential fundamentals for new investors entering the stock market in 2026..." },
+        { id: "2", slug: "value-investing-strategies-warren-buffett-techniques", title: "Value Investing Strategies: Learning from Warren Buffett", date: "2026-01-07", readTime: "12 min read", excerpt: "Time-tested value investing principles and techniques from the Oracle of Omaha..." },
+        { id: "3", slug: "day-trading-vs-long-term-investing-which-suits-you", title: "Day Trading vs Long-Term Investing: Which Suits You?", date: "2026-01-06", readTime: "9 min read", excerpt: "Comparing two popular investment approaches and determining which aligns with your goals..." },
+        { id: "4", slug: "dividend-investing-strategies-building-passive-income", title: "Dividend Investing Strategies: Building Passive Income", date: "2026-01-05", readTime: "11 min read", excerpt: "How to build a portfolio focused on dividend-paying stocks for steady income..." },
+        { id: "5", slug: "technical-analysis-tools-chart-patterns-trading", title: "Technical Analysis: Tools and Chart Patterns for Trading", date: "2026-01-04", readTime: "10 min read", excerpt: "Essential technical indicators and chart patterns every trader should know..." },
+        { id: "6", slug: "esg-investing-green-stocks-sustainable-portfolios", title: "ESG Investing: Green Stocks and Sustainable Portfolios", date: "2026-01-03", readTime: "9 min read", excerpt: "Building environmentally and socially responsible portfolios with ESG criteria..." },
+        { id: "7", slug: "market-volatility-managing-risk-during-uncertainty", title: "Market Volatility: Managing Risk During Uncertain Times", date: "2026-01-02", readTime: "10 min read", excerpt: "Strategies for navigating market turbulence and protecting your investments..." },
+        { id: "8", slug: "roth-ira-vs-traditional-ira-stock-investment", title: "Roth IRA vs Traditional IRA for Stock Investment", date: "2026-01-01", readTime: "11 min read", excerpt: "Understanding retirement account options for maximizing stock investment returns..." }
+      ],
+    },
+    retirement: {
+      name: "Retirement Planning",
+      description: "Strategies for a secure and comfortable retirement",
+      articles: [
+        { id: "1", slug: "comprehensive-guide-retirement-planning-starting-early", title: "The Comprehensive Guide to Retirement Planning: Starting Early", date: "2026-01-08", readTime: "12 min read", excerpt: "Essential strategies for beginning your retirement planning journey and maximizing your long-term financial security..." },
+        { id: "2", slug: "401k-ira-rollover-strategies-maximizing-savings", title: "401(k) and IRA Rollover Strategies for Maximizing Savings", date: "2026-01-07", readTime: "10 min read", excerpt: "Understanding the best approaches for managing your retirement accounts and optimizing your investment returns..." },
+        { id: "3", slug: "social-security-optimization-when-to-claim-benefits", title: "Social Security Optimization: When to Claim Benefits", date: "2026-01-06", readTime: "11 min read", excerpt: "Strategic timing for claiming Social Security benefits to maximize your lifetime income..." },
+        { id: "4", slug: "healthcare-costs-retirement-medicare-planning", title: "Healthcare Costs in Retirement: Medicare Planning", date: "2026-01-05", readTime: "13 min read", excerpt: "Understanding healthcare expenses in retirement and how to plan for medical costs..." },
+        { id: "5", slug: "retirement-income-diversification-strategies", title: "Retirement Income Diversification Strategies", date: "2026-01-04", readTime: "10 min read", excerpt: "Creating multiple streams of income to ensure financial security throughout retirement..." },
+        { id: "6", slug: "estate-planning-retirement-legacy-considerations", title: "Estate Planning for Retirement: Legacy Considerations", date: "2026-01-03", readTime: "12 min read", excerpt: "How to plan your estate to protect your assets and provide for your heirs..." },
+        { id: "7", slug: "retirement-lifestyle-planning-non-financial-aspects", title: "Retirement Lifestyle Planning: Non-Financial Aspects", date: "2026-01-02", readTime: "9 min read", excerpt: "Preparing for the non-financial challenges of retirement including health, relationships, and purpose..." },
+        { id: "8", slug: "inflation-retirement-planning-protecting-purchasing-power", title: "Inflation and Retirement Planning: Protecting Purchasing Power", date: "2026-01-01", readTime: "11 min read", excerpt: "Strategies to protect your retirement savings from the eroding effects of inflation..." }
+      ],
+    },
+    budgeting: {
+      name: "Budgeting",
+      description: "Strategies for managing personal finances and creating effective budgets",
+      articles: [
+        { id: "1", slug: "mastering-personal-budget-fundamentals-effective-money-management", title: "Mastering Personal Budget: Fundamentals of Effective Money Management", date: "2026-01-08", readTime: "10 min read", excerpt: "Essential principles and strategies for creating and maintaining a successful personal budget..." },
+        { id: "2", slug: "zero-based-budgeting-maximizing-your-income-allocation", title: "Zero-Based Budgeting: Maximizing Your Income Allocation", date: "2026-01-07", readTime: "9 min read", excerpt: "A comprehensive approach to budgeting where every dollar is assigned a specific purpose..." },
+        { id: "3", slug: "50-30-20-rule-applying-simple-budgeting-formula", title: "50/30/20 Rule: Applying the Simple Budgeting Formula", date: "2026-01-06", readTime: "8 min read", excerpt: "How to use the popular budgeting method that divides your income into three simple categories..." },
+        { id: "4", slug: "digital-budgeting-tools-apps-tracking-expenses-effectively", title: "Digital Budgeting Tools: Apps for Tracking Expenses Effectively", date: "2026-01-05", readTime: "11 min read", excerpt: "Exploring the best digital tools and applications for managing your budget and tracking expenses..." },
+        { id: "5", slug: "budgeting-for-emergencies-building-financial-security", title: "Budgeting for Emergencies: Building Financial Security", date: "2026-01-04", readTime: "9 min read", excerpt: "Creating an emergency fund as part of your budget to protect against unexpected expenses..." },
+        { id: "6", slug: "budgeting-for-major-purchases-saving-strategies", title: "Budgeting for Major Purchases: Saving Strategies", date: "2026-01-03", readTime: "10 min read", excerpt: "How to budget effectively for big-ticket items like homes, cars, or vacations..." },
+        { id: "7", slug: "budgeting-in-marriage-aligning-financial-goals-couples", title: "Budgeting in Marriage: Aligning Financial Goals for Couples", date: "2026-01-02", readTime: "12 min read", excerpt: "Strategies for managing finances together as a married couple or committed partners..." },
+        { id: "8", slug: "budgeting-for-retirement-integrating-long-term-savings", title: "Budgeting for Retirement: Integrating Long-Term Savings", date: "2026-01-01", readTime: "11 min read", excerpt: "Incorporating retirement savings into your budget for long-term financial security..." }
+      ],
+    },
+    tech: {
+      name: "Technology",
+      description: "Latest trends, innovations, and insights in technology",
+      articles: [
+        { id: "1", slug: "post-tech-1", title: "The Future of Artificial Intelligence in Technology", date: "2026-01-08", readTime: "8 min read", excerpt: "Exploring how AI is transforming the technology landscape and what to expect in the coming years..." },
+        { id: "2", slug: "post-tech-2", title: "Quantum Computing: The Next Frontier in Technology", date: "2026-01-07", readTime: "10 min read", excerpt: "Understanding quantum computing advancements and their potential impact on the tech industry..." },
+        { id: "3", slug: "post-tech-3", title: "Cybersecurity Trends Shaping the Tech Industry", date: "2026-01-06", readTime: "9 min read", excerpt: "How cybersecurity threats are evolving and the measures tech companies are taking..." },
+        { id: "4", slug: "post-tech-4", title: "Cloud Computing: Innovations and Future Directions", date: "2026-01-05", readTime: "11 min read", excerpt: "The evolution of cloud computing and emerging technologies in the cloud space..." },
+        { id: "5", slug: "post-tech-5", title: "Blockchain Technology: Beyond Cryptocurrency", date: "2026-01-04", readTime: "10 min read", excerpt: "Exploring practical applications of blockchain technology in various tech sectors..." },
+        { id: "6", slug: "post-tech-6", title: "IoT: Connecting the Digital and Physical Worlds", date: "2026-01-03", readTime: "9 min read", excerpt: "How the Internet of Things is revolutionizing technology integration in everyday life..." },
+        { id: "7", slug: "post-tech-7", title: "5G and Edge Computing: The New Tech Infrastructure", date: "2026-01-02", readTime: "10 min read", excerpt: "The impact of 5G networks and edge computing on technology development..." },
+        { id: "8", slug: "post-tech-8", title: "Sustainable Technology: Green Tech Innovations", date: "2026-01-01", readTime: "11 min read", excerpt: "How technology companies are developing sustainable and environmentally friendly solutions..." }
+      ]
+    },
     // Add more subcategories as needed...
   }
   
@@ -386,7 +492,7 @@ export default function SubcategoryPage() {
                 transitionDelay: `${index * 100}ms`
               }}
             >
-              <Link href={`/${getCategoryPath(id as string)}/${article.slug}`}>
+              <Link href={`/${getCategoryPath(subcategoryId as string)}/${article.slug}`}>
                 <div className="group bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 hover:bg-white/20 transition-all duration-300 cursor-pointer">
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="text-xl font-bold text-white group-hover:text-yellow-400 transition-colors">
