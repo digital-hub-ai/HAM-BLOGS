@@ -84,7 +84,7 @@ export default function BlogPost() {
             />
             
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              Serverless computing has revolutionized how developers deploy and manage applications, abstracting away infrastructure management and focusing on code. While the term "serverless" is somewhat misleading since servers still exist, the concept refers to the fact that developers no longer need to provision, scale, or manage servers themselves. This paradigm shift brings significant benefits but also introduces new challenges that organizations must consider.
+              Serverless computing has revolutionized how developers deploy and manage applications, abstracting away infrastructure management and focusing on code. While the term &quot;serverless&quot; is somewhat misleading since servers still exist, the concept refers to the fact that developers no longer need to provision, scale, or manage servers themselves. This paradigm shift brings significant benefits but also introduces new challenges that organizations must consider.
             </p>
             
             <h2 className="text-2xl font-bold text-white mb-4 mt-8">Benefits of Serverless Architecture</h2>

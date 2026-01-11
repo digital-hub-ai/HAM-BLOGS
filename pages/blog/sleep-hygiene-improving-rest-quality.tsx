@@ -120,7 +120,7 @@ export default function BlogPost() {
 
         <main className="prose prose-invert max-w-none">
           <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-            Sleep hygiene encompasses a series of behavioral and environmental practices designed to promote better quality sleep and daytime alertness. In our modern, always-connected world, many people struggle with sleep issues that can significantly impact their physical health, mental well-being, and daily functioning. Quality sleep is not a luxury but a biological necessity that supports immune function, cognitive performance, emotional regulation, and physical restoration. Understanding and implementing proper sleep hygiene practices can help reset your natural sleep-wake cycle and create the optimal conditions for restorative rest. The good news is that most sleep problems can be addressed through consistent, healthy sleep habits that don't require medication or complex interventions.
+            Sleep hygiene encompasses a series of behavioral and environmental practices designed to promote better quality sleep and daytime alertness. In our modern, always-connected world, many people struggle with sleep issues that can significantly impact their physical health, mental well-being, and daily functioning. Quality sleep is not a luxury but a biological necessity that supports immune function, cognitive performance, emotional regulation, and physical restoration. Understanding and implementing proper sleep hygiene practices can help reset your natural sleep-wake cycle and create the optimal conditions for restorative rest. The good news is that most sleep problems can be addressed through consistent, healthy sleep habits that don&#39;t require medication or complex interventions.
           </p>
 
           <h2 className="text-2xl font-bold text-white mt-12 mb-6">Understanding Sleep Architecture</h2>
@@ -136,7 +136,7 @@ export default function BlogPost() {
           <h2 className="text-2xl font-bold text-white mt-12 mb-6">Optimizing Your Sleep Environment</h2>
           
           <p className="mb-6 text-gray-200">
-            Temperature plays a crucial role in sleep quality. The ideal bedroom temperature is between 60-67°F (15-19°C), supporting your body's natural temperature drop that signals sleep readiness. Consider using breathable bedding, fans, or air conditioning to maintain this optimal range.
+            Temperature plays a crucial role in sleep quality. The ideal bedroom temperature is between 60-67°F (15-19°C), supporting your body&#39;s natural temperature drop that signals sleep readiness. Consider using breathable bedding, fans, or air conditioning to maintain this optimal range.
           </p>
           
           <p className="mb-6 text-gray-200">
@@ -164,7 +164,7 @@ export default function BlogPost() {
           <h2 className="text-2xl font-bold text-white mt-12 mb-6">Pre-Sleep Routine Development</h2>
           
           <p className="mb-6 text-gray-200">
-            A consistent pre-sleep routine signals to your brain that it's time to wind down. This might include reading, taking a warm bath, practicing gentle stretches, or engaging in relaxation techniques. Choose activities that are calming and enjoyable for you.
+            A consistent pre-sleep routine signals to your brain that it&#39;s time to wind down. This might include reading, taking a warm bath, practicing gentle stretches, or engaging in relaxation techniques. Choose activities that are calming and enjoyable for you.
           </p>
           
           <p className="mb-6 text-gray-200">
