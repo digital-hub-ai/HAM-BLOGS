@@ -185,7 +185,7 @@ export default function InflationRetirementPlanningProtectingPurchasingPower() {
             <li><strong>TIPS (10-20%):</strong> Direct inflation protection with principal adjustments</li>
             <li><strong>Real Estate (10-20%):</strong> Hedge against inflation with property appreciation</li>
             <li><strong>Commodities (5-10%):</strong> Protection during periods of high inflation</li>
-            <li><li><strong>Other Bonds (5-15%):</strong> Stability and income, though limited inflation protection</li>
+            <li><strong>Other Bonds (5-15%):</strong> Stability and income, though limited inflation protection</li>
           </ul>
 
           <h3 className="text-xl font-semibold text-white mt-6 mb-3">International Diversification</h3>

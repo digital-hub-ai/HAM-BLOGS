@@ -95,12 +95,12 @@ const BlogPost = () => {
         <main className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 mb-12">
           <div className="prose prose-lg prose-invert max-w-none">
             <p className="lead text-xl text-gray-200 mb-8">
-              Mindfulness doesn't have to be confined to formal meditation sessions. You can cultivate present-moment awareness during everyday activities, turning routine tasks into opportunities for practice and insight. This approach, sometimes called "informal mindfulness," can help you develop continuous awareness throughout your day.
+              Mindfulness doesn&#39;t have to be confined to formal meditation sessions. You can cultivate present-moment awareness during everyday activities, turning routine tasks into opportunities for practice and insight. This approach, sometimes called &quot;informal mindfulness,&quot; can help you develop continuous awareness throughout your day.
             </p>
 
             <h2 className="text-2xl font-bold text-white mb-4 mt-10">The Power of Informal Practice</h2>
             <p>
-              While sitting meditation is valuable, informal mindfulness practice allows you to bring awareness to the majority of your day that isn't spent in formal meditation. This continuous practice helps strengthen your mindfulness muscle and integrates awareness into your daily life.
+              While sitting meditation is valuable, informal mindfulness practice allows you to bring awareness to the majority of your day that isn&#39;t spent in formal meditation. This continuous practice helps strengthen your mindfulness muscle and integrates awareness into your daily life.
             </p>
 
             <p>
@@ -109,7 +109,7 @@ const BlogPost = () => {
 
             <h2 className="text-2xl font-bold text-white mb-4 mt-10">Mindful Walking</h2>
             <p>
-              Walking is one of the easiest activities to practice mindfulness with, whether you're taking a stroll, walking to your car, or moving around your home:
+              Walking is one of the easiest activities to practice mindfulness with, whether you&#39;re taking a stroll, walking to your car, or moving around your home:
             </p>
 
             <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -165,14 +165,14 @@ const BlogPost = () => {
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">Organizing</h3>
             <ul className="list-disc pl-6 mb-4 space-y-2">
               <li>Notice the weight of items as you lift them</li>
-              <li>Feel the surfaces you're organizing</li>
+              <li>Feel the surfaces you&#39;re organizing</li>
               <li>See how spaces transform as you work</li>
-              <li>Appreciate the order you're creating</li>
+              <li>Appreciate the order you&#39;re creating</li>
             </ul>
 
             <h2 className="text-2xl font-bold text-white mb-4 mt-10">Mindful Eating</h2>
             <p>
-              Though covered in detail in another article, mindful eating deserves mention here as it's one of the most accessible daily practices:
+              Though covered in detail in another article, mindful eating deserves mention here as it&#39;s one of the most accessible daily practices:
             </p>
 
             <ul className="list-disc pl-6 mb-6 space-y-2">

@@ -160,7 +160,7 @@ export default function BudgetingEmergencies() {
             Incorporate emergency fund contributions into your regular budgeting process to ensure consistent progress toward your goal:
           </p>
 
-          <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Zero-Based Budgeting</h =3>
+          <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Zero-Based Budgeting</h3>
           <p className="text-gray-700 mb-4 leading-relaxed">
             Assign every dollar a specific purpose, including emergency fund contributions. This approach ensures that building financial security becomes a non-negotiable expense rather than an afterthought.
           </p>
