@@ -6,7 +6,7 @@ const DigitalWellnessFramework = () => {
   return (
     <>
       <Head>
-        <title>Your Team Is Drowning in Notifications. Here's a Systematic Framework for Digital Wellness. | Atlas Neo</title>
+        <title>Your Team Is Drowning in Notifications. Here&#39;s a Systematic Framework for Digital Wellness. | Atlas Neo</title>
         <meta name="description" content="A systematic framework to solve notification overload and restore digital wellness. Learn how to reduce distractions, improve focus, and create a healthier work environment for your team." />
         <meta name="keywords" content="digital wellness, notification overload, team productivity, focus management, workplace distractions, communication strategy, remote work wellness" />
         <meta name="author" content="Atlas Neo Team" />
@@ -124,7 +124,7 @@ const DigitalWellnessFramework = () => {
           <div className="relative max-w-6xl mx-auto px-6 py-24">
             <div className="text-center">
               <h1 className="text-5xl font-bold mb-6">Your Team Is Drowning in Notifications</h1>
-              <p className="text-2xl mb-8 text-purple-100">Here's a Systematic Framework for Digital Wellness</p>
+              <p className="text-2xl mb-8 text-purple-100">Here&#39;s a Systematic Framework for Digital Wellness</p>
               <div className="flex items-center justify-center space-x-6 text-purple-100">
                 <span className="flex items-center">
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -175,12 +175,12 @@ const DigitalWellnessFramework = () => {
           
           {/* The Notification Crisis */}
           <section id="the-notification-crisis" className="bg-white rounded-xl shadow-lg p-8">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">The Silent Crisis Killing Your Team's Productivity</h2>
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">The Silent Crisis Killing Your Team&#39;s Productivity</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
-              <p className="text-xl leading-relaxed mb-6">Sarah stares at her screen. Slack pings. Email dings. Teams notification flashes. Phone buzzes. Calendar reminder pops up. In the last 10 minutes, she's received 7 notifications and hasn't written a single line of code.</p>
+              <p className="text-xl leading-relaxed mb-6">Sarah stares at her screen. Slack pings. Email dings. Teams notification flashes. Phone buzzes. Calendar reminder pops up. In the last 10 minutes, she&#39;s received 7 notifications and hasn&#39;t written a single line of code.</p>
               
               <div className="bg-red-50 border-l-4 border-red-500 p-6 mb-8">
-                <p className="text-red-800 font-medium">This isn't multitasking. This's cognitive assault. Your team is drowning in a sea of digital noise, and the cost is staggering.</p>
+                <p className="text-red-800 font-medium">This isn&#39;t multitasking. This is cognitive assault. Your team is drowning in a sea of digital noise, and the cost is staggering.</p>
               </div>
 
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">The Numbers That Should Scare You</h3>
@@ -203,7 +203,7 @@ const DigitalWellnessFramework = () => {
                 </div>
               </div>
 
-              <p className="text-lg leading-relaxed mb-6">The average knowledge worker checks email 74 times daily and Slack 56 times. That's a notification every 4 minutes. No wonder your team can't focus.</p>
+              <p className="text-lg leading-relaxed mb-6">The average knowledge worker checks email 74 times daily and Slack 56 times. That&#39;s a notification every 4 minutes. No wonder your team can&#39;t focus.</p>
 
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">Why Traditional Solutions Fail</h3>
               <div className="space-y-4 mb-8">

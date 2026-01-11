@@ -75,7 +75,7 @@ export default function AncientTradeRoutesCulturalExchange() {
             Spanning over 4,000 miles from China to the Mediterranean, the Silk Road was not a single road but a network of trade routes active from roughly 130 BCE to 1453 CE. Beyond silk, these routes carried precious stones, spices, ivory, and metals. More importantly, they facilitated the exchange of ideas, technologies, and religions. Buddhism spread from India to Central Asia and China along these routes, while Islamic culture moved eastward. Papermaking technology traveled from China to the Islamic world and eventually to Europe.
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-8 mb-4">The Incense Route: Arabia's Fragrant Highway</h2>
+          <h2 className="text-2xl font-bold text-white mt-8 mb-4">The Incense Route: Arabia&#39;s Fragrant Highway</h2>
           <p className="text-gray-300 mb-4">
             This network of trade routes enabled the transport of frankincense and myrrh from southern Arabia to the Mediterranean world. The Nabataeans mastered desert navigation and established cities like Petra as crucial trading hubs. The route facilitated not only commerce in aromatic resins but also cultural exchanges between Arab, Greek, Roman, and Jewish communities, contributing to the development of unique architectural and artistic traditions in the region.
           </p>
@@ -97,7 +97,7 @@ export default function AncientTradeRoutesCulturalExchange() {
 
           <h2 className="text-2xl font-bold text-white mt-8 mb-4">The Tea Horse Road</h2>
           <p className="text-gray-300 mb-4">
-            This high-altitude network connected China's tea-producing regions with Tibet and present-day Myanmar, facilitating the exchange of tea for horses. The route, crossing the treacherous Himalayas, promoted cultural exchanges between Han Chinese, Tibetans, and various ethnic groups of Yunnan and Sichuan provinces. Tibetan Buddhism spread along these routes, while Chinese agricultural techniques moved westward.
+            This high-altitude network connected China&#39;s tea-producing regions with Tibet and present-day Myanmar, facilitating the exchange of tea for horses. The route, crossing the treacherous Himalayas, promoted cultural exchanges between Han Chinese, Tibetans, and various ethnic groups of Yunnan and Sichuan provinces. Tibetan Buddhism spread along these routes, while Chinese agricultural techniques moved westward.
           </p>
 
           <h2 className="text-2xl font-bold text-white mt-8 mb-4">Legacy of Ancient Trade Networks</h2>

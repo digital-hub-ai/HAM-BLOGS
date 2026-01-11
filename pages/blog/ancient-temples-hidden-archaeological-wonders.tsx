@@ -92,7 +92,7 @@ export default function AncientTemplesHiddenWonders() {
 
           <h2 className="text-2xl font-bold text-white mt-8 mb-4">Takht-i-Bahi, Pakistan</h2>
           <p className="text-gray-300 mb-4">
-            Perched on a hilltop in the Mardan district, Takht-i-Bahi's Buddhist monastery complex survived centuries of invasions due to its strategic location. Dating from the 1st century BCE to the 7th century CE, the site features stupas, monasteries, and assembly halls that illustrate the evolution of Buddhist architecture and monastic life in Gandhara.
+            Perched on a hilltop in the Mardan district, Takht-i-Bahi&#39;s Buddhist monastery complex survived centuries of invasions due to its strategic location. Dating from the 1st century BCE to the 7th century CE, the site features stupas, monasteries, and assembly halls that illustrate the evolution of Buddhist architecture and monastic life in Gandhara.
           </p>
 
           <h2 className="text-2xl font-bold text-white mt-8 mb-4">Banteay Chhmar, Cambodia</h2>

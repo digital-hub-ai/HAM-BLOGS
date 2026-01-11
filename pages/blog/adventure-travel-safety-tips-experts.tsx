@@ -117,11 +117,11 @@ export default function AdventureTravelSafetyTips() {
 
           <h2 className="text-2xl font-bold text-white mt-8 mb-4">Risk Assessment and Decision Making</h2>
           <p className="text-gray-300 mb-4">
-            Continuously assess conditions and be willing to modify plans. Use the "10 and 2" rule: if weather is deteriorating, turn back when conditions reach 10% of the maximum you'd accept. Don't let previous investment in time or money influence unsafe decisions. Trust your instincts if something feels wrong.
+            Continuously assess conditions and be willing to modify plans. Use the &quot;10 and 2&quot; rule: if weather is deteriorating, turn back when conditions reach 10% of the maximum you&#39;d accept. Don't let previous investment in time or money influence unsafe decisions. Trust your instincts if something feels wrong.
           </p>
 
           <p className="text-gray-300 mb-8">
-            Adventure travel safety is an ongoing process that begins with preparation and continues throughout your journey. The most experienced adventurers are those who respect the environment, stay within their limits, and make conservative decisions in uncertain situations. By following these expert safety tips, you can enjoy incredible adventures while minimizing risks.
+            Adventure travel safety is an ongoing process that begins with preparation and continues throughout your journey. The most experienced adventurers&#39; are those who respect the environment, stay within their limits, and make conservative decisions in uncertain situations. By following these expert safety tips, you can enjoy incredible adventures while minimizing risks.
           </p>
         </div>
 

@@ -121,7 +121,7 @@ export default function AdventureBeachesWaterSportsActivities() {
           </p>
 
           <p className="text-gray-300 mb-8">
-            Adventure beaches represent the ultimate destination for water sports enthusiasts and thrill-seekers, offering diverse activities that take advantage of natural coastal features and optimal conditions. These destinations provide opportunities to learn new skills, challenge personal limits, and experience the ocean in dynamic and exciting ways. Whether seeking gentle exploration or extreme thrills, these beaches offer experiences that connect visitors with the ocean's power and beauty through active participation.
+            Adventure beaches represent the ultimate destination for water sports enthusiasts and thrill-seekers, offering diverse activities that take advantage of natural coastal features and optimal conditions. These destinations provide opportunities to learn new skills, challenge personal limits, and experience the ocean in dynamic and exciting ways. Whether seeking gentle exploration or extreme thrills, these beaches offer experiences that connect visitors with the ocean&#39;s power and beauty through active participation.
           </p>
         </div>
 

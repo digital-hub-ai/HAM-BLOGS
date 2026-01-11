@@ -126,7 +126,7 @@ export default function BlogPost() {
           <h2 className="text-2xl font-bold text-white mt-12 mb-6">Urban Adventure Opportunities</h2>
           
           <p className="mb-6 text-gray-200">
-            Modern cities increasingly recognize the demand for active tourism and have developed extensive networks of urban trails, cycling paths, and adventure facilities. These range from elevated parklands like New York's High Line to extensive urban trail systems that wind through city centers, connecting parks and cultural landmarks.
+            Modern cities increasingly recognize the demand for active tourism and have developed extensive networks of urban trails, cycling paths, and adventure facilities. These range from elevated parklands like New York&#39;s High Line to extensive urban trail systems that wind through city centers, connecting parks and cultural landmarks.
           </p>
           
           <p className="mb-6 text-gray-200">
@@ -140,11 +140,11 @@ export default function BlogPost() {
           </p>
           
           <p className="mb-6 text-gray-200">
-            Cape Town offers unparalleled urban adventure opportunities with Table Mountain providing hiking trails of varying difficulty levels, while the Atlantic coastline offers surfing, kayaking, and other water sports. The city's compact layout makes it possible to combine cultural sightseeing with outdoor activities in a single day.
+            Cape Town offers unparalleled urban adventure opportunities with Table Mountain providing hiking trails of varying difficulty levels, while the Atlantic coastline offers surfing, kayaking, and other water sports. The city&#39;s compact layout makes it possible to combine cultural sightseeing with outdoor activities in a single day.
           </p>
           
           <p className="mb-6 text-gray-200">
-            Melbourne has developed an extensive network of urban trails and cycling paths, complemented by laneways that provide unique running and walking routes. The city's proximity to surfing beaches and bushland hiking trails allows for diverse adventure experiences within a short distance of the urban center.
+            Melbourne has developed an extensive network of urban trails and cycling paths, complemented by laneways that provide unique running and walking routes. The city&#39;s proximity to surfing beaches and bushland hiking trails allows for diverse adventure experiences within a short distance of the urban center.
           </p>
 
           <h2 className="text-2xl font-bold text-white mt-12 mb-6">Active Transportation and Exploration</h2>
