@@ -43,7 +43,7 @@ export default function DayTradingVsLongTermInvestingWhichSuitsYou() {
       <SEO
         title="Day Trading vs Long-Term Investing: Which Suits You? - HAM BLOGS"
         description="Comparing two popular investment approaches and determining which aligns with your goals, personality, and risk tolerance."
-        canonicalUrl="https://ham-blogs.vercel.app/blog/stocks/day-trading-vs-long-term-investing-which-suits-you"
+        canonical="https://ham-blogs.vercel.app/blog/stocks/day-trading-vs-long-term-investing-which-suits-you"
       />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-12">

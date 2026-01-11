@@ -43,7 +43,7 @@ export default function RetirementLifestylePlanningNonFinancialAspects() {
       <SEO
         title="Retirement Lifestyle Planning: Non-Financial Aspects - HAM BLOGS"
         description="Preparing for the non-financial challenges of retirement including health, relationships, and purpose."
-        canonicalUrl="https://ham-blogs.vercel.app/blog/retirement/retirement-lifestyle-planning-non-financial-aspects"
+        canonical="https://ham-blogs.vercel.app/blog/retirement/retirement-lifestyle-planning-non-financial-aspects"
       />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-12">

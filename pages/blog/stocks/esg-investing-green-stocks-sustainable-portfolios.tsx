@@ -43,7 +43,7 @@ export default function ESGInvestingGreenStocksSustainablePortfolios() {
       <SEO
         title="ESG Investing: Green Stocks and Sustainable Portfolios - HAM BLOGS"
         description="Building environmentally and socially responsible portfolios with ESG criteria while maintaining strong financial performance."
-        canonicalUrl="https://ham-blogs.vercel.app/blog/stocks/esg-investing-green-stocks-sustainable-portfolios"
+        canonical="https://ham-blogs.vercel.app/blog/stocks/esg-investing-green-stocks-sustainable-portfolios"
       />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-12">

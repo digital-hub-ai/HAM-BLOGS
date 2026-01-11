@@ -43,7 +43,7 @@ export default function ValueInvestingStrategiesWarrenBuffettTechniques() {
       <SEO
         title="Value Investing Strategies: Learning from Warren Buffett - HAM BLOGS"
         description="Time-tested value investing principles and techniques from the Oracle of Omaha. Learn how to identify undervalued companies and build long-term wealth."
-        canonicalUrl="https://ham-blogs.vercel.app/blog/stocks/value-investing-strategies-warren-buffett-techniques"
+        canonical="https://ham-blogs.vercel.app/blog/stocks/value-investing-strategies-warren-buffett-techniques"
       />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-12">

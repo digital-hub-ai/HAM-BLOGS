@@ -43,7 +43,7 @@ export default function ComprehensiveGuideRetirementPlanningStartingEarly() {
       <SEO
         title="The Comprehensive Guide to Retirement Planning: Starting Early - HAM BLOGS"
         description="Essential strategies for beginning your retirement planning journey and maximizing your long-term financial security."
-        canonicalUrl="https://ham-blogs.vercel.app/blog/retirement/comprehensive-guide-retirement-planning-starting-early"
+        canonical="https://ham-blogs.vercel.app/blog/retirement/comprehensive-guide-retirement-planning-starting-early"
       />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-12">

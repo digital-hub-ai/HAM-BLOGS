@@ -43,7 +43,7 @@ export default function DividendInvestingStrategiesBuildingPassiveIncome() {
       <SEO
         title="Dividend Investing Strategies: Building Passive Income - HAM BLOGS"
         description="How to build a portfolio focused on dividend-paying stocks for steady income and long-term wealth growth."
-        canonicalUrl="https://ham-blogs.vercel.app/blog/stocks/dividend-investing-strategies-building-passive-income"
+        canonical="https://ham-blogs.vercel.app/blog/stocks/dividend-investing-strategies-building-passive-income"
       />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-12">
