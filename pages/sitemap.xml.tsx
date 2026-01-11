@@ -219,6 +219,13 @@ function getAllBlogPostSlugs() {
     'zero-based-budgeting-maximizing-your-income-allocation',
     '401k-ira-rollover-strategies-maximizing-savings',
     'comprehensive-guide-retirement-planning-starting-early',
+    // Finance category pages
+    'finance',
+    'finance/budgeting',
+    'finance/retirement',
+    'finance/stocks',
+    'finance/real-estate',
+    'finance/crypto',
     'estate-planning-retirement-legacy-considerations',
     'healthcare-costs-retirement-medicare-planning',
     'inflation-retirement-planning-protecting-purchasing-power',
