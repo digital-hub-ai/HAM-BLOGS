@@ -19,6 +19,7 @@ const getCategoryPath = (categoryId: string): string => {
     culture: 'blog',
     destinations: 'blog',
     culinary: 'blog',
+    food: 'blog',
     beach: 'blog',
     'city-breaks': 'blog',
     home: 'blog',
@@ -32,7 +33,14 @@ const getCategoryPath = (categoryId: string): string => {
     retirement: 'blog/retirement',
     budgeting: 'blog/budgeting',
     tech: 'blog/tech',
-    finance: 'blog'
+    finance: 'blog',
+    fitness: 'blog',
+    'ui-ux': 'blog',
+    graphic: 'blog',
+    architecture: 'blog',
+    'fashion-design': 'blog',
+    interior: 'blog',
+    industrial: 'blog'
   };
   
   return categoryPaths[categoryId] || 'blog';
@@ -390,6 +398,222 @@ export default function SubcategoryPage() {
         { id: "6", slug: "post-tech-6", title: "IoT: Connecting the Digital and Physical Worlds", date: "2026-01-03", readTime: "9 min read", excerpt: "How the Internet of Things is revolutionizing technology integration in everyday life..." },
         { id: "7", slug: "post-tech-7", title: "5G and Edge Computing: The New Tech Infrastructure", date: "2026-01-02", readTime: "10 min read", excerpt: "The impact of 5G networks and edge computing on technology development..." },
         { id: "8", slug: "post-tech-8", title: "Sustainable Technology: Green Tech Innovations", date: "2026-01-01", readTime: "11 min read", excerpt: "How technology companies are developing sustainable and environmentally friendly solutions..." }
+      ]
+    },
+    fitness: {
+      name: "Fitness",
+      description: "Workouts, training programs, and fitness advice for optimal physical health",
+      articles: [
+        { id: "1", slug: "best-cardio-workouts-for-weight-loss", title: "Best Cardio Workouts for Weight Loss", date: "2026-01-08", readTime: "7 min read", excerpt: "Effective cardio exercises to burn calories and boost metabolism for weight loss..." },
+        { id: "2", slug: "strength-training-beginners-guide", title: "Strength Training: Beginners Guide", date: "2026-01-07", readTime: "8 min read", excerpt: "Essential exercises and techniques for starting your strength training journey..." },
+        { id: "3", slug: "high-intensity-interval-training-benefits", title: "High-Intensity Interval Training: Benefits and Workouts", date: "2026-01-06", readTime: "9 min read", excerpt: "How HIIT workouts can maximize fat burning and improve cardiovascular health..." },
+        { id: "4", slug: "functional-fitness-exercises-for-daily-life", title: "Functional Fitness Exercises for Daily Life", date: "2026-01-05", readTime: "7 min read", excerpt: "Practical exercises that improve your ability to perform everyday activities..." },
+        { id: "5", slug: "recovery-and-rest-days-importance", title: "Recovery and Rest Days: Importance for Athletes", date: "2026-01-04", readTime: "6 min read", excerpt: "Understanding why recovery is crucial for muscle growth and injury prevention..." },
+        { id: "6", slug: "home-workout-routines-effective-exercises", title: "Home Workout Routines: Effective Exercises", date: "2026-01-03", readTime: "8 min read", excerpt: "Complete workout routines you can do at home without equipment..." }
+      ]
+    },
+    nutrition: {
+      name: "Nutrition",
+      description: "Healthy eating, diet plans, and nutritional science for optimal wellness",
+      articles: [
+        { id: "1", slug: "balanced-diet-nutrition-basics", title: "Balanced Diet: Nutrition Basics", date: "2026-01-08", readTime: "8 min read", excerpt: "Understanding macronutrients and micronutrients for optimal health..." },
+        { id: "2", slug: "meal-prep-strategies-healthy-eating", title: "Meal Prep Strategies for Healthy Eating", date: "2026-01-07", readTime: "9 min read", excerpt: "Effective meal planning and preparation techniques for consistent healthy eating..." },
+        { id: "3", slug: "superfoods-nutritional-benefits", title: "Superfoods and Their Nutritional Benefits", date: "2026-01-06", readTime: "7 min read", excerpt: "Exploring nutrient-dense foods that provide exceptional health benefits..." },
+        { id: "4", slug: "intermittent-fasting-health-impacts", title: "Intermittent Fasting: Health Impacts", date: "2026-01-05", readTime: "10 min read", excerpt: "Examining the science behind different intermittent fasting approaches..." },
+        { id: "5", slug: "hydration-importance-optimizing-water-intake", title: "Hydration: Optimizing Water Intake", date: "2026-01-04", readTime: "6 min read", excerpt: "Understanding the importance of proper hydration for overall health..." },
+        { id: "6", slug: "vitamins-minerals-essential-nutrients", title: "Vitamins and Minerals: Essential Nutrients", date: "2026-01-03", readTime: "8 min read", excerpt: "Key vitamins and minerals needed for optimal body function..." }
+      ]
+    },
+    mental: {
+      name: "Mental Health",
+      description: "Psychological wellness, mental health strategies, and emotional balance",
+      articles: [
+        { id: "1", slug: "stress-management-techniques", title: "Effective Stress Management Techniques", date: "2026-01-08", readTime: "7 min read", excerpt: "Evidence-based strategies for managing stress and anxiety..." },
+        { id: "2", slug: "mindfulness-meditation-practice", title: "Building a Mindfulness Meditation Practice", date: "2026-01-07", readTime: "8 min read", excerpt: "Getting started with meditation and mindfulness for mental wellness..." },
+        { id: "3", slug: "sleep-quality-importance", title: "Sleep Quality and Its Importance", date: "2026-01-06", readTime: "9 min read", excerpt: "How quality sleep impacts mental and physical health..." },
+        { id: "4", slug: "cognitive-behavioral-techniques", title: "Cognitive Behavioral Techniques", date: "2026-01-05", readTime: "8 min read", excerpt: "Practical CBT strategies for changing thought patterns..." },
+        { id: "5", slug: "building-resilience-overcoming-adversity", title: "Building Resilience and Overcoming Adversity", date: "2026-01-04", readTime: "7 min read", excerpt: "Developing mental strength to cope with life challenges..." },
+        { id: "6", slug: "social-connections-mental-wellness", title: "Social Connections and Mental Wellness", date: "2026-01-03", readTime: "6 min read", excerpt: "The importance of relationships for psychological health..." }
+      ]
+    },
+    longevity: {
+      name: "Longevity",
+      description: "Anti-aging strategies and lifestyle choices for a longer, healthier life",
+      articles: [
+        { id: "1", slug: "anti-aging-nutrition-tips", title: "Anti-Aging Nutrition Tips", date: "2026-01-08", readTime: "8 min read", excerpt: "Foods and nutrients that support cellular health and longevity..." },
+        { id: "2", slug: "exercise-for-healthy-aging", title: "Exercise for Healthy Aging", date: "2026-01-07", readTime: "9 min read", excerpt: "Physical activity strategies that promote healthy aging..." },
+        { id: "3", slug: "cellular-repair-and-regeneration", title: "Cellular Repair and Regeneration", date: "2026-01-06", readTime: "10 min read", excerpt: "Understanding autophagy and cellular renewal processes..." },
+        { id: "4", slug: "telomeres-and-longevity-research", title: "Telomeres and Longevity Research", date: "2026-01-05", readTime: "8 min read", excerpt: "The science of telomeres and their role in aging..." },
+        { id: "5", slug: "hormesis-and-health-benefits", title: "Hormesis and Health Benefits", date: "2026-01-04", readTime: "7 min read", excerpt: "How mild stress can improve resilience and longevity..." },
+        { id: "6", slug: "blue-zones-lifestyle-secrets", title: "Blue Zones: Lifestyle Secrets", date: "2026-01-03", readTime: "9 min read", excerpt: "Lessons from the world's longest-lived populations..." }
+      ]
+    },
+    preventive: {
+      name: "Preventive Care",
+      description: "Health screenings, checkups, and preventive measures for maintaining health",
+      articles: [
+        { id: "1", slug: "annual-health-screenings-importance", title: "Annual Health Screenings and Their Importance", date: "2026-01-08", readTime: "7 min read", excerpt: "Essential health screenings by age and risk factors..." },
+        { id: "2", slug: "vaccination-schedule-adults", title: "Vaccination Schedule for Adults", date: "2026-01-07", readTime: "8 min read", excerpt: "Important vaccines for adults to maintain health..." },
+        { id: "3", slug: "risk-factor-assessment", title: "Risk Factor Assessment and Management", date: "2026-01-06", readTime: "9 min read", excerpt: "Identifying and managing health risk factors..." },
+        { id: "4", slug: "family-history-and-genetics", title: "Family History and Genetic Factors", date: "2026-01-05", readTime: "8 min read", excerpt: "How family history influences health and prevention strategies..." },
+        { id: "5", slug: "environmental-health-factors", title: "Environmental Health Factors", date: "2026-01-04", readTime: "7 min read", excerpt: "Understanding environmental impacts on health..." },
+        { id: "6", slug: "workplace-health-safety", title: "Workplace Health and Safety", date: "2026-01-03", readTime: "8 min read", excerpt: "Maintaining health in various work environments..." }
+      ]
+    },
+    alternative: {
+      name: "Alternative Medicine",
+      description: "Complementary and alternative approaches to health and wellness",
+      articles: [
+        { id: "1", slug: "acupuncture-scientific-evidence", title: "Acupuncture: Scientific Evidence and Benefits", date: "2026-01-08", readTime: "8 min read", excerpt: "Examining the research behind acupuncture and its applications..." },
+        { id: "2", slug: "herbal-medicine-safety-effectiveness", title: "Herbal Medicine: Safety and Effectiveness", date: "2026-01-07", readTime: "9 min read", excerpt: "Common herbal remedies and their scientific backing..." },
+        { id: "3", slug: "yoga-therapeutic-benefits", title: "Yoga: Therapeutic Benefits", date: "2026-01-06", readTime: "7 min read", excerpt: "How yoga can complement traditional medical treatments..." },
+        { id: "4", slug: "meditation-and-brain-health", title: "Meditation and Brain Health", date: "2026-01-05", readTime: "8 min read", excerpt: "The impact of meditation on brain structure and function..." },
+        { id: "5", slug: "traditional-chinese-medicine", title: "Traditional Chinese Medicine", date: "2026-01-04", readTime: "10 min read", excerpt: "Principles and practices of Traditional Chinese Medicine..." },
+        { id: "6", slug: "homeopathy-controversies", title: "Homeopathy: Controversies and Research", date: "2026-01-03", readTime: "9 min read", excerpt: "Examining the evidence for and against homeopathic treatments..." }
+      ]
+    },
+    'ui-ux': {
+      name: "UI/UX Design",
+      description: "User interface and user experience design principles, trends, and best practices",
+      articles: [
+        { id: "1", slug: "ui-design-principles-modern-applications", title: "UI Design Principles for Modern Applications", date: "2026-01-08", readTime: "8 min read", excerpt: "Essential principles for creating intuitive and visually appealing user interfaces..." },
+        { id: "2", slug: "ux-research-methodologies-user-insights", title: "UX Research Methodologies for Actionable User Insights", date: "2026-01-07", readTime: "9 min read", excerpt: "Comprehensive guide to UX research methods and extracting meaningful insights..." },
+        { id: "3", slug: "responsive-web-design-mobile-first-approach", title: "Responsive Web Design: Mobile-First Approach", date: "2026-01-06", readTime: "10 min read", excerpt: "Strategies for designing websites that work seamlessly across all devices..." },
+        { id: "4", slug: "accessibility-in-design-inclusive-practices", title: "Accessibility in Design: Inclusive Practices", date: "2026-01-05", readTime: "7 min read", excerpt: "Creating designs that are accessible to users with diverse abilities and needs..." },
+        { id: "5", slug: "design-systems-scalable-interfaces", title: "Design Systems for Scalable Interfaces", date: "2026-01-04", readTime: "9 min read", excerpt: "Building and maintaining design systems for consistent and scalable products..." },
+        { id: "6", slug: "prototyping-tools-workflows-efficient-design", title: "Prototyping Tools and Workflows for Efficient Design", date: "2026-01-03", readTime: "8 min read", excerpt: "Comparing the best prototyping tools and establishing efficient design workflows..." }
+      ]
+    },
+    graphic: {
+      name: "Graphic Design",
+      description: "Visual communication, typography, branding, and creative design principles",
+      articles: [
+        { id: "1", slug: "color-theory-and-psychology-in-branding", title: "Color Theory and Psychology in Branding", date: "2026-01-08", readTime: "8 min read", excerpt: "How colors influence perception and decision-making in brand identity..." },
+        { id: "2", slug: "typography-principles-effective-visual-communication", title: "Typography Principles for Effective Visual Communication", date: "2026-01-07", readTime: "9 min read", excerpt: "Mastering fonts, spacing, and text hierarchy for impactful designs..." },
+        { id: "3", slug: "brand-identity-development-strategies", title: "Brand Identity Development Strategies", date: "2026-01-06", readTime: "10 min read", excerpt: "Creating cohesive visual identities that resonate with target audiences..." },
+        { id: "4", slug: "logo-design-trends-and-best-practices", title: "Logo Design Trends and Best Practices", date: "2026-01-05", readTime: "7 min read", excerpt: "Designing memorable and versatile logos for modern brands..." },
+        { id: "5", slug: "print-vs-digital-design-considerations", title: "Print vs Digital Design: Key Considerations", date: "2026-01-04", readTime: "8 min read", excerpt: "Understanding the differences between print and digital design workflows..." },
+        { id: "6", slug: "creative-tools-software-for-graphic-designers", title: "Creative Tools and Software for Graphic Designers", date: "2026-01-03", readTime: "9 min read", excerpt: "Overview of essential software and tools for professional graphic design..." }
+      ]
+    },
+    architecture: {
+      name: "Architecture",
+      description: "Architectural design, urban planning, sustainable construction, and building innovations",
+      articles: [
+        { id: "1", slug: "sustainable-architecture-green-building-practices", title: "Sustainable Architecture: Green Building Practices", date: "2026-01-08", readTime: "8 min read", excerpt: "Exploring eco-friendly design principles and sustainable construction methods..." },
+        { id: "2", slug: "modern-architectural-trends-innovative-designs", title: "Modern Architectural Trends and Innovative Designs", date: "2026-01-07", readTime: "9 min read", excerpt: "Current trends shaping contemporary architectural landscapes..." },
+        { id: "3", slug: "urban-planning-smart-cities-development", title: "Urban Planning and Smart Cities Development", date: "2026-01-06", readTime: "10 min read", excerpt: "Designing sustainable and efficient urban environments for the future..." },
+        { id: "4", slug: "historical-architecture-preservation-restoration", title: "Historical Architecture: Preservation and Restoration", date: "2026-01-05", readTime: "7 min read", excerpt: "Balancing heritage conservation with modern functionality..." },
+        { id: "5", slug: "residential-design-functional-living-spaces", title: "Residential Design: Functional Living Spaces", date: "2026-01-04", readTime: "8 min read", excerpt: "Creating comfortable and efficient homes for modern living..." },
+        { id: "6", slug: "commercial-architecture-workplace-innovation", title: "Commercial Architecture: Workplace Innovation", date: "2026-01-03", readTime: "9 min read", excerpt: "Designing productive and inspiring work environments..." }
+      ]
+    },
+    'fashion-design': {
+      name: "Fashion Design",
+      description: "Fashion trends, textile design, garment construction, and style innovation",
+      articles: [
+        { id: "1", slug: "sustainable-fashion-trends-eco-friendly-design", title: "Sustainable Fashion Trends and Eco-Friendly Design", date: "2026-01-08", readTime: "8 min read", excerpt: "Exploring environmentally conscious fashion practices and materials..." },
+        { id: "2", slug: "textile-innovation-future-of-fabric-design", title: "Textile Innovation and the Future of Fabric Design", date: "2026-01-07", readTime: "9 min read", excerpt: "Advanced materials and technologies transforming textile manufacturing..." },
+        { id: "3", slug: "fashion-forecasting-trend-analysis", title: "Fashion Forecasting and Trend Analysis", date: "2026-01-06", readTime: "10 min read", excerpt: "Methods and tools for predicting upcoming fashion trends..." },
+        { id: "4", slug: "cultural-influence-on-fashion-design", title: "Cultural Influence on Fashion Design", date: "2026-01-05", readTime: "7 min read", excerpt: "How global cultures shape contemporary fashion trends and styles..." },
+        { id: "5", slug: "digital-fashion-technology-virtual-design", title: "Digital Fashion: Technology and Virtual Design", date: "2026-01-04", readTime: "8 min read", excerpt: "Virtual fashion design and digital clothing innovations..." },
+        { id: "6", slug: "fashion-branding-marketing-strategies", title: "Fashion Branding and Marketing Strategies", date: "2026-01-03", readTime: "9 min read", excerpt: "Building successful fashion brands in the digital age..." }
+      ]
+    },
+    interior: {
+      name: "Interior Design",
+      description: "Space planning, furniture design, lighting, and home decor trends",
+      articles: [
+        { id: "1", slug: "minimalist-interior-design-trends-modern-living", title: "Minimalist Interior Design Trends for Modern Living", date: "2026-01-08", readTime: "8 min read", excerpt: "Exploring the principles and benefits of minimalist design in contemporary interiors..." },
+        { id: "2", slug: "sustainable-home-decor-eco-friendly-furniture-options", title: "Sustainable Home Decor: Eco-Friendly Furniture Options", date: "2026-01-07", readTime: "9 min read", excerpt: "Environmentally conscious choices for furnishing and decorating your space..." },
+        { id: "3", slug: "lighting-design-techniques-atmospheric-spaces", title: "Lighting Design Techniques for Creating Atmospheric Spaces", date: "2026-01-06", readTime: "10 min read", excerpt: "How strategic lighting enhances mood and functionality in interior design..." },
+        { id: "4", slug: "small-space-optimization-maximizing-functionality", title: "Small Space Optimization: Maximizing Functionality in Compact Homes", date: "2026-01-05", readTime: "7 min read", excerpt: "Creative solutions for organizing and furnishing smaller living spaces..." },
+        { id: "5", slug: "color-psychology-in-interior-design-emotional-spaces", title: "Color Psychology in Interior Design: Creating Emotional Spaces", date: "2026-01-04", readTime: "8 min read", excerpt: "How color choices affect mood and behavior in interior environments..." },
+        { id: "6", slug: "biophilic-design-integrating-nature-into-interiors", title: "Biophilic Design: Integrating Nature into Interiors", date: "2026-01-03", readTime: "9 min read", excerpt: "Bringing natural elements indoors to enhance well-being and connection..." }
+      ]
+    },
+    industrial: {
+      name: "Industrial Design",
+      description: "Product design, manufacturing processes, user experience, and design innovation",
+      articles: [
+        { id: "1", slug: "human-centered-product-design-principles", title: "Human-Centered Product Design Principles", date: "2026-01-08", readTime: "8 min read", excerpt: "Designing products that prioritize user needs and experiences..." },
+        { id: "2", slug: "sustainable-manufacturing-design-for-environment", title: "Sustainable Manufacturing: Design for Environment", date: "2026-01-07", readTime: "9 min read", excerpt: "Creating eco-friendly products with minimal environmental impact..." },
+        { id: "3", slug: "ergonomics-and-product-usability-optimization", title: "Ergonomics and Product Usability Optimization", date: "2026-01-06", readTime: "10 min read", excerpt: "Enhancing user comfort and efficiency through design..." },
+        { id: "4", slug: "innovative-materials-in-modern-product-design", title: "Innovative Materials in Modern Product Design", date: "2026-01-05", readTime: "7 min read", excerpt: "Exploring advanced materials transforming product design..." },
+        { id: "5", slug: "design-thinking-process-innovation-framework", title: "Design Thinking: Innovation Framework", date: "2026-01-04", readTime: "8 min read", excerpt: "A creative approach to problem-solving in product design..." },
+        { id: "6", slug: "smart-products-internet-of-things-design", title: "Smart Products and Internet of Things Design", date: "2026-01-03", readTime: "9 min read", excerpt: "Designing connected products for the digital age..." }
+      ]
+    },
+    recipes: {
+      name: "Recipes",
+      description: "Discover delicious recipes for every occasion, from quick weeknight dinners to elaborate desserts",
+      articles: [
+        { id: "1", slug: "easy-weeknight-dinners-family-friendly", title: "Easy Weeknight Dinners: Family-Friendly Recipes", date: "2026-01-08", readTime: "8 min read", excerpt: "Quick and simple dinner recipes perfect for busy weeknights with the family..." },
+        { id: "2", slug: "vegetarian-meals-nutritious-delicious", title: "Vegetarian Meals: Nutritious and Delicious Options", date: "2026-01-07", readTime: "9 min read", excerpt: "Plant-based recipes that are both healthy and satisfying..." },
+        { id: "3", slug: "quick-healthy-breakfast-ideas", title: "Quick and Healthy Breakfast Ideas", date: "2026-01-06", readTime: "7 min read", excerpt: "Start your day right with these nutritious and easy-to-make breakfast options..." },
+        { id: "4", slug: "dessert-recipes-sweet-indulgences", title: "Dessert Recipes: Sweet Indulgences", date: "2026-01-05", readTime: "10 min read", excerpt: "Indulge your sweet tooth with these delightful dessert recipes..." },
+        { id: "5", slug: "international-cuisine-authentic-flavors", title: "International Cuisine: Authentic Flavors", date: "2026-01-04", readTime: "11 min read", excerpt: "Explore authentic dishes from around the world..." },
+        { id: "6", slug: "seasonal-recipes-fresh-ingredients", title: "Seasonal Recipes: Cooking with Fresh Ingredients", date: "2026-01-03", readTime: "8 min read", excerpt: "Make the most of seasonal produce with these fresh and flavorful recipes..." }
+      ]
+    },
+    restaurants: {
+      name: "Restaurant Reviews",
+      description: "Expert reviews of top restaurants, hidden gems, and dining experiences",
+      articles: [
+        { id: "1", slug: "top-rated-restaurants-2026", title: "Top-Rated Restaurants of 2026", date: "2026-01-08", readTime: "9 min read", excerpt: "Our picks for the best restaurants around the world this year..." },
+        { id: "2", slug: "hidden-gem-restaurants-local-secrets", title: "Hidden Gem Restaurants: Local Secrets Worth Discovering", date: "2026-01-07", readTime: "8 min read", excerpt: "Underrated establishments with exceptional food and atmosphere..." },
+        { id: "3", slug: "fine-dining-experiences-luxury-meals", title: "Fine Dining Experiences: Luxury Meals Worth the Splurge", date: "2026-01-06", readTime: "10 min read", excerpt: "Exceptional fine dining experiences that offer extraordinary culinary artistry..." },
+        { id: "4", slug: "street-food-tours-global-flavors", title: "Street Food Tours: Global Flavors on a Budget", date: "2026-01-05", readTime: "8 min read", excerpt: "Discover the best street food experiences around the globe..." },
+        { id: "5", slug: "best-pizza-restaurants-around-world", title: "Best Pizza Restaurants Around the World", date: "2026-01-04", readTime: "9 min read", excerpt: "From Neapolitan classics to innovative toppings, our favorite pizza joints..." },
+        { id: "6", slug: "vegetarian-friendly-restaurants-options", title: "Vegetarian-Friendly Restaurants: Plant-Based Options", date: "2026-01-03", readTime: "7 min read", excerpt: "Restaurants offering exceptional vegetarian and vegan menu options..." }
+      ]
+    },
+    cooking: {
+      name: "Cooking Techniques",
+      description: "Master fundamental and advanced cooking techniques for culinary excellence",
+      articles: [
+        { id: "1", slug: "basic-cooking-techniques-beginners", title: "Basic Cooking Techniques for Beginners", date: "2026-01-08", readTime: "10 min read", excerpt: "Essential cooking methods every home chef should master..." },
+        { id: "2", slug: "advanced-knife-skills-professional-tips", title: "Advanced Knife Skills: Professional Tips", date: "2026-01-07", readTime: "9 min read", excerpt: "Refine your knife skills with techniques used by professional chefs..." },
+        { id: "3", slug: "temperature-control-cooking-perfection", title: "Temperature Control for Cooking Perfection", date: "2026-01-06", readTime: "8 min read", excerpt: "Learn how to control temperature for perfectly cooked dishes..." },
+        { id: "4", slug: "flavor-balancing-seasoning-mastery", title: "Flavor Balancing: Seasoning Mastery", date: "2026-01-05", readTime: "9 min read", excerpt: "Understanding how to balance flavors for restaurant-quality dishes..." },
+        { id: "5", slug: "meal-preparation-planning-ahead", title: "Meal Preparation and Planning Ahead", date: "2026-01-04", readTime: "7 min read", excerpt: "Efficient meal prep strategies to save time and eat well all week..." },
+        { id: "6", slug: "kitchen-tools-equipment-essentials", title: "Kitchen Tools and Equipment Essentials", date: "2026-01-03", readTime: "8 min read", excerpt: "Must-have kitchen tools for every home cook to achieve professional results..." }
+      ]
+    },
+    ingredients: {
+      name: "Ingredients",
+      description: "Discover unique ingredients, their uses, and how to select the best quality",
+      articles: [
+        { id: "1", slug: "exotic-spices-aromatic-wonders", title: "Exotic Spices: Aromatic Wonders", date: "2026-01-08", readTime: "9 min read", excerpt: "Explore rare and exotic spices that can transform your cooking..." },
+        { id: "2", slug: "seasonal-produce-shopping-guide", title: "Seasonal Produce Shopping Guide", date: "2026-01-07", readTime: "8 min read", excerpt: "How to select the best seasonal fruits and vegetables for peak flavor..." },
+        { id: "3", slug: "pantry-staples-essential-ingredients", title: "Pantry Staples: Essential Ingredients", date: "2026-01-06", readTime: "7 min read", excerpt: "Building a well-stocked pantry with versatile, essential ingredients..." },
+        { id: "4", slug: "organic-vs-conventional-ingredient-choice", title: "Organic vs Conventional: Ingredient Choice", date: "2026-01-05", readTime: "8 min read", excerpt: "Understanding when organic ingredients make a difference in your cooking..." },
+        { id: "5", slug: "fermented-foods-health-benefits", title: "Fermented Foods: Health Benefits and Uses", date: "2026-01-04", readTime: "10 min read", excerpt: "Incorporating fermented ingredients for flavor and gut health..." },
+        { id: "6", slug: "alternative-ingredients-substitutions", title: "Alternative Ingredients: Substitutions Guide", date: "2026-01-03", readTime: "7 min read", excerpt: "Smart ingredient substitutions for dietary restrictions and preferences..." }
+      ]
+    },
+    cuisines: {
+      name: "World Cuisines",
+      description: "Explore diverse culinary traditions and authentic regional dishes",
+      articles: [
+        { id: "1", slug: "italian-cuisine-authentic-recipes", title: "Italian Cuisine: Authentic Recipes", date: "2026-01-08", readTime: "10 min read", excerpt: "Traditional Italian dishes prepared with authentic techniques and ingredients..." },
+        { id: "2", slug: "japanese-cuisine-precision-elegance", title: "Japanese Cuisine: Precision and Elegance", date: "2026-01-07", readTime: "9 min read", excerpt: "Understanding the artistry and technique behind Japanese culinary traditions..." },
+        { id: "3", slug: "mexican-cuisine-bold-flavors", title: "Mexican Cuisine: Bold and Vibrant Flavors", date: "2026-01-06", readTime: "8 min read", excerpt: "Authentic Mexican recipes showcasing complex spice blends and traditional methods..." },
+        { id: "4", slug: "indian-cuisine-spice-combinations", title: "Indian Cuisine: Complex Spice Combinations", date: "2026-01-05", readTime: "11 min read", excerpt: "Mastering the intricate spice profiles of regional Indian cooking..." },
+        { id: "5", slug: "thai-cuisine-balancing-sweet-sour-spicy", title: "Thai Cuisine: Balancing Sweet, Sour, and Spicy", date: "2026-01-04", readTime: "9 min read", excerpt: "Achieving the perfect balance of flavors in authentic Thai dishes..." },
+        { id: "6", slug: "middle-eastern-cuisine-aromatic-dishes", title: "Middle Eastern Cuisine: Aromatic Dishes", date: "2026-01-03", readTime: "8 min read", excerpt: "Traditional Middle Eastern recipes featuring herbs and spices..." }
+      ]
+    },
+    wine: {
+      name: "Wine & Spirits",
+      description: "Wine pairing guides, tasting notes, and cocktail recipes",
+      articles: [
+        { id: "1", slug: "wine-pairing-perfect-matches", title: "Wine Pairing: Perfect Matches", date: "2026-01-08", readTime: "9 min read", excerpt: "Classic and unexpected wine and food pairings for enhanced dining experiences..." },
+        { id: "2", slug: "cocktail-recipes-classic-creations", title: "Cocktail Recipes: Classic and Modern Creations", date: "2026-01-07", readTime: "8 min read", excerpt: "Master mixologist recipes for timeless and innovative cocktails..." },
+        { id: "3", slug: "whiskey-appreciation-types-ages", title: "Whiskey Appreciation: Types and Ages", date: "2026-01-06", readTime: "10 min read", excerpt: "Understanding whiskey varieties, distillation methods, and aging processes..." },
+        { id: "4", slug: "champagne-celebration-selection", title: "Champagne and Celebration Selection", date: "2026-01-05", readTime: "7 min read", excerpt: "Choosing the perfect sparkling wines for any celebration..." },
+        { id: "5", slug: "craft-beer-varieties-flavor-profiles", title: "Craft Beer Varieties: Flavor Profiles", date: "2026-01-04", readTime: "8 min read", excerpt: "Exploring the diverse world of craft beer styles and taste characteristics..." },
+        { id: "6", slug: "spirits-storage-aging-tips", title: "Spirits Storage and Aging Tips", date: "2026-01-03", readTime: "9 min read", excerpt: "Proper storage techniques to preserve and enhance spirit quality..." }
       ]
     },
     // Add more subcategories as needed...
