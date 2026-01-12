@@ -5,13 +5,13 @@ import { useRouter } from 'next/router';
 
 export default function BasicCookingTechniquesForBeginners() {
   const [bookmarked, setBookmarked] = useState(false);
-  const [activeFAQ, setActiveFAQ] = useState(null);
+  const [activeFAQ, setActiveFAQ] = useState<number | null>(null);
   
   const toggleBookmark = () => {
     setBookmarked(!bookmarked);
   };
 
-  const toggleFAQ = (index) => {
+  const toggleFAQ = (index: number) => {
     setActiveFAQ(activeFAQ === index ? null : index);
   };
 
@@ -36,7 +36,7 @@ export default function BasicCookingTechniquesForBeginners() {
   const [quizAnswers, setQuizAnswers] = useState(Array(quizQuestions.length).fill(null));
   const [submitted, setSubmitted] = useState(false);
 
-  const handleQuizChange = (questionIndex, optionIndex) => {
+  const handleQuizChange = (questionIndex: number, optionIndex: number) => {
     const newAnswers = [...quizAnswers];
     newAnswers[questionIndex] = optionIndex;
     setQuizAnswers(newAnswers);
