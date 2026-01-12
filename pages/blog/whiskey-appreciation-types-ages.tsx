@@ -165,7 +165,7 @@ export default function WhiskeyAppreciationTypesAges() {
                 New charred oak barrels (required for bourbon) contribute vanilla, caramel, and spice notes. Previously used barrels (common for Scotch) provide more subtle wood influence, allowing the distillate character to shine through. Different oak species and char levels create varying flavor profiles.
               </p>
 
-              <h3 className="text-2xl font-semibold text-amber-700 mb-4">Climate Effects</h2>
+              <h3 className="text-2xl font-semibold text-amber-700 mb-4">Climate Effects</h3>
               <p className="mb-6">
                 Climate significantly affects aging. Kentucky's temperature fluctuations cause the spirit to expand into and contract from the wood, accelerating maturation. Scotland's cooler, more stable climate results in slower, more gradual maturation. Higher temperatures generally accelerate aging but can lead to excessive evaporation.
               </p>
