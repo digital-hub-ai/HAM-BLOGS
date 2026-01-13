@@ -129,7 +129,7 @@ export default function InternationalTVShowsBreakingBarriers() {
                 Engagement metrics for international content also exceeded expectations, with average completion rates of 78% for international series compared to 65% for English-language content. This suggested that audiences were not only watching international shows but were deeply invested in their narratives, leading to higher retention and cultural impact.
               </p>
 
-              <h3 className="text-2xl font-semibold text-green-700 mb-4">Geographic Distribution of Success</h2>
+              <h3 className="text-2xl font-semibold text-green-700 mb-4">Geographic Distribution of Success</h3>
               <p className="mb-6">
                 International content success in 2026 was not limited to specific regions but was distributed across various countries and cultures. Korean dramas continued their global expansion with series like "Squid Game" achieving record-breaking viewership, while Spanish-language content from Netflix's "Money Heist" franchise maintained its international appeal. French productions like "Lupin" demonstrated the global potential of non-English content, and German series like "Dark" proved that complex narratives could succeed internationally despite language barriers.
               </p>

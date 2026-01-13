@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const TransformationalLeadership2026 = () => {
   const router = useRouter();
@@ -60,10 +61,10 @@ const TransformationalLeadership2026 = () => {
           <h1 className="text-3xl font-bold text-indigo-800">HAM Blogs</h1>
           <nav>
             <ul className="flex space-x-6">
-              <li><a href="/" className="text-gray-600 hover:text-indigo-600">Home</a></li>
-              <li><a href="/categories" className="text-gray-600 hover:text-indigo-600">Categories</a></li>
-              <li><a href="/about" className="text-gray-600 hover:text-indigo-600">About</a></li>
-              <li><a href="/contact" className="text-gray-600 hover:text-indigo-600">Contact</a></li>
+              <li><Link href="/" className="text-gray-600 hover:text-indigo-600">Home</Link></li>
+              <li><Link href="/categories" className="text-gray-600 hover:text-indigo-600">Categories</Link></li>
+              <li><Link href="/about" className="text-gray-600 hover:text-indigo-600">About</Link></li>
+              <li><Link href="/contact" className="text-gray-600 hover:text-indigo-600">Contact</Link></li>
             </ul>
           </nav>
         </div>
@@ -229,20 +230,20 @@ const TransformationalLeadership2026 = () => {
             <div>
               <h4 className="font-semibold mb-4">Categories</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="/category/entertainment" className="hover:text-white">Entertainment</a></li>
-                <li><a href="/category/technology" className="hover:text-white">Technology</a></li>
-                <li><a href="/category/health" className="hover:text-white">Health</a></li>
-                <li><a href="/category/travel" className="hover:text-white">Travel</a></li>
+                <li><Link href="/category/entertainment" className="hover:text-white">Entertainment</Link></li>
+                <li><Link href="/category/technology" className="hover:text-white">Technology</Link></li>
+                <li><Link href="/category/health" className="hover:text-white">Health</Link></li>
+                <li><Link href="/category/travel" className="hover:text-white">Travel</Link></li>
               </ul>
             </div>
             
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="/about" className="hover:text-white">About Us</a></li>
-                <li><a href="/careers" className="hover:text-white">Careers</a></li>
-                <li><a href="/contact" className="hover:text-white">Contact</a></li>
-                <li><a href="/privacy" className="hover:text-white">Privacy Policy</a></li>
+                <li><Link href="/about" className="hover:text-white">About Us</Link></li>
+                <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
+                <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
+                <li><Link href="/privacy" className="hover:text-white">Privacy Policy</Link></li>
               </ul>
             </div>
             
