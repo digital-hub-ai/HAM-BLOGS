@@ -185,7 +185,7 @@ const GrowthStrategyFrameworks = () => {
               <h3>Jobs-to-be-Done Framework</h3>
               <p>This approach focuses on understanding the functional, emotional, and social jobs that customers are trying to accomplish. By identifying unmet customer needs, organizations can develop growth strategies that address these gaps with innovative solutions that create new market opportunities.</p>
 
-              <h3>Value Innovation Framework</h://www.strategyzer.com/blog/2016/09/15/value-innovation-the-blue-ocean-strategy-approach>
+              <h3>Value Innovation Framework</h3>
               <p>Combining value creation with innovation, this framework helps organizations identify ways to simultaneously pursue differentiation and low cost. It involves reconstructing market boundaries, focusing on the big picture, reaching beyond existing demand, and getting the strategic sequence right.</p>
 
               <h2>Implementing Growth Strategy Frameworks</h2>
