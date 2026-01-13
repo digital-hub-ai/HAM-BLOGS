@@ -616,6 +616,150 @@ export default function SubcategoryPage() {
         { id: "6", slug: "spirits-storage-aging-tips", title: "Spirits Storage and Aging Tips", date: "2026-01-03", readTime: "9 min read", excerpt: "Proper storage techniques to preserve and enhance spirit quality..." }
       ]
     },
+    movies: {
+      name: "Movies",
+      description: "Reviews, analysis, and recommendations for the latest and greatest films",
+      articles: [
+        { id: "1", slug: "oscar-winning-films-2026-analysis", title: "Oscar-Winning Films of 2026: In-Depth Analysis", date: "2026-01-08", readTime: "8 min read", excerpt: "Detailed analysis of the Academy Award winners and their cinematic achievements..." },
+        { id: "2", slug: "blockbuster-movie-trends-2026", title: "Blockbuster Movie Trends of 2026", date: "2026-01-07", readTime: "9 min read", excerpt: "Exploring the major trends that defined the box office landscape this year..." },
+        { id: "3", slug: "independent-films-worth-watching", title: "Independent Films Worth Watching", date: "2026-01-06", readTime: "7 min read", excerpt: "Hidden gems from the indie film scene that deserve wider recognition..." },
+        { id: "4", slug: "directors-craft-techniques-2026", title: "Directors' Craft: Cinematic Techniques of 2026", date: "2026-01-05", readTime: "10 min read", excerpt: "Examining the innovative cinematography and storytelling methods of the year..." },
+        { id: "5", slug: "movie-remakes-reboots-success-failure", title: "Movie Remakes and Reboots: Success vs Failure", date: "2026-01-04", readTime: "8 min read", excerpt: "Analyzing why some remakes work while others fall short of expectations..." },
+        { id: "6", slug: "foreign-cinema-international-film-highlights", title: "Foreign Cinema: International Film Highlights", date: "2026-01-03", readTime: "9 min read", excerpt: "Celebrating exceptional films from around the world that deserve global attention..." }
+      ],
+    },
+    music: {
+      name: "Music",
+      description: "Reviews, analysis, and recommendations for the latest musical releases and artists",
+      articles: [
+        { id: "1", slug: "top-albums-2026-musical-innovation", title: "Top Albums of 2026: Musical Innovation and Artistic Achievement", date: "2026-01-08", readTime: "8 min read", excerpt: "A comprehensive look at the most innovative and critically acclaimed albums released this year..." },
+        { id: "2", slug: "emerging-artists-changing-music-landscape", title: "Emerging Artists Changing the Music Landscape", date: "2026-01-07", readTime: "9 min read", excerpt: "Spotlighting the rising musicians who are reshaping genres and influencing industry trends..." },
+        { id: "3", slug: "revival-music-trends-retro-influences", title: "Revival Music Trends: The Power of Retro Influences", date: "2026-01-06", readTime: "7 min read", excerpt: "Exploring how vintage sounds are making a comeback and influencing contemporary music..." },
+        { id: "4", slug: "music-festival-highlights-2026-spectacular-performances", title: "Music Festival Highlights of 2026: Spectacular Performances", date: "2026-01-05", readTime: "10 min read", excerpt: "Recapping the most memorable moments from this year's major music festivals worldwide..." },
+        { id: "5", slug: "streaming-evolution-artist-compensation-issues", title: "Streaming Evolution: Artist Compensation and Industry Issues", date: "2026-01-04", readTime: "8 min read", excerpt: "Analyzing how streaming platforms are changing the music industry and affecting artist revenues..." },
+        { id: "6", slug: "genre-blending-innovative-sound-combinations", title: "Genre Blending: Innovative Sound Combinations", date: "2026-01-03", readTime: "9 min read", excerpt: "Examining how artists are breaking boundaries by combining disparate musical genres..." }
+      ]
+    },
+    tv: {
+      name: "TV Shows",
+      description: "Reviews, analysis, and recommendations for the latest television series and streaming content",
+      articles: [
+        { id: "1", slug: "2026s-most-acclaimed-tv-series", title: "2026's Most Acclaimed TV Series", date: "2026-01-08", readTime: "8 min read", excerpt: "A comprehensive look at the television series that earned critical acclaim and captivated audiences in 2026..." },
+        { id: "2", slug: "streaming-platform-original-content-analysis", title: "Streaming Platform Original Content Analysis", date: "2026-01-07", readTime: "9 min read", excerpt: "Examining how Netflix, Hulu, Amazon Prime, and other platforms are competing with exclusive content..." },
+        { id: "3", slug: "revival-series-success-nostalgia-factor", title: "Revival Series: Success of the Nostalgia Factor", date: "2026-01-06", readTime: "7 min read", excerpt: "Exploring the trend of bringing back classic shows and how nostalgia influences viewing decisions..." },
+        { id: "4", slug: "international-tv-shows-breaking-barriers", title: "International TV Shows: Breaking Language Barriers", date: "2026-01-05", readTime: "10 min read", excerpt: "How non-English series are gaining global recognition and changing the television landscape..." },
+        { id: "5", slug: "limited-series-vs-traditional-tv-evolution", title: "Limited Series vs Traditional TV: Evolution of Storytelling", date: "2026-01-04", readTime: "8 min read", excerpt: "Analyzing the rise of limited series and how they're changing the television industry..." },
+        { id: "6", slug: "diverse-representation-in-modern-television", title: "Diverse Representation in Modern Television", date: "2026-01-03", readTime: "9 min read", excerpt: "Examining how television is becoming more inclusive and representative of diverse communities..." }
+      ]
+    },
+    gaming: {
+      name: "Gaming",
+      description: "Reviews, analysis, and recommendations for the latest video games and gaming industry trends",
+      articles: [
+        { id: "1", slug: "2026s-top-video-game-releases-analysis", title: "2026's Top Video Game Releases: Comprehensive Analysis", date: "2026-01-08", readTime: "9 min read", excerpt: "A detailed look at the most significant game releases of 2026, including AAA titles and indie gems that shaped the industry..." },
+        { id: "2", slug: "emerging-gaming-platforms-cloud-gaming-revolution", title: "Emerging Gaming Platforms: Cloud Gaming Revolution", date: "2026-01-07", readTime: "10 min read", excerpt: "Exploring the rise of cloud gaming platforms and how they're changing the way we play and access video games..." },
+        { id: "3", slug: "esports-evolution-competitive-gaming-scene", title: "Esports Evolution: Competitive Gaming Scene", date: "2026-01-06", readTime: "8 min read", excerpt: "How competitive gaming has evolved into a major industry with professional leagues and massive audiences..." },
+        { id: "4", slug: "vr-ar-gaming-immersive-technologies", title: "VR & AR Gaming: Immersive Technologies", date: "2026-01-05", readTime: "11 min read", excerpt: "The impact of virtual and augmented reality on gaming experiences and their growing influence on the industry..." },
+        { id: "5", slug: "game-development-indie-developer-success-stories", title: "Game Development: Indie Developer Success Stories", date: "2026-01-04", readTime: "9 min read", excerpt: "Highlighting independent developers who created successful games despite limited resources and competition..." },
+        { id: "6", slug: "gaming-culture-community-impact-social-aspects", title: "Gaming Culture: Community Impact and Social Aspects", date: "2026-01-03", readTime: "10 min read", excerpt: "Examining how gaming communities form and the social impact of gaming culture on players worldwide..." }
+      ]
+    },
+    books: {
+      name: "Books",
+      description: "Reviews, analysis, and recommendations for literature across genres and authors",
+      articles: [
+        { id: "1", slug: "2026s-most-influential-fiction-novels", title: "2026's Most Influential Fiction Novels", date: "2026-01-08", readTime: "8 min read", excerpt: "A comprehensive look at the fiction novels that shaped literary discourse and captured readers' imaginations in 2026..." },
+        { id: "2", slug: "non-fiction-books-changing-perspectives", title: "Non-Fiction Books That Are Changing Perspectives", date: "2026-01-07", readTime: "9 min read", excerpt: "Examining the most impactful non-fiction works that challenged conventional thinking and influenced public discourse..." },
+        { id: "3", slug: "emerging-authors-literary-breakthroughs", title: "Emerging Authors: Literary Breakthroughs", date: "2026-01-06", readTime: "7 min read", excerpt: "Spotlighting debut novelists and seasoned writers who made significant literary contributions this year..." },
+        { id: "4", slug: "classic-literature-reimagined-modern-adaptations", title: "Classic Literature Reimagined: Modern Adaptations", date: "2026-01-05", readTime: "10 min read", excerpt: "How contemporary authors are reinterpreting timeless classics for modern audiences..." },
+        { id: "5", slug: "genre-fiction-trends-mystery-sci-fi-fantasy", title: "Genre Fiction Trends: Mystery, Sci-Fi, and Fantasy", date: "2026-01-04", readTime: "8 min read", excerpt: "Analyzing the evolving landscape of genre fiction and its growing influence on popular culture..." },
+        { id: "6", slug: "audiobooks-market-growth-and-storytelling", title: "Audiobooks Market Growth and Storytelling Evolution", date: "2026-01-03", readTime: "9 min read", excerpt: "The rise of audiobooks and how narration is transforming the literary experience..." }
+      ]
+    },
+    events: {
+      name: "Events",
+      description: "Reviews, analysis, and recommendations for concerts, festivals, and cultural events",
+      articles: [
+        { id: "1", slug: "2026s-most-unforgettable-music-festivals", title: "2026's Most Unforgettable Music Festivals", date: "2026-01-08", readTime: "8 min read", excerpt: "A comprehensive look at the music festivals that defined the summer season and created unforgettable experiences for attendees..." },
+        { id: "2", slug: "cultural-events-shaping-our-world", title: "Cultural Events That Are Shaping Our World", date: "2026-01-07", readTime: "9 min read", excerpt: "Examining the most impactful cultural events that influenced global conversations and brought communities together..." },
+        { id: "3", slug: "concert-experiences-live-music-revival", title: "Concert Experiences: The Live Music Revival", date: "2026-01-06", readTime: "7 min read", excerpt: "How live music experiences are making a comeback and what to expect from the next generation of concerts..." },
+        { id: "4", slug: "film-festivals-innovation-and-cinema", title: "Film Festivals: Innovation and Cinema", date: "2026-01-05", readTime: "10 min read", excerpt: "Exploring how film festivals are adapting to new technologies and continuing to showcase groundbreaking cinema..." },
+        { id: "5", slug: "theater-performances-memorable-shows", title: "Theater Performances: Most Memorable Shows", date: "2026-01-04", readTime: "8 min read", excerpt: "A look at the most captivating theatrical performances that graced stages around the world in 2026..." },
+        { id: "6", slug: "virtual-events-hybrid-experiences-future", title: "Virtual Events: Hybrid Experiences and the Future", date: "2026-01-03", readTime: "9 min read", excerpt: "How virtual and hybrid event formats are reshaping the events industry and expanding access globally..." }
+      ]
+    },
+    entrepreneurship: {
+      name: "Entrepreneurship",
+      description: "Inspiring stories, business strategies, and insights for aspiring entrepreneurs",
+      articles: [
+        { id: "1", slug: "startup-success-stories-2026", title: "Startup Success Stories of 2026: Lessons from New Billion-Dollar Companies", date: "2026-01-08", readTime: "10 min read", excerpt: "An in-depth look at the most successful startups of 2026 and the strategies that led them to billion-dollar valuations..." },
+        { id: "2", slug: "funding-strategies-vc-investors", title: "Funding Strategies: Getting VCs and Investors to Notice Your Startup", date: "2026-01-07", readTime: "9 min read", excerpt: "Expert advice on approaching venture capitalists and securing funding for your business idea..." },
+        { id: "3", slug: "digital-transformation-business-models", title: "Digital Transformation: Evolving Business Models in the Digital Age", date: "2026-01-06", readTime: "8 min read", excerpt: "How traditional businesses are adapting their models to thrive in the digital economy..." },
+        { id: "4", slug: "scaling-businesses-growth-hacks", title: "Scaling Businesses: Proven Growth Hacks and Expansion Strategies", date: "2026-01-05", readTime: "10 min read", excerpt: "Essential tactics for scaling your business without losing operational efficiency..." },
+        { id: "5", slug: "innovative-marketing-startups", title: "Innovative Marketing Approaches for Startups with Limited Budgets", date: "2026-01-04", readTime: "7 min read", excerpt: "Creative marketing strategies that help startups compete with established companies..." },
+        { id: "6", slug: "entrepreneurial-mindset-success-habits", title: "Entrepreneurial Mindset: Success Habits of Visionary Leaders", date: "2026-01-03", readTime: "9 min read", excerpt: "Understanding the mindset and habits that separate successful entrepreneurs from the rest..." }
+      ]
+    },
+    leadership: {
+      name: "Leadership",
+      description: "Strategic leadership insights, management techniques, and executive development",
+      articles: [
+        { id: "1", slug: "transformational-leadership-2026", title: "Transformational Leadership in 2026: Leading Through Uncertainty", date: "2026-01-08", readTime: "9 min read", excerpt: "How visionary leaders inspire teams and drive organizational change in challenging times..." },
+        { id: "2", slug: "executive-decision-making", title: "Executive Decision-Making: Balancing Data and Intuition", date: "2026-01-07", readTime: "10 min read", excerpt: "Strategies for making critical business decisions when facing incomplete information..." },
+        { id: "3", slug: "remote-team-leadership", title: "Remote Team Leadership: Building Trust and Accountability", date: "2026-01-06", readTime: "8 min read", excerpt: "Effective techniques for leading distributed teams and maintaining productivity across locations..." },
+        { id: "4", slug: "emotional-intelligence-leadership", title: "Emotional Intelligence in Leadership: The Key to Team Performance", date: "2026-01-05", readTime: "9 min read", excerpt: "How emotional intelligence impacts team dynamics and organizational success..." },
+        { id: "5", slug: "inclusive-leadership-strategies", title: "Inclusive Leadership: Creating Diverse and Equitable Work Environments", date: "2026-01-04", readTime: "10 min read", excerpt: "Building inclusive cultures that leverage diversity for competitive advantage..." },
+        { id: "6", slug: "succession-planning-executives", title: "Succession Planning: Developing the Next Generation of Leaders", date: "2026-01-03", readTime: "8 min read", excerpt: "Strategies for identifying and nurturing future organizational leaders..." }
+      ]
+    },
+    marketing: {
+      name: "Marketing",
+      description: "Strategic marketing approaches, digital advertising, and customer acquisition techniques",
+      articles: [
+        { id: "1", slug: "digital-marketing-trends-2026", title: "Digital Marketing Trends in 2026: AI, Personalization, and Privacy Changes", date: "2026-01-08", readTime: "10 min read", excerpt: "Exploring the latest digital marketing trends that are reshaping customer acquisition and retention strategies..." },
+        { id: "2", slug: "customer-acquisition-strategies", title: "Customer Acquisition Strategies: Turning Prospects into Loyal Customers", date: "2026-01-07", readTime: "9 min read", excerpt: "Proven techniques for attracting and converting new customers while maintaining cost efficiency..." },
+        { id: "3", slug: "content-marketing-roi", title: "Content Marketing ROI: Measuring and Optimizing Your Investment", date: "2026-01-06", readTime: "8 min read", excerpt: "How to measure the true return on investment for your content marketing efforts and optimize performance..." },
+        { id: "4", slug: "social-media-advertising-2026", title: "Social Media Advertising in 2026: Platform Strategies and Best Practices", date: "2026-01-05", readTime: "10 min read", excerpt: "Effective approaches to social media advertising across different platforms and audience segments..." },
+        { id: "5", slug: "influencer-marketing-effectiveness", title: "Influencer Marketing: Measuring True Effectiveness and ROI", date: "2026-01-04", readTime: "9 min read", excerpt: "How to select, evaluate, and measure influencer partnerships for maximum marketing impact..." },
+        { id: "6", slug: "marketing-automation-tools", title: "Marketing Automation: Choosing the Right Tools for Your Business", date: "2026-01-03", readTime: "8 min read", excerpt: "Selecting and implementing marketing automation tools to scale your efforts and improve efficiency..." }
+      ]
+    },
+    strategy: {
+      name: "Strategy",
+      description: "Business strategy development, competitive analysis, and strategic planning methodologies",
+      articles: [
+        { id: "1", slug: "strategic-planning-2026", title: "Strategic Planning in 2026: Adapting to Uncertainty and Change", date: "2026-01-08", readTime: "11 min read", excerpt: "How organizations are developing flexible strategies that adapt to rapidly changing market conditions..." },
+        { id: "2", slug: "competitive-analysis-methods", title: "Competitive Analysis: Modern Methods for Market Positioning", date: "2026-01-07", readTime: "10 min read", excerpt: "Advanced techniques for understanding competitors and identifying strategic opportunities..." },
+        { id: "3", slug: "business-model-innovation", title: "Business Model Innovation: Restructuring for Future Success", date: "2026-01-06", readTime: "9 min read", excerpt: "How companies are reinventing their business models to stay competitive in evolving markets..." },
+        { id: "4", slug: "digital-transformation-strategy", title: "Digital Transformation Strategy: From Planning to Execution", date: "2026-01-05", readTime: "12 min read", excerpt: "Comprehensive approaches to digital transformation that deliver sustainable results..." },
+        { id: "5", slug: "growth-strategy-frameworks", title: "Growth Strategy Frameworks: Scaling Organizations Effectively", date: "2026-01-04", readTime: "10 min read", excerpt: "Proven frameworks for sustainable growth in competitive markets..." },
+        { id: "6", slug: "risk-management-strategic", title: "Strategic Risk Management: Mitigating Business Threats", date: "2026-01-03", readTime: "9 min read", excerpt: "Integrating risk management into strategic planning for organizational resilience..." }
+      ]
+    },
+    innovation: {
+      name: "Innovation",
+      description: "Innovation strategies, creative problem-solving, and fostering innovation culture in organizations",
+      articles: [
+        { id: "1", slug: "innovation-culture-organization", title: "Building Innovation Culture: Transforming Organizations for Creative Excellence", date: "2026-01-08", readTime: "10 min read", excerpt: "How organizations are cultivating environments that encourage creativity, experimentation, and breakthrough thinking..." },
+        { id: "2", slug: "open-innovation-collaboration", title: "Open Innovation: Collaborating for Breakthrough Solutions", date: "2026-01-07", readTime: "9 min read", excerpt: "Strategies for leveraging external partnerships and collaborative approaches to drive innovation..." },
+        { id: "3", slug: "design-thinking-implementation", title: "Design Thinking Implementation: From Concept to Reality", date: "2026-01-06", readTime: "11 min read", excerpt: "Practical approaches to implementing design thinking methodologies for innovation and problem-solving..." },
+        { id: "4", slug: "innovation-metrics-measurement", title: "Innovation Metrics: Measuring What Matters for Growth", date: "2026-01-05", readTime: "10 min read", excerpt: "How to measure and track innovation effectiveness with meaningful metrics and KPIs..." },
+        { id: "5", slug: "disruptive-innovation-strategies", title: "Disruptive Innovation: Strategies for Market Leadership", date: "2026-01-04", readTime: "9 min read", excerpt: "Approaches to creating disruptive innovations that reshape industries and create new markets..." },
+        { id: "6", slug: "future-innovation-trends", title: "Future Innovation Trends: Preparing for Tomorrow's Opportunities", date: "2026-01-03", readTime: "10 min read", excerpt: "Emerging trends in innovation and how organizations can prepare for future opportunities..." }
+      ]
+    },
+    management: {
+      name: "Management",
+      description: "Management principles, team leadership, performance optimization, and organizational effectiveness",
+      articles: [
+        { id: "1", slug: "effective-leadership-principles", title: "Effective Leadership Principles: Leading High-Performance Teams", date: "2026-01-08", readTime: "10 min read", excerpt: "Essential leadership principles that enable managers to inspire teams and drive organizational success..." },
+        { id: "2", slug: "team-building-strategies", title: "Team Building Strategies: Creating Cohesive and Productive Units", date: "2026-01-07", readTime: "9 min read", excerpt: "Proven strategies for building strong, collaborative teams that deliver exceptional results..." },
+        { id: "3", slug: "performance-management-systems", title: "Performance Management Systems: Optimizing Employee Productivity", date: "2026-01-06", readTime: "10 min read", excerpt: "How to design and implement effective performance management systems that drive results..." },
+        { id: "4", slug: "change-management-implementation", title: "Change Management Implementation: Leading Through Transitions", date: "2026-01-05", readTime: "11 min read", excerpt: "Strategies for successfully managing organizational change and helping teams adapt..." },
+        { id: "5", slug: "organizational-communication", title: "Organizational Communication: Enhancing Information Flow", date: "2026-01-04", readTime: "9 min read", excerpt: "Best practices for creating effective communication channels within organizations..." },
+        { id: "6", slug: "executive-decision-making", title: "Executive Decision-Making: Strategic Choices for Organizational Success", date: "2026-01-03", readTime: "10 min read", excerpt: "Framework for making complex decisions that affect the entire organization..." }
+      ]
+    }
     // Add more subcategories as needed...
   }
   
