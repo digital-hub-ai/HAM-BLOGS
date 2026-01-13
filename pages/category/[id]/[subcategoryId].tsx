@@ -40,7 +40,8 @@ const getCategoryPath = (categoryId: string): string => {
     architecture: 'blog',
     'fashion-design': 'blog',
     interior: 'blog',
-    industrial: 'blog'
+    industrial: 'blog',
+    science: 'blog'
   };
   
   return categoryPaths[categoryId] || 'blog';
@@ -76,6 +77,18 @@ export default function SubcategoryPage() {
         { id: "6", slug: "quantum-machine-learning-potential", title: "Quantum Machine Learning: The Potential Revolution", date: "2026-01-03", readTime: "12 min read", excerpt: "Exploring the intersection of quantum computing and machine learning..." },
         { id: "7", slug: "quantum-cryptography-security", title: "Quantum Cryptography and Security", date: "2026-01-02", readTime: "10 min read", excerpt: "Understanding quantum-safe encryption and quantum key distribution..." },
         { id: "8", slug: "quantum-simulation-chemistry", title: "Quantum Simulation in Chemistry", date: "2026-01-01", readTime: "11 min read", excerpt: "How quantum computers are revolutionizing molecular modeling..." }
+      ]
+    },
+    physics: {
+      name: "Physics",
+      description: "Exploring fundamental laws of nature, from quantum particles to cosmic phenomena",
+      articles: [
+        { id: "1", slug: "quantum-mechanics-fundamental-principles", title: "Quantum Mechanics: Fundamental Principles", date: "2026-01-08", readTime: "10 min read", excerpt: "Understanding the core principles that govern the quantum world..." },
+        { id: "2", slug: "relativity-theory-einstein-contributions", title: "Relativity Theory: Einstein's Contributions", date: "2026-01-07", readTime: "9 min read", excerpt: "Exploring special and general relativity's impact on modern physics..." },
+        { id: "3", slug: "particle-physics-standard-model", title: "Particle Physics: Standard Model", date: "2026-01-06", readTime: "12 min read", excerpt: "The fundamental particles and forces that make up our universe..." },
+        { id: "4", slug: "cosmology-dark-matter-energy", title: "Cosmology: Dark Matter and Energy", date: "2026-01-05", readTime: "11 min read", excerpt: "Understanding the mysterious components of our universe..." },
+        { id: "5", slug: "thermodynamics-laws-applications", title: "Thermodynamics: Laws and Applications", date: "2026-01-04", readTime: "10 min read", excerpt: "From heat engines to entropy, the laws that govern energy..." },
+        { id: "6", slug: "electromagnetism-maxwell-equations", title: "Electromagnetism: Maxwell's Equations", date: "2026-01-03", readTime: "12 min read", excerpt: "The unified theory of electric and magnetic phenomena..." }
       ]
     },
     blockchain: {
@@ -652,6 +665,7 @@ export default function SubcategoryPage() {
         { id: "6", slug: "diverse-representation-in-modern-television", title: "Diverse Representation in Modern Television", date: "2026-01-03", readTime: "9 min read", excerpt: "Examining how television is becoming more inclusive and representative of diverse communities..." }
       ]
     },
+
     gaming: {
       name: "Gaming",
       description: "Reviews, analysis, and recommendations for the latest video games and gaming industry trends",
@@ -676,6 +690,7 @@ export default function SubcategoryPage() {
         { id: "6", slug: "audiobooks-market-growth-and-storytelling", title: "Audiobooks Market Growth and Storytelling Evolution", date: "2026-01-03", readTime: "9 min read", excerpt: "The rise of audiobooks and how narration is transforming the literary experience..." }
       ]
     },
+
     events: {
       name: "Events",
       description: "Reviews, analysis, and recommendations for concerts, festivals, and cultural events",
@@ -758,6 +773,138 @@ export default function SubcategoryPage() {
         { id: "4", slug: "change-management-implementation", title: "Change Management Implementation: Leading Through Transitions", date: "2026-01-05", readTime: "11 min read", excerpt: "Strategies for successfully managing organizational change and helping teams adapt..." },
         { id: "5", slug: "organizational-communication", title: "Organizational Communication: Enhancing Information Flow", date: "2026-01-04", readTime: "9 min read", excerpt: "Best practices for creating effective communication channels within organizations..." },
         { id: "6", slug: "executive-decision-making", title: "Executive Decision-Making: Strategic Choices for Organizational Success", date: "2026-01-03", readTime: "10 min read", excerpt: "Framework for making complex decisions that affect the entire organization..." }
+      ]
+    },
+    biology: {
+      name: "Biology",
+      description: "Discover the science of life and living organisms",
+      articles: [
+        { id: "1", slug: "cell-theory-structure-function", title: "Cell Theory: Structure and Function", date: "2026-01-08", readTime: "12 min read", excerpt: "Exploring the fundamental unit of life and understanding how cellular structure enables biological function..." },
+        { id: "2", slug: "genetics-dna-reproduction", title: "Genetics: DNA and Reproduction", date: "2026-01-07", readTime: "14 min read", excerpt: "Understanding heredity, DNA structure, and the mechanisms of reproduction that ensure genetic continuity..." },
+        { id: "3", slug: "evolution-natural-selection", title: "Evolution: Natural Selection", date: "2026-01-06", readTime: "13 min read", excerpt: "Darwin's revolutionary theory and modern evolutionary concepts explaining the diversity of life on Earth..." },
+        { id: "4", slug: "ecosystems-biodiversity-conservation", title: "Ecosystems: Biodiversity and Conservation", date: "2026-01-05", readTime: "11 min read", excerpt: "Interactions between organisms and their environment, and the critical importance of biodiversity conservation..." },
+        { id: "5", slug: "human-anatomy-physiology", title: "Human Anatomy and Physiology", date: "2026-01-04", readTime: "15 min read", excerpt: "Structure and function of the human body: understanding how our organ systems work together..." },
+        { id: "6", slug: "biotechnology-applications-innovations", title: "Biotechnology: Applications and Innovations", date: "2026-01-03", readTime: "13 min read", excerpt: "Modern biotech and its impact on society: from gene editing to sustainable solutions..." }
+      ]
+    },
+    chemistry: {
+      name: "Chemistry",
+      description: "Explore the science of matter, its properties, composition, and reactions",
+      articles: [
+        { id: "1", slug: "atomic-structure-periodic-table", title: "Atomic Structure and the Periodic Table", date: "2026-01-08", readTime: "12 min read", excerpt: "Understanding atomic structure, elements, and organization of the periodic table..." },
+        { id: "2", slug: "chemical-bonding-molecular-geometry", title: "Chemical Bonding and Molecular Geometry", date: "2026-01-07", readTime: "13 min read", excerpt: "Exploring how atoms bond and form molecules with different shapes and properties..." },
+        { id: "3", slug: "thermodynamics-chemical-reactions", title: "Thermodynamics and Chemical Reactions", date: "2026-01-06", readTime: "14 min read", excerpt: "Understanding energy changes in chemical reactions and reaction spontaneity..." },
+        { id: "4", slug: "kinetics-reaction-rates-catalysts", title: "Kinetics: Reaction Rates and Catalysts", date: "2026-01-05", readTime: "11 min read", excerpt: "How fast reactions occur and factors that influence reaction rates..." },
+        { id: "5", slug: "organic-chemistry-carbon-compounds", title: "Organic Chemistry: Carbon Compounds", date: "2026-01-04", readTime: "15 min read", excerpt: "The chemistry of carbon-based compounds and their applications..." },
+        { id: "6", slug: "analytical-chemistry-techniques-instruments", title: "Analytical Chemistry: Techniques and Instruments", date: "2026-01-03", readTime: "13 min read", excerpt: "Methods and tools for identifying and quantifying chemical substances..." }
+      ]
+    },
+    astronomy: {
+      name: "Astronomy",
+      description: "Explore the wonders of the universe, celestial objects, and cosmic phenomena",
+      articles: [
+        { id: "1", slug: "stellar-evolution-life-cycle-stars", title: "Stellar Evolution: The Life Cycle of Stars", date: "2026-01-08", readTime: "14 min read", excerpt: "Understanding how stars form, evolve, and meet their final fate..." },
+        { id: "2", slug: "galaxies-and-cosmic-structure", title: "Galaxies and Cosmic Structure", date: "2026-01-07", readTime: "13 min read", excerpt: "Exploring galaxies, clusters, and the large-scale structure of the universe..." },
+        { id: "3", slug: "exoplanets-search-for-life", title: "Exoplanets: The Search for Life", date: "2026-01-06", readTime: "15 min read", excerpt: "Discovering worlds beyond our solar system and the quest for habitable planets..." },
+        { id: "4", slug: "black-holes-mysteries-revealed", title: "Black Holes: Mysteries Revealed", date: "2026-01-05", readTime: "12 min read", excerpt: "Exploring the enigmatic nature of black holes and their role in the cosmos..." },
+        { id: "5", slug: "cosmology-big-bang-theory", title: "Cosmology: The Big Bang Theory", date: "2026-01-04", readTime: "16 min read", excerpt: "Understanding the origin and evolution of the universe..." },
+        { id: "6", slug: "solar-system-exploration", title: "Solar System: Exploration and Discovery", date: "2026-01-03", readTime: "14 min read", excerpt: "Journey through our cosmic neighborhood and recent space missions..." }
+      ]
+    },
+    medicine: {
+      name: "Medicine",
+      description: "Explore medical advances, health innovations, and healthcare breakthroughs",
+      articles: [
+        { id: "1", slug: "revolutionary-medical-advances", title: "Revolutionary Medical Advances Transforming Healthcare", date: "2026-01-08", readTime: "15 min read", excerpt: "Examining cutting-edge medical technologies and treatments reshaping patient care..." },
+        { id: "2", slug: "precision-medicine-genomics", title: "Precision Medicine and Genomics", date: "2026-01-07", readTime: "14 min read", excerpt: "How genetic information is enabling personalized treatment approaches..." },
+        { id: "3", slug: "artificial-intelligence-healthcare", title: "Artificial Intelligence in Healthcare", date: "2026-01-06", readTime: "13 min read", excerpt: "AI applications transforming diagnosis, treatment, and patient outcomes..." },
+        { id: "4", slug: "immunotherapy-breakthroughs", title: "Immunotherapy Breakthroughs", date: "2026-01-05", readTime: "16 min read", excerpt: "Harnessing the immune system to fight cancer and other diseases..." },
+        { id: "5", slug: "regenerative-medicine-stem-cell-therapy", title: "Regenerative Medicine and Stem Cell Therapy", date: "2026-01-04", readTime: "17 min read", excerpt: "The promise of tissue engineering and cellular therapies..." },
+        { id: "6", slug: "global-health-challenges-solutions", title: "Global Health Challenges and Solutions", date: "2026-01-03", readTime: "14 min read", excerpt: "Addressing worldwide health disparities and emerging infectious diseases..." }
+      ]
+    },
+    environment: {
+      name: "Environmental Science",
+      description: "Explore the study of the environment and solutions to environmental problems",
+      articles: [
+        { id: "1", slug: "climate-change-causes-effects-solutions", title: "Climate Change: Causes, Effects, and Solutions", date: "2026-01-08", readTime: "16 min read", excerpt: "Understanding the science of climate change and strategies for mitigation and adaptation..." },
+        { id: "2", slug: "biodiversity-conservation-strategies", title: "Biodiversity Conservation Strategies", date: "2026-01-07", readTime: "15 min read", excerpt: "Protecting species and ecosystems for future generations..." },
+        { id: "3", slug: "renewable-energy-sustainability", title: "Renewable Energy and Sustainability", date: "2026-01-06", readTime: "14 min read", excerpt: "The transition to clean energy and sustainable practices..." },
+        { id: "4", slug: "pollution-control-environmental-protection", title: "Pollution Control and Environmental Protection", date: "2026-01-05", readTime: "17 min read", excerpt: "Addressing air, water, and soil pollution challenges..." },
+        { id: "5", slug: "ecosystem-restoration-techniques", title: "Ecosystem Restoration Techniques", date: "2026-01-04", readTime: "16 min read", excerpt: "Rehabilitating degraded ecosystems and promoting ecological recovery..." },
+        { id: "6", slug: "environmental-policy-sustainable-development", title: "Environmental Policy and Sustainable Development", date: "2026-01-03", readTime: "15 min read", excerpt: "Creating frameworks for sustainable growth and environmental protection..." }
+      ]
+    },
+    visual: {
+      name: "Visual Arts",
+      description: "Exploring painting, sculpture, photography, and other visual art forms",
+      articles: [
+        { id: "1", slug: "renaissance-masterpieces-art-techniques", title: "Renaissance Masterpieces and Art Techniques", date: "2026-01-08", readTime: "14 min read", excerpt: "Exploring the artistic innovations and masterpieces of the Renaissance period..." },
+        { id: "2", slug: "contemporary-art-movements-innovations", title: "Contemporary Art Movements and Innovations", date: "2026-01-07", readTime: "13 min read", excerpt: "Examining modern art movements and their cultural impact on society..." },
+        { id: "3", slug: "photography-techniques-composition", title: "Photography Techniques and Composition", date: "2026-01-06", readTime: "12 min read", excerpt: "Mastering the art of visual storytelling through photography..." },
+        { id: "4", slug: "sculpture-through-ages-materials", title: "Sculpture Through the Ages and Materials", date: "2026-01-05", readTime: "15 min read", excerpt: "From ancient stone carvings to modern installations, the evolution of sculptural art..." },
+        { id: "5", slug: "digital-art-new-frontiers", title: "Digital Art: New Frontiers in Creative Expression", date: "2026-01-04", readTime: "11 min read", excerpt: "How technology is transforming the landscape of artistic creation and expression..." },
+        { id: "6", slug: "art-restoration-preservation-techniques", title: "Art Restoration and Preservation Techniques", date: "2026-01-03", readTime: "16 min read", excerpt: "The science and art behind preserving cultural treasures for future generations..." }
+      ]
+    },
+    theater: {
+      name: "Theater",
+      description: "Reviews, analysis, and recommendations for stage productions, Broadway shows, and theatrical performances",
+      articles: [
+        { id: "1", slug: "broadway-sensations-2026-must-see-productions", title: "Broadway Sensations of 2026: Must-See Productions", date: "2026-01-08", readTime: "10 min read", excerpt: "A comprehensive guide to the most acclaimed Broadway shows of 2026 that deserve your attention and tickets..." },
+        { id: "2", slug: "off-broadway-hidden-gems-emerging-talent", title: "Off-Broadway Hidden Gems: Emerging Talent and Innovative Staging", date: "2026-01-07", readTime: "9 min read", excerpt: "Exploring the creative freedom and experimental productions that make Off-Broadway a vital part of the theatrical scene..." },
+        { id: "3", slug: "regional-theatre-outstanding-productions-countrywide", title: "Regional Theatre: Outstanding Productions Across the Country", date: "2026-01-06", readTime: "11 min read", excerpt: "Showcasing exceptional theatrical productions happening in regional theaters across the United States..." },
+        { id: "4", slug: "theatre-technology-innovation-stage-design", title: "Theatre Technology: Innovation in Stage Design and Effects", date: "2026-01-05", readTime: "8 min read", excerpt: "How modern technology is enhancing stage productions and creating new possibilities for theatrical experiences..." },
+        { id: "5", slug: "classical-vs-contemporary-theatre-approaches", title: "Classical vs Contemporary Theatre: Approaches and Audiences", date: "2026-01-04", readTime: "10 min read", excerpt: "Examining the differences between classical and contemporary theatrical approaches and their respective audiences..." },
+        { id: "6", slug: "theatre-careers-behind-scenes-opportunities", title: "Theatre Careers: Opportunities Behind the Scenes", date: "2026-01-03", readTime: "12 min read", excerpt: "Exploring the diverse career opportunities in theatre beyond acting, from directing to production design..." }
+      ]
+    },
+    literature: {
+      name: "Literature",
+      description: "Exploring classic and contemporary literary works, analysis, and critical interpretations",
+      articles: [
+        { id: "1", slug: "classic-literature-timeless-masterpieces", title: "Classic Literature: Timeless Masterpieces That Shaped Our World", date: "2024-07-15", readTime: "12 min read", excerpt: "Exploring the enduring power of classic literature and its impact on society, culture, and human understanding." },
+        { id: "2", slug: "contemporary-fiction-trends-innovation", title: "Contemporary Fiction: Trends and Innovation in Modern Storytelling", date: "2024-07-16", readTime: "10 min read", excerpt: "Examining the latest developments in contemporary fiction and how authors are pushing creative boundaries." },
+        { id: "3", slug: "poetry-art-craft-expression", title: "Poetry: The Art, Craft, and Emotional Expression", date: "2024-07-17", readTime: "9 min read", excerpt: "Understanding the multifaceted nature of poetry as both artistic expression and literary craft." },
+        { id: "4", slug: "world-literature-cultural-perspectives", title: "World Literature: Diverse Cultural Perspectives and Voices", date: "2024-07-18", readTime: "11 min read", excerpt: "Discovering the richness of world literature and how it reflects diverse cultural experiences and perspectives." },
+        { id: "5", slug: "genre-fiction-trends-mystery-sci-fi-fantasy", title: "Genre Fiction: Exploring Fantasy, Sci-Fi, Mystery, and More", date: "2024-07-19", readTime: "10 min read", excerpt: "Diving into the popular genres of fiction and understanding what makes each category unique and compelling." },
+        { id: "6", slug: "literary-analysis-critical-interpretation", title: "Literary Analysis: Techniques for Critical Interpretation", date: "2024-07-20", readTime: "13 min read", excerpt: "Mastering the art of literary analysis and developing skills for deeper critical interpretation of texts." }
+      ]
+    },
+    dance: {
+      name: "Dance",
+      description: "Exploring various dance forms, techniques, and performances from ballet to contemporary",
+      articles: [
+        { id: "1", slug: "classical-ballet-masters-and-masterpieces", title: "Classical Ballet: Masters and Timeless Masterpieces", date: "2026-01-08", readTime: "11 min read", excerpt: "Exploring the greatest ballets and choreographers who shaped the art form and continue to influence dancers worldwide..." },
+        { id: "2", slug: "contemporary-dance-innovation-and-expression", title: "Contemporary Dance: Innovation and Artistic Expression", date: "2026-01-07", readTime: "10 min read", excerpt: "How contemporary dance pushes boundaries and creates new forms of artistic expression and storytelling..." },
+        { id: "3", slug: "world-dance-traditions-and-cultural-significance", title: "World Dance: Cultural Traditions and Their Significance", date: "2026-01-06", readTime: "12 min read", excerpt: "Discovering the rich diversity of dance traditions from around the world and their cultural importance..." },
+        { id: "4", slug: "hip-hop-dance-evolution-and-cultural-impact", title: "Hip-Hop Dance: Evolution and Cultural Impact", date: "2026-01-05", readTime: "9 min read", excerpt: "Tracing the evolution of hip-hop dance from street culture to global phenomenon and its cultural significance..." },
+        { id: "5", slug: "ballroom-dancing-technique-and-competition", title: "Ballroom Dancing: Technique and Competition Insights", date: "2026-01-04", readTime: "10 min read", excerpt: "Exploring the art and technique of ballroom dancing and the world of competitive dance sport..." },
+        { id: "6", slug: "dance-careers-training-and-opportunities", title: "Dance Careers: Training and Professional Opportunities", date: "2026-01-03", readTime: "13 min read", excerpt: "Understanding the path to a professional dance career and the diverse opportunities in the dance industry..." }
+      ]
+    },
+    photography: {
+      name: "Photography",
+      description: "Exploring the art, techniques, and technology of photography from traditional to digital",
+      articles: [
+        { id: "1", slug: "mastering-light-and-composition-photography-basics", title: "Mastering Light and Composition: Photography Basics", date: "2026-01-08", readTime: "12 min read", excerpt: "Understanding the fundamental elements of photography including light, composition, and technical settings that create compelling images..." },
+        { id: "2", slug: "portrait-photography-capturing-personality-and-emotion", title: "Portrait Photography: Capturing Personality and Emotion", date: "2026-01-07", readTime: "11 min read", excerpt: "Techniques and approaches for creating portraits that reveal the subject's personality and evoke genuine emotions..." },
+        { id: "3", slug: "landscape-photography-nature-splendor-documentation", title: "Landscape Photography: Documenting Nature's Splendor", date: "2026-01-06", readTime: "13 min read", excerpt: "Exploring techniques for capturing the majesty of natural landscapes and preserving the beauty of our environment..." },
+        { id: "4", slug: "street-photography-candid-moments-urban-life", title: "Street Photography: Capturing Candid Moments of Urban Life", date: "2026-01-05", readTime: "10 min read", excerpt: "The art of documenting everyday life and spontaneous moments in urban environments with sensitivity and skill..." },
+        { id: "5", slug: "photography-equipment-gear-guide-professionals", title: "Photography Equipment: A Complete Gear Guide for Professionals", date: "2026-01-04", readTime: "14 min read", excerpt: "Understanding cameras, lenses, accessories, and post-processing tools that professional photographers use in their craft..." },
+        { id: "6", slug: "post-processing-techniques-enhancing-photographic-art", title: "Post-Processing Techniques: Enhancing Your Photographic Art", date: "2026-01-03", readTime: "12 min read", excerpt: "Exploring the digital darkroom and techniques for enhancing photographs while maintaining authenticity and artistic vision..." }
+      ]
+    },
+    poetry: {
+      name: "Poetry",
+      description: "Exploring the art of verse, rhythm, and literary expression through various poetic forms and styles",
+      articles: [
+        { id: "1", slug: "understanding-poetic-meter-rhythm-and-form", title: "Understanding Poetic Meter, Rhythm, and Form", date: "2026-01-08", readTime: "11 min read", excerpt: "Exploring the foundational elements of poetry including meter, rhythm, rhyme schemes, and various poetic forms that create musical and structural beauty..." },
+        { id: "2", slug: "imagery-symbolism-and-metaphor-in-poetry", title: "Imagery, Symbolism, and Metaphor in Poetry", date: "2026-01-07", readTime: "10 min read", excerpt: "How poets use sensory details, symbols, and metaphors to create vivid mental images and convey deeper meanings..." },
+        { id: "3", slug: "classic-poetic-movements-from-romanticism-to-modernism", title: "Classic Poetic Movements: From Romanticism to Modernism", date: "2026-01-06", readTime: "12 min read", excerpt: "Examining influential poetic movements that shaped literature and exploring the characteristics that define each era..." },
+        { id: "4", slug: "contemporary-poetry-experimental-forms-and-free-verse", title: "Contemporary Poetry: Experimental Forms and Free Verse", date: "2026-01-05", readTime: "9 min read", excerpt: "How modern poets break traditional conventions and experiment with form, language, and expression to create innovative works..." },
+        { id: "5", slug: "writing-poetry-tips-for-beginners-and-seasoned-writers", title: "Writing Poetry: Tips for Beginners and Seasoned Writers", date: "2026-01-04", readTime: "10 min read", excerpt: "Practical advice for crafting meaningful poems, from choosing subjects to revising and refining your work..." },
+        { id: "6", slug: "poetry-performance-spoken-word-and-literary-events", title: "Poetry Performance: Spoken Word and Literary Events", date: "2026-01-03", readTime: "13 min read", excerpt: "The art of bringing poetry to life through performance, voice, and audience engagement in the spoken word tradition..." }
       ]
     }
     // Add more subcategories as needed...
