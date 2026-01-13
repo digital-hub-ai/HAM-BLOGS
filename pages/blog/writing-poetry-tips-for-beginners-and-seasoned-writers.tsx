@@ -225,4 +225,119 @@ export default function WritingPoetryTipsForBeginnersAndSeasonedWriters() {
               </p>
               
               <p className="text-gray-700 mb-4">
-                Don't be discouraged by rejection or lack
+                Don't be discouraged by rejection or lack of publication opportunities; persistence and continuous improvement are key to developing your craft. Share your work with trusted readers for feedback, but ultimately trust your own artistic vision.
+              </p>
+              
+              <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Conclusion</h3>
+              
+              <p className="text-gray-700 mb-4">
+                Writing poetry is a journey of continuous learning and growth. Whether you're just beginning or have years of experience, the most important element is maintaining your curiosity about language and the world around you. Remember that every published poet was once a beginner, and every experienced poet continues to learn and evolve. The key to success in poetry lies not just in technical proficiency but in authenticity, persistence, and the willingness to take creative risks.
+              </p>
+              
+              <p className="text-gray-700 mb-4">
+                Focus on developing your unique voice while learning from the rich tradition of poetry. Read widely, write regularly, revise thoughtfully, and don't be afraid to experiment with different forms and approaches. Most importantly, remember that poetry is ultimately about connecting with readers through the power of language and shared human experience.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        {/* Quiz Section */}
+        <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Test Your Knowledge</h2>
+          
+          <div className="space-y-6">
+            {quizQuestions.map((q, index) => (
+              <div key={index} className="mb-6">
+                <h3 className="text-lg font-semibold text-gray-800 mb-3">{q.question}</h3>
+                <div className="space-y-2">
+                  {q.options.map((option, optIndex) => (
+                    <div key={optIndex} className="flex items-center">
+                      <input
+                        type="radio"
+                        id={`q${index}_opt${optIndex}`}
+                        name={`question${index}`}
+                        checked={quizAnswers[index] === option}
+                        onChange={() => handleQuizAnswer(index, option)}
+                        className="h-4 w-4 text-orange-600 focus:ring-orange-500"
+                        disabled={quizSubmitted}
+                      />
+                      <label 
+                        htmlFor={`q${index}_opt${optIndex}`} 
+                        className="ml-3 block text-gray-700"
+                      >
+                        {option}
+                      </label>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <button
+            onClick={submitQuiz}
+            disabled={quizSubmitted}
+            className={`mt-4 px-6 py-3 rounded-lg font-medium ${
+              quizSubmitted 
+                ? 'bg-gray-300 text-gray-500 cursor-not-allowed' 
+                : 'bg-orange-500 text-white hover:bg-orange-600 transition-colors duration-200'
+            }`}
+          >
+            {quizSubmitted ? 'Quiz Submitted' : 'Submit Answers'}
+          </button>
+          
+          {quizSubmitted && (
+            <div className="mt-6 p-4 bg-green-50 rounded-lg">
+              <h3 className="text-lg font-semibold text-green-800 mb-2">Results</h3>
+              <p className="text-green-700">
+                You scored {calculateScore()} out of {quizQuestions.length} correct!
+              </p>
+            </div>
+          )}
+        </section>
+
+        {/* FAQ Section */}
+        <section className="bg-white rounded-xl shadow-lg p-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+          
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div key={index} className="border-b border-gray-200 pb-4 last:border-0">
+                <button
+                  onClick={() => toggleFaq(index)}
+                  className="flex justify-between items-center w-full text-left py-2 focus:outline-none"
+                >
+                  <span className="text-lg font-medium text-gray-900">{faq.question}</span>
+                  <svg 
+                    className={`h-5 w-5 text-orange-500 transform transition-transform duration-200 ${
+                      expandedFaq === index ? 'rotate-180' : ''
+                    }`} 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    viewBox="0 0 20 20" 
+                    fill="currentColor"
+                  >
+                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </button>
+                
+                {expandedFaq === index && (
+                  <div className="mt-2 text-gray-700">
+                    {faq.answer}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+      </main>
+
+      <footer className="bg-white border-t border-gray-200 py-8 mt-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center text-gray-600">
+            <p>© 2026 HAM-BLOGS. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
