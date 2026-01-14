@@ -101,6 +101,14 @@ export default function Document() {
           }}
         />
         
+        {/* Telegram Monetag Advertising Code */}
+        <Script
+          src="https://quge5.com/88/tag.min.js"
+          strategy="afterInteractive"
+          data-zone="201912"
+          async
+        />
+        
         {/* Fonts with proper loading */}
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
