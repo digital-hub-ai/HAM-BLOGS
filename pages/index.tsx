@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
 
 // Define TypeScript interfaces
 interface BlogPost {
@@ -48,6 +49,21 @@ export default function Home() {
     }, 100);
     
     return () => clearInterval(timer);
+  }, []);
+  
+  // Close mobile menu when resizing to desktop
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) { // md breakpoint
+        setIsMobileMenuOpen(false);
+      }
+    };
+    
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   // Load blog posts from data file
@@ -141,12 +157,49 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 overflow-hidden">
       <Head>
-        <title>CHRONOSPHERE: The Cosmic Blogging Universe</title>
-        <meta name="description" content="Navigate the infinite galaxy of human thought where every idea is a star." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="keywords" content="cosmic blog, knowledge galaxy, infinite wisdom, temporal thoughts, quantum articles" />
-        <meta name="author" content="CHRONOSPHERE Universe" />
-        <link rel="canonical" href="https://chronosphere.com" />
+        <title>HAM BLOGS - World's Largest Premium Blogging Platform</title>
+        <meta name="description" content="Explore the world's largest premium blogging platform featuring cutting-edge technology, AI insights, and expert knowledge." />
+        <meta name="keywords" content="premium blog, technology blog, AI insights, expert knowledge, tech news, artificial intelligence, innovation" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="canonical" href="https://ham-blogs.vercel.app" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="HAM BLOGS - World's Largest Premium Blogging Platform" />
+        <meta property="og:description" content="Explore the world's largest premium blogging platform featuring cutting-edge technology, AI insights, and expert knowledge." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://ham-blogs.vercel.app/images/og-default.jpg" />
+        <meta property="og:url" content="https://ham-blogs.vercel.app" />
+        <meta property="og:site_name" content="HAM BLOGS" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="HAM BLOGS - World's Largest Premium Blogging Platform" />
+        <meta name="twitter:description" content="Explore the world's largest premium blogging platform featuring cutting-edge technology, AI insights, and expert knowledge." />
+        <meta name="twitter:image" content="https://ham-blogs.vercel.app/images/og-default.jpg" />
+        
+        {/* Schema.org Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Blog',
+            name: 'HAM BLOGS',
+            description: 'World\'s Largest Premium Blogging Platform',
+            url: 'https://ham-blogs.vercel.app',
+            publisher: {
+              '@type': 'Organization',
+              name: 'HAM BLOGS',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://ham-blogs.vercel.app/logo.jpg'
+              }
+            },
+            mainEntityOfPage: {
+              '@type': 'WebSite',
+              '@id': 'https://ham-blogs.vercel.app'
+            }
+          })}}
+        />
       </Head>
       
       {/* Professional Header Navigation */}
@@ -159,32 +212,75 @@ export default function Home() {
               </div>
             </div>
             
-            {/* Live Time Display */}
-            <div className="flex items-center space-x-6">
-              <div className="hidden md:block text-blue-200 text-sm font-medium">
+            {/* Mobile menu button */}
+            <div className="flex items-center md:hidden">
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="text-blue-200 hover:text-white p-2 rounded-md text-sm font-medium"
+                aria-expanded={isMobileMenuOpen}
+                aria-label="Main menu"
+              >
+                <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  {isMobileMenuOpen ? (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  ) : (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  )}
+                </svg>
+              </button>
+            </div>
+            
+            {/* Desktop Navigation - visible on medium screens and up */}
+            <div className="hidden md:flex items-center space-x-6">
+              <div className="text-blue-200 text-sm font-medium">
                 {currentTime.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
               </div>
               
-              {/* Full Navigation - visible on all screen sizes */}
-              <div className="flex items-center space-x-4 md:space-x-8">
-                <Link href="/" className="text-blue-200 hover:text-white px-2 py-1 md:px-3 md:py-2 rounded-md text-sm font-medium transition-colors duration-200">
+              <div className="flex items-center space-x-8">
+                <Link href="/" className="text-blue-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
                   Home
                 </Link>
-                <Link href="/categories" className="text-blue-200 hover:text-white px-2 py-1 md:px-3 md:py-2 rounded-md text-sm font-medium transition-colors duration-200">
+                <Link href="/categories" className="text-blue-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
                   Categories
                 </Link>
-                <Link href="/blog" className="text-blue-200 hover:text-white px-2 py-1 md:px-3 md:py-2 rounded-md text-sm font-medium transition-colors duration-200">
+                <Link href="/blog" className="text-blue-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
                   Blog
                 </Link>
-                <Link href="/about" className="text-blue-200 hover:text-white px-2 py-1 md:px-3 md:py-2 rounded-md text-sm font-medium transition-colors duration-200">
+                <Link href="/about" className="text-blue-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
                   About
                 </Link>
-                <Link href="/services" className="text-blue-200 hover:text-white px-2 py-1 md:px-3 md:py-2 rounded-md text-sm font-medium transition-colors duration-200">
+                <Link href="/services" className="text-blue-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
                   Services
                 </Link>
               </div>
             </div>
           </div>
+          
+          {/* Mobile Navigation Menu - visible only on small screens */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden bg-gray-900/95 backdrop-blur-lg border-t border-blue-800/30">
+              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <div className="text-blue-200 text-center py-2">
+                  {currentTime.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+                </div>
+                <Link href="/" className="text-blue-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+                  Home
+                </Link>
+                <Link href="/categories" className="text-blue-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+                  Categories
+                </Link>
+                <Link href="/blog" className="text-blue-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+                  Blog
+                </Link>
+                <Link href="/about" className="text-blue-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+                  About
+                </Link>
+                <Link href="/services" className="text-blue-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+                  Services
+                </Link>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
@@ -365,11 +461,11 @@ export default function Home() {
             </div>
           </div>
           
-          <h1 className="text-8xl md:text-10xl font-black mb-8 bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl xl:text-10xl font-black mb-6 md:mb-8 bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent leading-tight">
             CHRONOSPHERE: <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">ETERNAL</span> <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">CONSCIOUSNESS</span> NEXUS
           </h1>
           
-          <p className="text-3xl md:text-4xl text-blue-100 max-w-4xl mx-auto mb-16 leading-relaxed">
+          <p className="text-lg md:text-2xl lg:text-3xl xl:text-4xl text-blue-100 max-w-4xl mx-auto mb-8 md:mb-16 leading-relaxed">
             Traverse the boundless cosmos of thought where knowledge entities orbit in eternal dance across space and time.
           </p>
           
@@ -389,14 +485,14 @@ export default function Home() {
           </div>
           
           <div className="max-w-4xl mx-auto relative">
-            <div className="absolute inset-y-0 left-0 pl-6 flex items-center pointer-events-none">
-              <svg className="h-8 w-8 text-blue-300" fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none md:pl-6">
+              <svg className="h-6 w-6 text-blue-300 md:h-8 md:w-8" fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
               </svg>
             </div>
             <input
               type="text"
-              className="block w-full pl-16 pr-6 py-6 border border-blue-500/50 rounded-2xl bg-blue-900/50 text-white placeholder-blue-300 focus:outline-none focus:ring-4 focus:ring-blue-500/50 focus:border-blue-400 shadow-2xl text-xl backdrop-blur-sm"
+              className="block w-full pl-12 pr-4 py-4 md:pl-16 md:pr-6 md:py-6 border border-blue-500/50 rounded-xl md:rounded-2xl bg-blue-900/50 text-white placeholder-blue-300 focus:outline-none focus:ring-4 focus:ring-blue-500/50 focus:border-blue-400 shadow-2xl text-lg md:text-xl backdrop-blur-sm"
               placeholder="Navigate the cosmic knowledge expanse..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -469,35 +565,35 @@ export default function Home() {
         
         <section className="py-20">
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            <div className="bg-gradient-to-br from-blue-800/30 to-purple-800/30 backdrop-blur-sm rounded-3xl p-10 border border-blue-400/30 shadow-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
+            <div className="bg-gradient-to-br from-blue-800/30 to-purple-800/30 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 border border-blue-400/30 shadow-2xl">
               <div className="text-center">
-                <div className="text-6xl mb-6">🌌</div>
-                <h3 className="text-3xl font-bold text-white mb-4">Temporal Navigation</h3>
-                <p className="text-blue-100 text-lg mb-6">Travel through time to explore how ideas evolved across centuries</p>
-                <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-bold hover:from-blue-500 hover:to-purple-500 transition-all duration-300 shadow-lg">
+                <div className="text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6">🌌</div>
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3 md:mb-4">Temporal Navigation</h3>
+                <p className="text-blue-100 text-base md:text-lg mb-4 md:mb-6">Travel through time to explore how ideas evolved across centuries</p>
+                <button className="px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-bold hover:from-blue-500 hover:to-purple-500 transition-all duration-300 shadow-lg text-sm md:text-base">
                   Enter Timeline
                 </button>
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 backdrop-blur-sm rounded-3xl p-10 border border-purple-400/30 shadow-2xl">
+            <div className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 border border-purple-400/30 shadow-2xl">
               <div className="text-center">
-                <div className="text-6xl mb-6">🔮</div>
-                <h3 className="text-3xl font-bold text-white mb-4">Quantum Discovery</h3>
-                <p className="text-purple-100 text-lg mb-6">Uncover hidden connections between ideas across space and time</p>
-                <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-bold hover:from-purple-500 hover:to-pink-500 transition-all duration-300 shadow-lg">
+                <div className="text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6">🔮</div>
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3 md:mb-4">Quantum Discovery</h3>
+                <p className="text-purple-100 text-base md:text-lg mb-4 md:mb-6">Uncover hidden connections between ideas across space and time</p>
+                <button className="px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-bold hover:from-purple-500 hover:to-pink-500 transition-all duration-300 shadow-lg text-sm md:text-base">
                   Explore Connections
                 </button>
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-pink-800/30 to-blue-800/30 backdrop-blur-sm rounded-3xl p-10 border border-pink-400/30 shadow-2xl">
+            <div className="bg-gradient-to-br from-pink-800/30 to-blue-800/30 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 border border-pink-400/30 shadow-2xl">
               <div className="text-center">
-                <div className="text-6xl mb-6">🌟</div>
-                <h3 className="text-3xl font-bold text-white mb-4">Consciousness Nexus</h3>
-                <p className="text-pink-100 text-lg mb-6">Connect with the collective wisdom of cosmic contributors</p>
-                <button className="px-8 py-4 bg-gradient-to-r from-pink-600 to-blue-600 text-white rounded-full font-bold hover:from-pink-500 hover:to-blue-500 transition-all duration-300 shadow-lg">
+                <div className="text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6">🌟</div>
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3 md:mb-4">Consciousness Nexus</h3>
+                <p className="text-pink-100 text-base md:text-lg mb-4 md:mb-6">Connect with the collective wisdom of cosmic contributors</p>
+                <button className="px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-pink-600 to-blue-600 text-white rounded-full font-bold hover:from-pink-500 hover:to-blue-500 transition-all duration-300 shadow-lg text-sm md:text-base">
                   Join Collective
                 </button>
               </div>
@@ -517,51 +613,51 @@ export default function Home() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-blue-800/30 to-blue-900/30 backdrop-blur-sm rounded-3xl p-8 border border-blue-400/30 shadow-2xl">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold text-xl mr-4">
+            <div className="grid grid-cols-1 gap-6 md:gap-8">
+              <div className="bg-gradient-to-br from-blue-800/30 to-blue-900/30 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 md:p-8 border border-blue-400/30 shadow-2xl">
+                <div className="flex items-center mb-4 md:mb-6">
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold text-lg md:text-xl mr-3 md:mr-4">
                     A
                   </div>
                   <div>
-                    <div className="font-bold text-white text-lg">Alex Rivera</div>
-                    <div className="text-blue-300">Quantum Scholar</div>
+                    <div className="font-bold text-white text-base md:text-lg">Alex Rivera</div>
+                    <div className="text-blue-300 text-sm md:text-base">Quantum Scholar</div>
                   </div>
                 </div>
-                <p className="text-blue-100 text-lg italic">"CHRONOSPHERE transformed how I consume knowledge. The temporal navigation feature helped me understand the evolution of ideas across centuries."</p>
-                <div className="flex text-yellow-400 mt-4">
+                <p className="text-blue-100 text-base md:text-lg italic">"CHRONOSPHERE transformed how I consume knowledge. The temporal navigation feature helped me understand the evolution of ideas across centuries."</p>
+                <div className="flex text-yellow-400 mt-3 md:mt-4 text-sm md:text-base">
                   ★★★★★
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-purple-800/30 to-purple-900/30 backdrop-blur-sm rounded-3xl p-8 border border-purple-400/30 shadow-2xl">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-xl mr-4">
+              <div className="bg-gradient-to-br from-purple-800/30 to-purple-900/30 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 md:p-8 border border-purple-400/30 shadow-2xl">
+                <div className="flex items-center mb-4 md:mb-6">
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-lg md:text-xl mr-3 md:mr-4">
                     S
                   </div>
                   <div>
-                    <div className="font-bold text-white text-lg">Sophia Chen</div>
-                    <div className="text-purple-300">Consciousness Explorer</div>
+                    <div className="font-bold text-white text-base md:text-lg">Sophia Chen</div>
+                    <div className="text-purple-300 text-sm md:text-base">Consciousness Explorer</div>
                   </div>
                 </div>
-                <p className="text-purple-100 text-lg italic">"The quantum discovery algorithms unveiled connections between concepts I never knew existed. My research has accelerated tenfold."</p>
-                <div className="flex text-yellow-400 mt-4">
+                <p className="text-purple-100 text-base md:text-lg italic">"The quantum discovery algorithms unveiled connections between concepts I never knew existed. My research has accelerated tenfold."</p>
+                <div className="flex text-yellow-400 mt-3 md:mt-4 text-sm md:text-base">
                   ★★★★★
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-pink-800/30 to-blue-800/30 backdrop-blur-sm rounded-3xl p-8 border border-pink-400/30 shadow-2xl">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-r from-pink-500 to-blue-500 flex items-center justify-center text-white font-bold text-xl mr-4">
+              <div className="bg-gradient-to-br from-pink-800/30 to-blue-800/30 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 md:p-8 border border-pink-400/30 shadow-2xl">
+                <div className="flex items-center mb-4 md:mb-6">
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-gradient-to-r from-pink-500 to-blue-500 flex items-center justify-center text-white font-bold text-lg md:text-xl mr-3 md:mr-4">
                     M
                   </div>
                   <div>
-                    <div className="font-bold text-white text-lg">Marcus Johnson</div>
-                    <div className="text-pink-300">Temporal Sage</div>
+                    <div className="font-bold text-white text-base md:text-lg">Marcus Johnson</div>
+                    <div className="text-pink-300 text-sm md:text-base">Temporal Sage</div>
                   </div>
                 </div>
-                <p className="text-pink-100 text-lg italic">"As someone who studies historical patterns, the ability to visualize idea evolution across time is revolutionary. Thank you, CHRONOSPHERE!"</p>
-                <div className="flex text-yellow-400 mt-4">
+                <p className="text-pink-100 text-base md:text-lg italic">"As someone who studies historical patterns, the ability to visualize idea evolution across time is revolutionary. Thank you, CHRONOSPHERE!"</p>
+                <div className="flex text-yellow-400 mt-3 md:mt-4 text-sm md:text-base">
                   ★★★★★
                 </div>
               </div>
@@ -572,26 +668,26 @@ export default function Home() {
         {/* Stats Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div className="p-8">
-                <div className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent mb-4">∞</div>
-                <h3 className="text-2xl font-bold text-white">Cosmic Ideas</h3>
-                <p className="text-blue-200">Infinite knowledge bodies</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
+              <div className="p-4 md:p-6">
+                <div className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent mb-3 md:mb-4">∞</div>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-white">Cosmic Ideas</h3>
+                <p className="text-blue-200 text-sm md:text-base">Infinite knowledge bodies</p>
               </div>
-              <div className="p-8">
-                <div className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent mb-4">∞</div>
-                <h3 className="text-2xl font-bold text-white">Temporal Minds</h3>
-                <p className="text-purple-200">Connected consciousness</p>
+              <div className="p-4 md:p-6">
+                <div className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent mb-3 md:mb-4">∞</div>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-white">Temporal Minds</h3>
+                <p className="text-purple-200 text-sm md:text-base">Connected consciousness</p>
               </div>
-              <div className="p-8">
-                <div className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-pink-400 to-pink-600 bg-clip-text text-transparent mb-4">∞</div>
-                <h3 className="text-2xl font-bold text-white">Quantum Paths</h3>
-                <p className="text-pink-200">Discovery routes</p>
+              <div className="p-4 md:p-6">
+                <div className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-pink-400 to-pink-600 bg-clip-text text-transparent mb-3 md:mb-4">∞</div>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-white">Quantum Paths</h3>
+                <p className="text-pink-200 text-sm md:text-base">Discovery routes</p>
               </div>
-              <div className="p-8">
-                <div className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent mb-4">∞</div>
-                <h3 className="text-2xl font-bold text-white">Eternal Moments</h3>
-                <p className="text-blue-200">Timeless insights</p>
+              <div className="p-4 md:p-6">
+                <div className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent mb-3 md:mb-4">∞</div>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-white">Eternal Moments</h3>
+                <p className="text-blue-200 text-sm md:text-base">Timeless insights</p>
               </div>
             </div>
           </div>
@@ -1391,13 +1487,13 @@ export default function Home() {
             <p className="text-2xl text-blue-100 mb-10">
               Subscribe to receive cosmic insights, temporal discoveries, and quantum revelations directly to your consciousness
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 max-w-2xl mx-auto">
               <input 
                 type="email" 
                 placeholder="Enter your cosmic coordinates..." 
-                className="flex-grow px-6 py-4 rounded-2xl bg-blue-900/50 text-white placeholder-blue-300 border border-blue-500/50 focus:outline-none focus:ring-4 focus:ring-blue-500/50"
+                className="flex-grow px-4 py-3 md:px-6 md:py-4 rounded-xl md:rounded-2xl bg-blue-900/50 text-white placeholder-blue-300 border border-blue-500/50 focus:outline-none focus:ring-4 focus:ring-blue-500/50 text-sm md:text-base"
               />
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl font-bold hover:from-blue-500 hover:to-purple-500 transition-all duration-300 shadow-lg text-lg">
+              <button className="px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl md:rounded-2xl font-bold hover:from-blue-500 hover:to-purple-500 transition-all duration-300 shadow-lg text-sm md:text-lg">
                 Beam Me Up
               </button>
             </div>

@@ -39,6 +39,18 @@ export default function Document() {
         <meta name="theme-color" content="#111827" />
         <meta name="google-site-verification" content="LBIeQN0P9NmMDc52HgxtMo-SAhmjBB3REjrhiK6yb3k" />
         
+        {/* SEO Meta Tags */}
+        <meta name="author" content="HAM BLOGS" />
+        <meta name="copyright" content="HAM BLOGS" />
+        <meta name="distribution" content="global" />
+        <meta name="rating" content="general" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="MobileOptimized" content="320" />
+        
+        {/* Telegram Mini App Verification Code */}
+        <meta name="monetag" content="5c844fb179b9a983b54573c99cd9a620" />
+        
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={siteUrl} />
@@ -55,6 +67,22 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
+        
+        {/* Performance optimizations */}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        
+        {/* Accessibility */}
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        
+        {/* Accessibility improvements */}
+        <meta name="application-name" content="HAM BLOGS" />
+        <meta name="msapplication-TileColor" content="#111827" />
+        
+        {/* Telegram Mini App Verification Code - Required for monetization */}
+        {/* Insert your specific Telegram verification code here */}
+        {/* Example: Add the actual verification meta tag when you receive it from Telegram */}
         
         {/* Google Analytics */}
         <Script

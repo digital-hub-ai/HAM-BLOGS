@@ -522,7 +522,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   const currentDate = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
   
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-  xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+  xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">\n';
 
   // Add static pages
   staticPages.forEach(page => {
@@ -547,7 +547,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
 
   xml += '</urlset>';
 
-  res.setHeader('Content-Type', 'text/xml');
+  res.setHeader('Content-Type', 'application/xml');
   res.write(xml);
   res.end();
 
