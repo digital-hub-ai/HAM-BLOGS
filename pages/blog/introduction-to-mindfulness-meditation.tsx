@@ -1,221 +1,240 @@
-import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useState } from 'react';
 
-const BlogPost = () => {
+export default function IntroductionToMindfulnessMeditation() {
   const router = useRouter();
-  const [bookmarked, setBookmarked] = useState(false);
-  const [showNextArticle, setShowNextArticle] = useState(false);
-
-  useEffect(() => {
-    const bookmarks = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('blogBookmarks') || '[]') : [];
-    if (bookmarks.includes(router.asPath)) {
-      setBookmarked(true);
-    }
-  }, [router.asPath]);
+  const [isBookmarked, setIsBookmarked] = useState(false);
 
   const toggleBookmark = () => {
-    if (typeof window === 'undefined') return;
-    
-    const bookmarks = JSON.parse(localStorage.getItem('blogBookmarks') || '[]');
-    let updatedBookmarks;
-    
-    if (bookmarked) {
-      updatedBookmarks = bookmarks.filter((bookmark: string) => bookmark !== router.asPath);
-    } else {
-      updatedBookmarks = [...bookmarks, router.asPath];
-    }
-    
-    localStorage.setItem('blogBookmarks', JSON.stringify(updatedBookmarks));
-    setBookmarked(!bookmarked);
+    setIsBookmarked(!isBookmarked);
   };
 
-  const nextArticles = [
-    { title: "Breathing Techniques for Stress Relief", slug: "/blog/breathing-techniques-for-stress-relief" },
-    { title: "Mindful Eating Practices", slug: "/blog/mindful-eating-practices" },
-    { title: "Body Scan Meditation: A Complete Guide", slug: "/blog/body-scan-meditation-guide" }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-50">
       <Head>
-        <title>Introduction to Mindfulness Meditation - Mindfulness Practices</title>
-        <meta name="description" content="Learn the fundamentals of mindfulness meditation and its transformative benefits for mental health and well-being." />
-        <link rel="canonical" href="https://www.hamblogs.tech/blog/introduction-to-mindfulness-meditation" />
-        <meta property="og:title" content="Introduction to Mindfulness Meditation" />
-        <meta property="og:description" content="Learn the fundamentals of mindfulness meditation and its transformative benefits for mental health and well-being." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.hamblogs.tech/blog/introduction-to-mindfulness-meditation" />
+        <title>Introduction to Mindfulness Meditation: Learn the Fundamentals | Ham Blogs</title>
+        <meta name="description" content="Complete introduction to mindfulness meditation, covering fundamentals, techniques, and benefits for beginners." />
+        <link rel="canonical" href="https://ham-blogs.vercel.app/blog/introduction-to-mindfulness-meditation" />
       </Head>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 py-12">
-        <header className="mb-12 text-center">
-          <button 
-            onClick={() => window.history.back()} 
-            className="inline-flex items-center text-yellow-400 hover:text-yellow-300 mb-6"
-          >
-            <span className="mr-2">←</span> Back to Articles
-          </button>
+      <article className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        <header className="mb-10">
+          <nav className="mb-6">
+            <Link href="/" className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200">Home</Link>
+            <span className="mx-2 text-gray-500">/</span>
+            <Link href="/blog" className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200">Blog</Link>
+            <span className="mx-2 text-gray-500">/</span>
+            <Link href="/category/wellness" className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200">Wellness</Link>
+            <span className="mx-2 text-gray-500">/</span>
+            <Link href="/category/wellness/meditation" className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200">Meditation</Link>
+            <span className="mx-2 text-gray-500">/</span>
+            <span className="text-gray-700">Introduction to Mindfulness Meditation</span>
+          </nav>
           
-          <div className="flex justify-between items-start mb-6">
-            <div>
-              <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-medium mb-4">
-                Mindfulness
-              </span>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-                Introduction to Mindfulness Meditation
-              </h1>
-            </div>
-            <button
+          <div className="flex justify-between items-start">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Introduction to Mindfulness Meditation: Learn the Fundamentals</h1>
+            
+            <button 
               onClick={toggleBookmark}
-              className={`p-3 rounded-full ${bookmarked ? 'bg-yellow-400 text-gray-900' : 'bg-gray-700 text-yellow-400'} hover:scale-105 transition-transform duration-200`}
-              aria-label={bookmarked ? "Remove bookmark" : "Bookmark this article"}
+              className={`p-2 rounded-full ${isBookmarked ? 'text-yellow-500' : 'text-gray-400'} hover:bg-gray-100 transition-colors duration-200`}
+              aria-label={isBookmarked ? "Remove bookmark" : "Bookmark this article"}
             >
-              {bookmarked ? '★' : '☆'}
+              {isBookmarked ? (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                  <path fillRule="evenodd" d="M6.32 2.577a49.255 49.255 0 0 1 11.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 0 1-1.085.67L12 18.089l-7.165 3.583A.75.75 0 0 1 3.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93Z" clipRule="evenodd" />
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                </svg>
+              )}
             </button>
           </div>
-
-          <div className="flex flex-wrap justify-center gap-6 mb-8">
-            <div className="flex items-center text-gray-300">
-              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-              </svg>
-              6 min read
-            </div>
-            <div className="flex items-center text-gray-300">
-              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
-              </svg>
-              January 8, 2026
-            </div>
+          
+          <div className="flex flex-wrap items-center text-gray-600 mb-6">
+            <span className="mr-4">📅 January 10, 2026</span>
+            <span className="mr-4">⏱️ 6 min read</span>
+            <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Wellness</span>
+            <span className="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm ml-2">Meditation</span>
+            <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm ml-2">Beginner</span>
           </div>
         </header>
 
-        <main className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 mb-12">
-          <div className="prose prose-lg prose-invert max-w-none">
-            <p className="lead text-xl text-gray-200 mb-8">
-              Mindfulness meditation is a simple yet profound practice that involves paying attention to the present moment without judgment. It's about observing your thoughts, feelings, bodily sensations, and surrounding environment with a gentle, accepting attitude.
-            </p>
+        <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+          <img 
+            src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+            alt="Person practicing mindfulness meditation"
+            className="w-full h-64 object-cover rounded-lg mb-4"
+          />
+          <p className="text-gray-600 italic">Starting your mindfulness meditation journey</p>
+        </div>
 
-            <h2 className="text-2xl font-bold text-white mb-4 mt-10">The Foundation of Mindfulness</h2>
-            <p>
-              At its core, mindfulness is about developing awareness of the here and now. Rather than getting caught up in regrets about the past or worries about the future, mindfulness invites you to anchor yourself in the present moment.
-            </p>
-
-            <p>
-              This practice has roots in ancient Buddhist traditions but has been adapted for modern secular contexts by researchers like Jon Kabat-Zinn, who developed the Mindfulness-Based Stress Reduction (MBSR) program.
-            </p>
-
-            <h2 className="text-2xl font-bold text-white mb-4 mt-10">Benefits of Regular Practice</h2>
-            <p>
-              Research has consistently shown that regular mindfulness meditation offers numerous benefits:
-            </p>
-
-            <ul className="list-disc pl-6 mb-6 space-y-2">
-              <li>Reduced stress and anxiety levels</li>
-              <li>Improved emotional regulation</li>
-              <li>Better focus and concentration</li>
-              <li>Enhanced self-awareness</li>
-              <li>Greater empathy and compassion</li>
-              <li>Improved physical health markers</li>
-            </ul>
-
-            <h2 className="text-2xl font-bold text-white mb-4 mt-10">Getting Started with Your Practice</h2>
-            <p>
-              Starting a mindfulness meditation practice doesn't require special equipment or hours of sitting in silence. Here's a simple approach for beginners:
-            </p>
-
-            <ol className="list-decimal pl-6 mb-6 space-y-2">
-              <li>Choose a quiet space where you won't be disturbed</li>
-              <li>Sit comfortably with your spine straight (on a chair or cushion)</li>
-              <li>Close your eyes or soften your gaze downward</li>
-              <li>Focus on your breath - feel the sensation of air entering and leaving your nostrils</li>
-              <li>When your mind wanders (and it will), gently bring your attention back to your breath</li>
-              <li>Start with just 5-10 minutes and gradually increase the duration</li>
-            </ol>
-
-            <h2 className="text-2xl font-bold text-white mb-4 mt-10">Common Challenges and How to Overcome Them</h2>
-            <p>
-              Many beginners expect to achieve a completely "blank mind" during meditation, but this is a common misconception. The goal isn't to stop thinking altogether, but rather to observe thoughts without getting carried away by them.
-            </p>
-
-            <p>
-              It's normal for your mind to wander frequently, especially in the beginning. Each time you notice your attention has drifted and you bring it back, you're strengthening your mindfulness muscle.
-            </p>
-
-            <h2 className="text-2xl font-bold text-white mb-4 mt-10">Incorporating Mindfulness into Daily Life</h2>
-            <p>
-              While formal meditation practice is valuable, you can also cultivate mindfulness throughout your day. This might involve:
-            </p>
-
-            <ul className="list-disc pl-6 mb-6 space-y-2">
-              <li>Eating meals without distractions</li>
-              <li>Taking mindful walks where you notice your surroundings</li>
-              <li>Pausing to breathe deeply before responding to stressful situations</li>
-              <li>Noticing the sensations of daily activities like washing dishes or brushing teeth</li>
-            </ul>
-
-            <p>
-              Remember, mindfulness is a skill that develops over time. Be patient with yourself and approach your practice with curiosity rather than criticism. Even a few minutes of daily mindfulness can begin to create positive changes in your mental well-being.
-            </p>
-          </div>
-        </main>
-
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 mb-12">
-          <h3 className="text-2xl font-bold text-white mb-6">About Mindfulness</h3>
-          <p className="text-gray-300 mb-4">
-            Mindfulness is the practice of bringing one's attention to the present moment in a non-judgmental way. It has been practiced for thousands of years in various traditions and has gained significant recognition in Western medicine and psychology for its therapeutic benefits.
+        <div className="prose prose-lg prose-indigo max-w-none">
+          <p className="text-xl text-gray-700 mb-6">
+            Mindfulness meditation has gained significant popularity in recent years as people seek 
+            effective ways to manage stress, improve focus, and enhance overall well-being. Rooted in 
+            ancient contemplative traditions, mindfulness meditation has been scientifically validated 
+            for its numerous benefits. If you're new to meditation, this guide will introduce you to 
+            the fundamentals and help you establish a sustainable practice.
           </p>
-          <p className="text-gray-300">
-            Regular mindfulness practice can help reduce stress, improve emotional regulation, enhance focus, and promote overall well-being. It's accessible to everyone regardless of age, background, or beliefs.
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">What is Mindfulness Meditation?</h2>
+          <p className="text-gray-700 mb-6">
+            Mindfulness meditation is the practice of paying attention to the present moment without 
+            judgment. It involves observing your thoughts, feelings, bodily sensations, and surrounding 
+            environment with a gentle, accepting attitude. Rather than getting caught up in thoughts 
+            about the past or future, mindfulness meditation trains you to anchor your attention in 
+            the here and now.
+          </p>
+
+          <p className="text-gray-700 mb-6">
+            The essence of mindfulness meditation is not to stop thinking or empty your mind, but 
+            rather to notice when your mind has wandered and gently return your attention to the 
+            present moment. This practice cultivates awareness and acceptance of whatever arises in 
+            your experience.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Core Principles of Mindfulness</h2>
+          <p className="text-gray-700 mb-4">
+            Understanding these fundamental principles will help you develop a deeper appreciation 
+            for mindfulness meditation:
+          </p>
+
+          <ul className="list-disc pl-6 mb-6 space-y-2">
+            <li className="text-gray-700"><strong>Present moment awareness:</strong> Focusing on what's happening right now, rather than dwelling on the past or anticipating the future.</li>
+            <li className="text-gray-700"><strong>Non-judgmental observation:</strong> Noticing thoughts and feelings without labeling them as good or bad.</li>
+            <li className="text-gray-700"><strong>Acceptance:</strong> Acknowledging experiences as they are, without trying to change them immediately.</li>
+            <li className="text-gray-700"><strong>Beginner's mind:</strong> Approaching each moment with fresh curiosity, as if experiencing it for the first time.</li>
+            <li className="text-gray-700"><strong>Patience:</strong> Understanding that developing mindfulness takes time and practice.</li>
+            <li className="text-gray-700"><strong>Self-compassion:</strong> Being kind to yourself when your mind wanders or when you find the practice challenging.</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Basic Techniques for Beginners</h2>
+          <p className="text-gray-700 mb-4">
+            Start with these foundational techniques to build your mindfulness meditation practice:
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Breath Awareness</h3>
+          <p className="text-gray-700 mb-4">
+            This is the most common starting point for mindfulness meditation. Simply focus on 
+            your natural breathing pattern. Notice the sensation of air entering and leaving your 
+            nostrils, or the rise and fall of your chest or abdomen. When you notice your mind 
+            has wandered (which is completely normal), gently return your attention to your breath.
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Body Awareness</h3>
+          <p className="text-gray-700 mb-4">
+            Bring attention to physical sensations in your body. Start with a simple awareness of 
+            the points of contact between your body and the chair or cushion you're sitting on. 
+            Notice any areas of tension, warmth, coolness, or other sensations without trying to 
+            change them.
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Thought Observation</h3>
+          <p className="text-gray-700 mb-4">
+            Once you're comfortable with breath awareness, you can begin to observe your thoughts 
+            as they arise. Instead of engaging with them, try to see them as passing clouds in 
+            the sky of your mind. Acknowledge them and let them go, returning to your breath.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Getting Started: A Simple Practice</h2>
+          <p className="text-gray-700 mb-4">
+            Here's a step-by-step guide for your first mindfulness meditation session:
+          </p>
+
+          <ol className="list-decimal pl-6 mb-6 space-y-2">
+            <li className="text-gray-700"><strong>Find a comfortable position:</strong> Sit upright in a chair with your feet flat on the floor, or sit cross-legged on a cushion. Keep your back straight but not rigid.</li>
+            <li className="text-gray-700"><strong>Set a timer:</strong> Start with just 5-10 minutes. This removes the distraction of watching the clock.</li>
+            <li className="text-gray-700"><strong>Close your eyes or soften your gaze:</strong> Choose what feels more comfortable for you.</li>
+            <li className="text-gray-700"><strong>Focus on your breath:</strong> Begin by taking a few deep breaths, then allow your breathing to return to its natural rhythm.</li>
+            <li className="text-gray-700"><strong>Notice your breath:</strong> Pay attention to the physical sensations of breathing. If your mind wanders, gently bring it back to the breath.</li>
+            <li className="text-gray-700"><strong>End gently:</strong> When your timer goes off, take a moment before opening your eyes. Notice how you feel.</li>
+          </ol>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Common Challenges and How to Address Them</h2>
+          <p className="text-gray-700 mb-4">
+            As a beginner, you'll likely encounter these common challenges:
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">My mind keeps wandering</h3>
+          <p className="text-gray-700 mb-4">
+            This is completely normal and expected. The practice isn't about stopping thoughts 
+            but noticing when your attention has wandered and gently returning to your focus point. 
+            Every time you bring your attention back, you're strengthening your mindfulness muscle.
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">I feel restless or uncomfortable</h3>
+          <p className="text-gray-700 mb-4">
+            Physical discomfort is common when sitting still. Make small adjustments as needed, 
+            but try to observe the sensation without immediately reacting. Sometimes we're not 
+            aware of how much tension we carry until we sit quietly.
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">I don't have time</h3>
+          <p className="text-gray-700 mb-4">
+            Even 5 minutes of daily practice can be beneficial. You don't need to meditate for 
+            long periods to experience benefits. Consistency matters more than duration.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Benefits of Regular Practice</h2>
+          <p className="text-gray-700 mb-4">
+            Research has shown that regular mindfulness meditation practice offers numerous benefits:
+          </p>
+
+          <ul className="list-disc pl-6 mb-6 space-y-2">
+            <li className="text-gray-700"><strong>Reduced stress and anxiety:</strong> Mindfulness helps break the cycle of worry and rumination.</li>
+            <li className="text-gray-700"><strong>Improved focus and concentration:</strong> Regular practice strengthens attention and cognitive function.</li>
+            <li className="text-gray-700"><strong>Enhanced emotional regulation:</strong> Greater awareness of emotions allows for more thoughtful responses.</li>
+            <li className="text-gray-700"><strong>Better sleep:</strong> Mindfulness can help calm the mind before bedtime.</li>
+            <li className="text-gray-700"><strong>Increased self-awareness:</strong> Deeper understanding of your thought patterns and habits.</li>
+            <li className="text-gray-700"><strong>Greater compassion:</strong> Mindfulness practice often leads to increased empathy and kindness toward yourself and others.</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Building a Sustainable Practice</h2>
+          <p className="text-gray-700 mb-4">
+            To develop a lasting mindfulness meditation practice:
+          </p>
+
+          <ul className="list-disc pl-6 mb-6 space-y-2">
+            <li className="text-gray-700">Start small and be consistent rather than aiming for long sessions</li>
+            <li className="text-gray-700">Choose a time of day that works for your schedule</li>
+            <li className="text-gray-700">Create a dedicated space for practice, even if it's just a corner of a room</li>
+            <li className="text-gray-700">Use guided meditations initially to stay on track</li>
+            <li className="text-gray-700">Be patient with yourself and approach the practice with curiosity rather than criticism</li>
+            <li className="text-gray-700">Remember that some days will be easier than others, and that's perfectly normal</li>
+          </ul>
+
+          <p className="text-gray-700 mt-8">
+            Remember, mindfulness meditation is a skill that develops with practice. There's no 
+            perfect way to do it, and every session – regardless of how "successful" it feels – 
+            is beneficial. The key is to approach your practice with patience, kindness, and 
+            consistency. Over time, you may find that the benefits of mindfulness extend beyond 
+            your meditation sessions into all areas of your daily life.
           </p>
         </div>
 
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 mb-12">
-          <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>
-          <div className="space-y-4">
-            <Link href="/blog/breathing-techniques-for-stress-relief" className="block p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
-              <h4 className="text-lg font-semibold text-yellow-400">Breathing Techniques for Stress Relief</h4>
-              <p className="text-gray-300">Essential breathing exercises to calm your mind and reduce anxiety.</p>
-            </Link>
-            <Link href="/blog/body-scan-meditation-guide" className="block p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
-              <h4 className="text-lg font-semibold text-yellow-400">Body Scan Meditation: A Complete Guide</h4>
-              <p className="text-gray-300">Step-by-step instructions for this powerful awareness technique.</p>
-            </Link>
-            <Link href="/blog/mindfulness-in-daily-activities" className="block p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
-              <h4 className="text-lg font-semibold text-yellow-400">Mindfulness in Daily Activities</h4>
-              <p className="text-gray-300">Integrate mindfulness into routine tasks like walking, cleaning, and working.</p>
-            </Link>
-          </div>
-        </div>
-
-        <div className="text-center">
-          <button 
-            onClick={() => setShowNextArticle(!showNextArticle)}
-            className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-medium mb-6"
-          >
-            Show Next Article
-          </button>
-
-          {showNextArticle && (
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 inline-block">
-              <h4 className="text-lg font-semibold text-white mb-3">Continue Reading</h4>
-              <ul className="space-y-2">
-                {nextArticles.map((article, index) => (
-                  <li key={index}>
-                    <Link href={article.slug} className="text-yellow-400 hover:text-yellow-300">
-                      {article.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+        <footer className="mt-12 pt-8 border-t border-gray-200">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+            <div className="mb-4 sm:mb-0">
+              <h3 className="font-semibold text-gray-900 mb-2">Categories:</h3>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Wellness</span>
+                <span className="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Meditation</span>
+                <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Beginner</span>
+                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Mindfulness</span>
+              </div>
             </div>
-          )}
-        </div>
-      </div>
+            <button 
+              onClick={() => router.back()}
+              className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-200"
+            >
+              Back to Previous Page
+            </button>
+          </div>
+        </footer>
+      </article>
     </div>
   );
-};
-
-export default BlogPost;
+}

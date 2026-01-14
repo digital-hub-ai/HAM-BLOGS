@@ -1,279 +1,286 @@
-import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useState } from 'react';
 
-const BlogPost = () => {
+export default function LovingKindnessMeditationPractice() {
   const router = useRouter();
-  const [bookmarked, setBookmarked] = useState(false);
-  const [showNextArticle, setShowNextArticle] = useState(false);
-
-  useEffect(() => {
-    const bookmarks = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('blogBookmarks') || '[]') : [];
-    if (bookmarks.includes(router.asPath)) {
-      setBookmarked(true);
-    }
-  }, [router.asPath]);
+  const [isBookmarked, setIsBookmarked] = useState(false);
 
   const toggleBookmark = () => {
-    if (typeof window === 'undefined') return;
-    
-    const bookmarks = JSON.parse(localStorage.getItem('blogBookmarks') || '[]');
-    let updatedBookmarks;
-    
-    if (bookmarked) {
-      updatedBookmarks = bookmarks.filter((bookmark: string) => bookmark !== router.asPath);
-    } else {
-      updatedBookmarks = [...bookmarks, router.asPath];
-    }
-    
-    localStorage.setItem('blogBookmarks', JSON.stringify(updatedBookmarks));
-    setBookmarked(!bookmarked);
+    setIsBookmarked(!isBookmarked);
   };
 
-  const nextArticles = [
-    { title: "Mindfulness for Better Sleep", slug: "/blog/mindfulness-for-better-sleep" },
-    { title: "Developing a Regular Mindfulness Habit", slug: "/blog/developing-regular-mindfulness-habit" },
-    { title: "Introduction to Mindfulness Meditation", slug: "/blog/introduction-to-mindfulness-meditation" }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
+    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-rose-50">
       <Head>
-        <title>Loving-Kindness Meditation Practice - Compassion Building</title>
-        <meta name="description" content="Cultivate compassion for yourself and others through loving-kindness meditation practice." />
-        <link rel="canonical" href="https://www.hamblogs.tech/blog/loving-kindness-meditation-practice" />
-        <meta property="og:title" content="Loving-Kindness Meditation Practice" />
-        <meta property="og:description" content="Cultivate compassion for yourself and others through loving-kindness meditation practice." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.hamblogs.tech/blog/loving-kindness-meditation-practice" />
+        <title>Loving-Kindness Meditation: Cultivating Compassion for Yourself and Others | Ham Blogs</title>
+        <meta name="description" content="Learn about loving-kindness meditation, a powerful practice for developing compassion and positive emotions toward yourself and others." />
+        <link rel="canonical" href="https://ham-blogs.vercel.app/blog/loving-kindness-meditation-practice" />
       </Head>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 py-12">
-        <header className="mb-12 text-center">
-          <button 
-            onClick={() => window.history.back()} 
-            className="inline-flex items-center text-yellow-400 hover:text-yellow-300 mb-6"
-          >
-            <span className="mr-2">←</span> Back to Articles
-          </button>
+      <article className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        <header className="mb-10">
+          <nav className="mb-6">
+            <Link href="/" className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200">Home</Link>
+            <span className="mx-2 text-gray-500">/</span>
+            <Link href="/blog" className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200">Blog</Link>
+            <span className="mx-2 text-gray-500">/</span>
+            <Link href="/category/wellness" className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200">Wellness</Link>
+            <span className="mx-2 text-gray-500">/</span>
+            <Link href="/category/wellness/meditation" className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200">Meditation</Link>
+            <span className="mx-2 text-gray-500">/</span>
+            <span className="text-gray-700">Loving-Kindness Meditation Practice</span>
+          </nav>
           
-          <div className="flex justify-between items-start mb-6">
-            <div>
-              <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-medium mb-4">
-                Mindfulness
-              </span>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-                Loving-Kindness Meditation Practice
-              </h1>
-            </div>
-            <button
+          <div className="flex justify-between items-start">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Loving-Kindness Meditation: Cultivating Compassion for Yourself and Others</h1>
+            
+            <button 
               onClick={toggleBookmark}
-              className={`p-3 rounded-full ${bookmarked ? 'bg-yellow-400 text-gray-900' : 'bg-gray-700 text-yellow-400'} hover:scale-105 transition-transform duration-200`}
-              aria-label={bookmarked ? "Remove bookmark" : "Bookmark this article"}
+              className={`p-2 rounded-full ${isBookmarked ? 'text-yellow-500' : 'text-gray-400'} hover:bg-gray-100 transition-colors duration-200`}
+              aria-label={isBookmarked ? "Remove bookmark" : "Bookmark this article"}
             >
-              {bookmarked ? '★' : '☆'}
+              {isBookmarked ? (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                  <path fillRule="evenodd" d="M6.32 2.577a49.255 49.255 0 0 1 11.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 0 1-1.085.67L12 18.089l-7.165 3.583A.75.75 0 0 1 3.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93Z" clipRule="evenodd" />
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                </svg>
+              )}
             </button>
           </div>
-
-          <div className="flex flex-wrap justify-center gap-6 mb-8">
-            <div className="flex items-center text-gray-300">
-              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-              </svg>
-              8 min read
-            </div>
-            <div className="flex items-center text-gray-300">
-              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
-              </svg>
-              January 3, 2026
-            </div>
+          
+          <div className="flex flex-wrap items-center text-gray-600 mb-6">
+            <span className="mr-4">📅 January 25, 2026</span>
+            <span className="mr-4">⏱️ 8 min read</span>
+            <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Wellness</span>
+            <span className="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm ml-2">Meditation</span>
+            <span className="bg-rose-100 text-rose-800 px-3 py-1 rounded-full text-sm ml-2">Compassion</span>
           </div>
         </header>
 
-        <main className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 mb-12">
-          <div className="prose prose-lg prose-invert max-w-none">
-            <p className="lead text-xl text-gray-200 mb-8">
-              Loving-kindness meditation, also known as Metta meditation, is a practice that cultivates unconditional love and compassion toward yourself and others. This ancient practice can transform your relationships, reduce negative emotions, and increase positive feelings of connection and well-being.
-            </p>
+        <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+          <img 
+            src="https://images.unsplash.com/photo-1516726817505-5ec7378f5e85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+            alt="Hands forming a heart shape"
+            className="w-full h-64 object-cover rounded-lg mb-4"
+          />
+          <p className="text-gray-600 italic">Cultivating compassion through loving-kindness meditation</p>
+        </div>
 
-            <h2 className="text-2xl font-bold text-white mb-4 mt-10">Understanding Loving-Kindness</h2>
-            <p>
-              Loving-kindness (Metta in Pali) is one of the four Brahmaviharas or "divine abodes" in Buddhist tradition. It refers to an unconditional, benevolent love that is free from attachment, desire, or expectation. Unlike romantic love or affection based on personal gain, loving-kindness is a genuine wish for the happiness and welfare of all beings.
-            </p>
-
-            <p>
-              The practice involves silently repeating phrases of goodwill, kindness, and warmth to yourself and others. Scientific research has shown that regular loving-kindness practice increases positive emotions, reduces symptoms of PTSD and depression, and enhances social connection.
-            </p>
-
-            <h2 className="text-2xl font-bold text-white mb-4 mt-10">Traditional Phrases</h2>
-            <p>
-              The classic loving-kindness phrases in English are:
-            </p>
-
-            <ul className="list-disc pl-6 mb-6 space-y-2">
-              <li>May I be happy</li>
-              <li>May I be healthy</li>
-              <li>May I be safe</li>
-              <li>May I live with ease</li>
-            </ul>
-
-            <p>
-              You can also use variations such as "May I be peaceful," "May I be free from suffering," or "May I be filled with loving-kindness." The exact words matter less than the intention behind them.
-            </p>
-
-            <h2 className="text-2xl font-bold text-white mb-4 mt-10">The Traditional Sequence</h2>
-            <p>
-              Classical loving-kindness meditation follows a specific sequence that gradually expands your circle of compassion:
-            </p>
-
-            <ol className="list-decimal pl-6 mb-6 space-y-2">
-              <li><strong>Yourself:</strong> Start by directing loving-kindness toward yourself</li>
-              <li><strong>A loved one:</strong> Someone for whom you naturally feel love and care</li>
-              <li><strong>A neutral person:</strong> Someone you neither like nor dislike (like a cashier or mail carrier)</li>
-              <li><strong>A difficult person:</strong> Someone you have conflict with or find challenging</li>
-              <li><strong>All beings:</strong> Extend loving-kindness to all living beings everywhere</li>
-            </ol>
-
-            <h2 className="text-2xl font-bold text-white mb-4 mt-10">Step-by-Step Practice</h2>
-            <p>
-              Follow these steps for a complete loving-kindness meditation session:
-            </p>
-
-            <ol className="list-decimal pl-6 mb-6 space-y-4">
-              <li>
-                <strong>Find a comfortable position:</strong> Sit upright in a chair or cushion with your spine erect but not rigid. Close your eyes or lower your gaze.
-              </li>
-              <li>
-                <strong>Connect with your breath:</strong> Take a few deep breaths and allow your breathing to settle into its natural rhythm. Spend a minute or two simply observing your breath.
-              </li>
-              <li>
-                <strong>Direct loving-kindness to yourself:</strong> Begin with the traditional phrases, repeating them silently while imagining yourself. Picture yourself surrounded by warm, golden light representing loving-kindness. Repeat the phrases for 2-5 minutes.
-              </li>
-              <li>
-                <strong>Extend to a loved one:</strong> Think of someone you care about deeply. Visualize them and repeat the phrases for them: "May you be happy, may you be healthy, may you be safe, may you live with ease." Hold them in your heart with warmth and goodwill.
-              </li>
-              <li>
-                <strong>Include a neutral person:</strong> Bring to mind someone you see regularly but don't know well – perhaps a neighbor, store clerk, or colleague. Offer the same phrases of loving-kindness to this person.
-              </li>
-              <li>
-                <strong>Offer to a difficult person:</strong> Think of someone with whom you have conflict or difficulty. This can be challenging, but try to extend the same wishes of well-being to them. Remember that they, like you, want to be happy and free from suffering.
-              </li>
-              <li>
-                <strong>Expand to all beings:</strong> Finally, extend loving-kindness to all beings everywhere, in all directions. Imagine a vast ocean of compassion flowing from your heart to embrace all of existence.
-              </li>
-            </ol>
-
-            <h2 className="text-2xl font-bold text-white mb-4 mt-10">Working with Difficult Emotions</h2>
-            <p>
-              During loving-kindness practice, you may encounter various emotional responses:
-            </p>
-
-            <h3 className="text-xl font-semibold text-white mb-3 mt-6">Resistance to Self-Compassion</h3>
-            <p>
-              Many people struggle to direct loving-kindness toward themselves, feeling unworthy or uncomfortable with self-care. Remember that self-compassion is not selfish – it's necessary for extending genuine compassion to others. Start with phrases that feel manageable, such as "May I be okay."
-            </p>
-
-            <h3 className="text-xl font-semibold text-white mb-3 mt-6">Anger Toward Difficult People</h3>
-            <p>
-              When directing loving-kindness to challenging individuals, strong emotions may arise. This is normal. You don't have to feel the emotion to offer the intention. You might start by wishing for their suffering to decrease rather than for their happiness directly.
-            </p>
-
-            <h3 className="text-xl font-semibold text-white mb-3 mt-6">Overwhelming Emotions</h3>
-            <p>
-              Sometimes the practice brings up intense sadness, grief, or loneliness. If this happens, pause and return to your breath. You can also direct loving-kindness to the part of you experiencing difficulty: "May the part of me that is sad be happy, may it be at peace."
-            </p>
-
-            <h2 className="text-2xl font-bold text-white mb-4 mt-10">Benefits of Regular Practice</h2>
-            <p>
-              Research has demonstrated numerous benefits of loving-kindness meditation:
-            </p>
-
-            <ul className="list-disc pl-6 mb-6 space-y-2">
-              <li>Increased positive emotions and life satisfaction</li>
-              <li>Reduced symptoms of depression and PTSD</li>
-              <li>Enhanced empathy and compassion</li>
-              <li>Improved relationships and social connections</li>
-              <li>Greater emotional resilience and stress management</li>
-              <li>Reduced implicit bias and increased acceptance of others</li>
-              <li>Physical health benefits, including reduced inflammation</li>
-              <li>Increased vagal tone, associated with better emotional regulation</li>
-            </ul>
-
-            <h2 className="text-2xl font-bold text-white mb-4 mt-10">Daily Integration</h2>
-            <p>
-              You can extend loving-kindness beyond formal meditation practice:
-            </p>
-
-            <ul className="list-disc pl-6 mb-6 space-y-2">
-              <li>Send loving-kindness to people you encounter during the day</li>
-              <li>Use the phrases as self-soothing when stressed</li>
-              <li>Practice loving-kindness during difficult interactions</li>
-              <li>End your day by extending good wishes to all beings</li>
-              <li>Offer loving-kindness to yourself when facing challenges</li>
-            </ul>
-
-            <p>
-              With consistent practice, loving-kindness meditation can transform your relationship with yourself and others, fostering a more compassionate and connected way of being in the world.
-            </p>
-          </div>
-        </main>
-
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 mb-12">
-          <h3 className="text-2xl font-bold text-white mb-6">About Compassion Practices</h3>
-          <p className="text-gray-300 mb-4">
-            Loving-kindness meditation is part of a broader category of practices aimed at cultivating compassion and emotional well-being. These practices have been scientifically studied and shown to have significant positive effects on mental and physical health.
+        <div className="prose prose-lg prose-indigo max-w-none">
+          <p className="text-xl text-gray-700 mb-6">
+            Loving-kindness meditation, known as Metta meditation in the Buddhist tradition, is a 
+            powerful practice for developing compassion, empathy, and positive emotions. This 
+            ancient practice focuses on cultivating unconditional love and goodwill toward 
+            ourselves and others. Unlike other forms of meditation that emphasize concentration 
+            or mindfulness, loving-kindness meditation actively generates feelings of warmth 
+            and benevolence.
           </p>
-          <p className="text-gray-300">
-            Regular compassion practice can help counteract the negativity bias of our minds and build resilience against stress and difficult emotions.
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">The Philosophy of Loving-Kindness</h2>
+          <p className="text-gray-700 mb-6">
+            The concept of loving-kindness (Metta in Pali) represents an unconditional, 
+            benevolent love that extends to all beings. It's not the romantic love between 
+            individuals, nor is it a sentiment that depends on how others treat us. Instead, 
+            it's a genuine wish for the happiness and well-being of all beings, including 
+            ourselves and even those we find difficult.
+          </p>
+
+          <p className="text-gray-700 mb-6">
+            The practice is rooted in the understanding that all beings want to be happy and 
+            free from suffering. By repeatedly generating these wishes, we begin to internalize 
+            this perspective and develop a more compassionate outlook toward life.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Benefits of Loving-Kindness Meditation</h2>
+          <p className="text-gray-700 mb-4">
+            Research has demonstrated numerous benefits of regular loving-kindness practice:
+          </p>
+
+          <ul className="list-disc pl-6 mb-6 space-y-2">
+            <li className="text-gray-700"><strong>Increased positive emotions:</strong> Regular practice leads to more joy, contentment, and hope in daily life.</li>
+            <li className="text-gray-700"><strong>Reduced negative emotions:</strong> Decreases experiences of anger, resentment, and irritability.</li>
+            <li className="text-gray-700"><strong>Enhanced empathy and compassion:</strong> Improves ability to relate to others' experiences with understanding.</li>
+            <li className="text-gray-700"><strong>Improved self-compassion:</strong> Develops a kinder, more accepting relationship with yourself.</li>
+            <li className="text-gray-700"><strong>Stronger social connections:</strong> Increases feelings of connection and reduces social isolation.</li>
+            <li className="text-gray-700"><strong>Reduced symptoms of PTSD:</strong> Studies show effectiveness in treating trauma-related symptoms.</li>
+            <li className="text-gray-700"><strong>Improved physical health:</strong> Associated with lower blood pressure and reduced inflammation markers.</li>
+            <li className="text-gray-700"><strong>Increased vagal tone:</strong> Improves heart rate variability and parasympathetic nervous system function.</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Traditional Loving-Kindness Sequence</h2>
+          <p className="text-gray-700 mb-4">
+            The classical practice follows a specific sequence that gradually expands your circle 
+            of loving-kindness:
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">1. Yourself</h3>
+          <p className="text-gray-700 mb-4">
+            Begin by directing loving-kindness toward yourself. This is often the most challenging 
+            step, as many people struggle with self-compassion. Repeat phrases such as:
+          </p>
+          <ul className="list-disc pl-6 mb-4 space-y-2">
+            <li className="text-gray-700">May I be happy</li>
+            <li className="text-gray-700">May I be healthy</li>
+            <li className="text-gray-700">May I be safe</li>
+            <li className="text-gray-700">May I live with ease</li>
+          </ul>
+
+          <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">2. A Good Friend</h3>
+          <p className="text-gray-700 mb-4">
+            Think of someone who has been kind to you or whom you naturally care about. Visualize 
+            them and direct the same phrases toward them, feeling the warmth and goodwill.
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">3. A Neutral Person</h3>
+          <p className="text-gray-700 mb-4">
+            Choose someone you neither like nor dislike – perhaps a neighbor or acquaintance. 
+            This helps expand your loving-kindness beyond your immediate circle of affection.
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">4. A Difficult Person</h3>
+          <p className="text-gray-700 mb-4">
+            Direct loving-kindness toward someone with whom you have conflict or difficulty. 
+            This is often the most challenging step but also the most transformative.
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">5. All Beings</h3>
+          <p className="text-gray-700 mb-4">
+            Extend your loving-kindness to all beings everywhere, without distinction or condition.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Getting Started with Practice</h2>
+          <p className="text-gray-700 mb-4">
+            Here's how to begin your loving-kindness meditation:
+          </p>
+
+          <ol className="list-decimal pl-6 mb-6 space-y-2">
+            <li className="text-gray-700"><strong>Find a comfortable position:</strong> Sit comfortably with your back straight but relaxed.</li>
+            <li className="text-gray-700"><strong>Set a timer:</strong> Start with 5-10 minutes for beginners.</li>
+            <li className="text-gray-700"><strong>Begin with yourself:</strong> Focus on generating warm, caring feelings toward yourself.</li>
+            <li className="text-gray-700"><strong>Use phrases:</strong> Repeat traditional phrases or create your own that feel meaningful.</li>
+            <li className="text-gray-700"><strong>Visualize:</strong> Picture the person you're directing loving-kindness toward, seeing them happy and peaceful.</li>
+            <li className="text-gray-700"><strong>Feel the emotion:</strong> Try to actually generate feelings of warmth and care, not just reciting words.</li>
+            <li className="text-gray-700"><strong>Move through the sequence:</strong> Gradually work through the traditional sequence over multiple sessions.</li>
+          </ol>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Customizing Your Phrases</h2>
+          <p className="text-gray-700 mb-4">
+            While traditional phrases are effective, you can adapt them to resonate more personally:
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Traditional Phrases</h3>
+          <ul className="list-disc pl-6 mb-4 space-y-2">
+            <li className="text-gray-700">May I/May you be happy</li>
+            <li className="text-gray-700">May I/May you be healthy</li>
+            <li className="text-gray-700">May I/May you be safe</li>
+            <li className="text-gray-700">May I/May you live with ease</li>
+          </ul>
+
+          <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Alternative Phrases</h3>
+          <ul className="list-disc pl-6 mb-4 space-y-2">
+            <li className="text-gray-700">May I/May you be filled with loving-kindness</li>
+            <li className="text-gray-700">May I/May you be peaceful and at ease</li>
+            <li className="text-gray-700">May I/May you be free from suffering</li>
+            <li className="text-gray-700">May I/May you experience joy and contentment</li>
+          </ul>
+
+          <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Personalized Phrases</h3>
+          <ul className="list-disc pl-6 mb-4 space-y-2">
+            <li className="text-gray-700">May I/May you find peace in this moment</li>
+            <li className="text-gray-700">May I/May you be gentle with yourself</li>
+            <li className="text-gray-700">May I/May you be surrounded by love</li>
+            <li className="text-gray-700">May I/May you be worthy of happiness</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Working with Difficult Emotions</h2>
+          <p className="text-gray-700 mb-4">
+            Loving-kindness meditation can bring up challenging emotions:
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Resistance to Self-Compassion</h3>
+          <p className="text-gray-700 mb-4">
+            Many people initially resist sending loving-kindness to themselves, feeling 
+            unworthy or perceiving self-compassion as selfish. Remember that self-compassion 
+            is not about self-indulgence but about treating yourself with the same kindness 
+            you would offer a dear friend.
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Anger Toward Difficult People</h3>
+          <p className="text-gray-700 mb-4">
+            When working with difficult people, strong emotions may arise. This is normal. 
+            Start by acknowledging these feelings without judgment. You might begin by 
+            wishing for their suffering to decrease rather than for their happiness, 
+            which can be a gentler entry point.
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Feeling Fake or Artificial</h3>
+          <p className="text-gray-700 mb-4">
+            It's common to feel like you're pretending when first practicing loving-kindness. 
+            This is normal. Continue the practice even when it feels artificial. Over time, 
+            the feelings will become more natural and genuine.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Advanced Practices</h2>
+          <p className="text-gray-700 mb-4">
+            Once you're comfortable with the basic practice, you can explore these variations:
+          </p>
+
+          <ul className="list-disc pl-6 mb-6 space-y-2">
+            <li className="text-gray-700"><strong>Image practice:</strong> Visualize a bright light of loving-kindness emanating from your heart and extending to others.</li>
+            <li className="text-gray-700"><strong>Healing practice:</strong> Direct loving-kindness to specific areas of pain or difficulty in yourself or others.</li>
+            <li className="text-gray-700"><strong>Community practice:</strong> Extend loving-kindness to your community, workplace, or city.</li>
+            <li className="text-gray-700"><strong>Environmental practice:</strong> Send loving-kindness to the natural world and all living beings.</li>
+            <li className="text-gray-700"><strong>Implicit practice:</strong> Integrate loving-kindness into other meditation practices like mindfulness or breath awareness.</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Integrating Loving-Kindness into Daily Life</h2>
+          <p className="text-gray-700 mb-4">
+            You can extend loving-kindness practice beyond formal meditation:
+          </p>
+
+          <ul className="list-disc pl-6 mb-6 space-y-2">
+            <li className="text-gray-700"><strong>Driving:</strong> Send loving-kindness to other drivers on the road</li>
+            <li className="text-gray-700"><strong>Waiting:</strong> Use waiting time to silently wish well-being for those around you</li>
+            <li className="text-gray-700"><strong>Conflict resolution:</strong> Practice sending loving-kindness before difficult conversations</li>
+            <li className="text-gray-700"><strong>Gratitude:</strong> Combine loving-kindness with appreciation for others</li>
+            <li className="text-gray-700"><strong>Bedtime:</strong> End the day by sending loving-kindness to all beings</li>
+          </ul>
+
+          <p className="text-gray-700 mt-8">
+            Remember, loving-kindness meditation is a practice, not a performance. The goal 
+            isn't to generate intense feelings of love but to gradually expand your capacity 
+            for compassion and goodwill. Some days will feel more natural than others, and 
+            that's perfectly normal. With consistent practice, you may find that your 
+            baseline level of compassion increases, creating more harmony in your relationships 
+            and a greater sense of connection with the world around you.
           </p>
         </div>
 
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 mb-12">
-          <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>
-          <div className="space-y-4">
-            <Link href="/blog/introduction-to-mindfulness-meditation" className="block p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
-              <h4 className="text-lg font-semibold text-yellow-400">Introduction to Mindfulness Meditation</h4>
-              <p className="text-gray-300">Learn the fundamentals of mindfulness meditation and its transformative benefits.</p>
-            </Link>
-            <Link href="/blog/mindfulness-in-daily-activities" className="block p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
-              <h4 className="text-lg font-semibold text-yellow-400">Mindfulness in Daily Activities</h4>
-              <p className="text-gray-300">Integrate mindfulness into routine tasks like walking, cleaning, and working.</p>
-            </Link>
-            <Link href="/blog/body-scan-meditation-guide" className="block p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
-              <h4 className="text-lg font-semibold text-yellow-400">Body Scan Meditation: A Complete Guide</h4>
-              <p className="text-gray-300">Step-by-step instructions for this powerful awareness technique.</p>
-            </Link>
-          </div>
-        </div>
-
-        <div className="text-center">
-          <button 
-            onClick={() => setShowNextArticle(!showNextArticle)}
-            className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-medium mb-6"
-          >
-            Show Next Article
-          </button>
-
-          {showNextArticle && (
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 inline-block">
-              <h4 className="text-lg font-semibold text-white mb-3">Continue Reading</h4>
-              <ul className="space-y-2">
-                {nextArticles.map((article, index) => (
-                  <li key={index}>
-                    <Link href={article.slug} className="text-yellow-400 hover:text-yellow-300">
-                      {article.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+        <footer className="mt-12 pt-8 border-t border-gray-200">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+            <div className="mb-4 sm:mb-0">
+              <h3 className="font-semibold text-gray-900 mb-2">Categories:</h3>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Wellness</span>
+                <span className="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Meditation</span>
+                <span className="bg-rose-100 text-rose-800 px-3 py-1 rounded-full text-sm">Compassion</span>
+                <span className="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">Loving-Kindness</span>
+              </div>
             </div>
-          )}
-        </div>
-      </div>
+            <button 
+              onClick={() => router.back()}
+              className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-200"
+            >
+              Back to Previous Page
+            </button>
+          </div>
+        </footer>
+      </article>
     </div>
   );
-};
-
-export default BlogPost;
+}

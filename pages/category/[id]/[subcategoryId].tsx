@@ -906,7 +906,71 @@ export default function SubcategoryPage() {
         { id: "5", slug: "writing-poetry-tips-for-beginners-and-seasoned-writers", title: "Writing Poetry: Tips for Beginners and Seasoned Writers", date: "2026-01-04", readTime: "10 min read", excerpt: "Practical advice for crafting meaningful poems, from choosing subjects to revising and refining your work..." },
         { id: "6", slug: "poetry-performance-spoken-word-and-literary-events", title: "Poetry Performance: Spoken Word and Literary Events", date: "2026-01-03", readTime: "13 min read", excerpt: "The art of bringing poetry to life through performance, voice, and audience engagement in the spoken word tradition..." }
       ]
-    }
+    },
+    meditation: {
+      name: "Meditation",
+      description: "Guided practices, techniques, and insights for developing a meditation practice",
+      articles: [
+        { id: "1", slug: "meditation-basics-mindfulness-techniques-and-stress-relief", title: "Meditation Basics: Mindfulness Techniques and Stress Relief", date: "2026-01-08", readTime: "12 min read", excerpt: "Learn essential meditation basics, mindfulness techniques, and stress relief practices to improve your mental wellness and daily life..." },
+        { id: "2", slug: "introduction-to-mindfulness-meditation", title: "Introduction to Mindfulness Meditation", date: "2026-01-07", readTime: "6 min read", excerpt: "Learn the fundamentals of mindfulness meditation and its transformative benefits..." },
+        { id: "3", slug: "breathing-techniques-for-stress-relief", title: "Breathing Techniques for Stress Relief", date: "2026-01-06", readTime: "7 min read", excerpt: "Essential breathing exercises to calm your mind and reduce anxiety..." },
+        { id: "4", slug: "body-scan-meditation-guide", title: "Body Scan Meditation: A Complete Guide", date: "2026-01-05", readTime: "9 min read", excerpt: "Step-by-step instructions for this powerful awareness technique..." },
+        { id: "5", slug: "mindfulness-in-daily-activities", title: "Mindfulness in Daily Activities", date: "2026-01-04", readTime: "7 min read", excerpt: "Integrate mindfulness into routine tasks like walking, cleaning, and working..." },
+        { id: "6", slug: "loving-kindness-meditation-practice", title: "Loving-Kindness Meditation Practice", date: "2026-01-03", readTime: "8 min read", excerpt: "Cultivate compassion for yourself and others through this practice..." },
+        { id: "7", slug: "mindfulness-for-better-sleep", title: "Mindfulness for Better Sleep", date: "2026-01-02", readTime: "7 min read", excerpt: "Techniques to quiet your mind and prepare for restful sleep..." },
+        { id: "8", slug: "developing-regular-mindfulness-habit", title: "Developing a Regular Mindfulness Habit", date: "2026-01-01", readTime: "9 min read", excerpt: "Strategies to maintain a consistent mindfulness practice in daily life..." }
+      ]
+    },
+    yoga: {
+      name: "Yoga",
+      description: "Guided practices, poses, and insights for developing a yoga practice",
+      articles: [
+        { id: "1", slug: "introduction-to-yoga-beginners-guide-to-basic-poses", title: "Introduction to Yoga: Beginner's Guide to Basic Poses", date: "2026-02-01", readTime: "10 min read", excerpt: "Essential yoga poses and practices for beginners to start their yoga journey..." },
+        { id: "2", slug: "yoga-for-stress-relief-and-relaxation-techniques", title: "Yoga for Stress Relief and Relaxation Techniques", date: "2026-02-02", readTime: "9 min read", excerpt: "Specific yoga poses and sequences to reduce stress and promote relaxation..." },
+        { id: "3", slug: "morning-yoga-routine-to-start-your-day-right", title: "Morning Yoga Routine to Start Your Day Right", date: "2026-02-03", readTime: "8 min read", excerpt: "Gentle yoga sequence to energize your body and mind for the day ahead..." },
+        { id: "4", slug: "yoga-for-better-sleep-and-restoration", title: "Yoga for Better Sleep and Restoration", date: "2026-02-04", readTime: "10 min read", excerpt: "Yoga poses and practices to prepare your body for deep, restorative sleep..." },
+        { id: "5", slug: "strength-building-yoga-poses-for-core-and-full-body", title: "Strength Building Yoga Poses for Core and Full Body", date: "2026-02-05", readTime: "11 min read", excerpt: "Yoga poses that build functional strength and improve overall body stability..." },
+        { id: "6", slug: "flexibility-and-mobility-yoga-sequences", title: "Flexibility and Mobility: Yoga Sequences for Improved Range of Motion", date: "2026-02-06", readTime: "9 min read", excerpt: "Targeted yoga flows to increase flexibility and joint mobility..." },
+        { id: "7", slug: "meditation-and-breathing-techniques-yoga-pranayama", title: "Meditation and Breathing Techniques: Yoga Pranayama", date: "2026-02-07", readTime: "8 min read", excerpt: "Breathing practices and meditation techniques from the yoga tradition..." },
+        { id: "8", slug: "yoga-for-back-pain-relief-and-posture-correction", title: "Yoga for Back Pain Relief and Posture Correction", date: "2026-02-08", readTime: "10 min read", excerpt: "Therapeutic yoga poses to alleviate back pain and improve posture..." }
+      ]
+    },
+    stress: {
+      name: "Stress Management",
+      description: "Techniques, strategies, and practices for managing stress effectively",
+      articles: [
+        { id: "1", slug: "effective-stress-management-techniques-for-modern-life", title: "Effective Stress Management Techniques for Modern Life", date: "2026-03-01", readTime: "8 min read", excerpt: "Practical strategies to manage stress in our fast-paced world..." },
+        { id: "2", slug: "mindfulness-and-meditation-for-stress-reduction", title: "Mindfulness and Meditation for Stress Reduction", date: "2026-03-02", readTime: "9 min read", excerpt: "Using mindfulness practices to reduce stress and improve mental well-being..." },
+        { id: "3", slug: "physical-exercise-and-movement-for-stress-relief", title: "Physical Exercise and Movement for Stress Relief", date: "2026-03-03", readTime: "10 min read", excerpt: "How physical activity helps reduce stress and improve mood..." },
+        { id: "4", slug: "healthy-sleep-habits-to-combat-stress", title: "Healthy Sleep Habits to Combat Stress", date: "2026-03-04", readTime: "8 min read", excerpt: "Establishing restful sleep routines to help manage stress..." },
+        { id: "5", slug: "nutrition-and-diet-for-stress-management", title: "Nutrition and Diet for Stress Management", date: "2026-03-05", readTime: "9 min read", excerpt: "How food choices impact stress levels and mood..." },
+        { id: "6", slug: "time-management-and-organization-for-stress-reduction", title: "Time Management and Organization for Stress Reduction", date: "2026-03-06", readTime: "10 min read", excerpt: "Strategies for organizing your time and tasks to reduce stress..." },
+        { id: "7", slug: "building-resilience-and-emotional-strength", title: "Building Resilience and Emotional Strength", date: "2026-03-07", readTime: "9 min read", excerpt: "Developing emotional resilience to better handle life's challenges..." },
+        { id: "8", slug: "social-support-and-relationships-in-stress-management", title: "Social Support and Relationships in Stress Management", date: "2026-03-08", readTime: "8 min read", excerpt: "The importance of relationships and social connections in managing stress..." },
+        { id: "9", slug: "cognitive-behavioral-techniques-for-stress-management", title: "Cognitive Behavioral Techniques for Stress Management", date: "2026-03-09", readTime: "10 min read", excerpt: "Changing thought patterns to better manage stress and emotional responses..." },
+        { id: "10", slug: "breathing-techniques-and-relaxation-methods", title: "Breathing Techniques and Relaxation Methods", date: "2026-03-10", readTime: "8 min read", excerpt: "Powerful breathing exercises and relaxation techniques for instant stress relief..." },
+        { id: "11", slug: "setting-boundaries-and-learning-to-say-no", title: "Setting Boundaries and Learning to Say No", date: "2026-03-11", readTime: "9 min read", excerpt: "Protecting your mental health by establishing healthy boundaries in personal and professional life..." },
+        { id: "12", slug: "stress-management-in-the-workplace", title: "Stress Management in the Workplace", date: "2026-03-12", readTime: "10 min read", excerpt: "Strategies for managing job-related stress and maintaining work-life balance..." }
+      ]
+    },
+    sleep: {
+      name: "Sleep Health",
+      description: "Strategies, tips, and insights for improving sleep quality and overall rest",
+      articles: [
+        { id: "1", slug: "science-of-sleep-understanding-sleep-cycles", title: "The Science of Sleep: Understanding Sleep Cycles", date: "2026-04-01", readTime: "8 min read", excerpt: "Deep dive into sleep stages, circadian rhythms, and how sleep affects your health..." },
+        { id: "2", slug: "creating-ideal-sleep-environment-bedroom-tips", title: "Creating an Ideal Sleep Environment: Bedroom Tips", date: "2026-04-02", readTime: "7 min read", excerpt: "Transform your bedroom into a sleep sanctuary with these proven strategies..." },
+        { id: "3", slug: "sleep-hygiene-practices-good-sleep-habits", title: "Sleep Hygiene: Essential Practices for Good Sleep Habits", date: "2026-04-03", readTime: "9 min read", excerpt: "Establish healthy routines that signal to your body it's time to sleep..." },
+        { id: "4", slug: "managing-sleep-disorders-insomnia-sleep-apnea", title: "Managing Sleep Disorders: Insomnia and Sleep Apnea", date: "2026-04-04", readTime: "10 min read", excerpt: "Understanding common sleep disorders and treatment approaches..." },
+        { id: "5", slug: "technology-screen-time-sleep-connection", title: "Technology and Screen Time: The Sleep Connection", date: "2026-04-05", readTime: "8 min read", excerpt: "How electronic devices affect your sleep and strategies to minimize disruption..." },
+        { id: "6", slug: "diet-exercise-impact-sleep-quality", title: "Diet and Exercise: Their Impact on Sleep Quality", date: "2026-04-06", readTime: "9 min read", excerpt: "Optimize your daily habits to promote better sleep naturally..." },
+        { id: "7", slug: "stress-anxiety-sleep-relationship", title: "The Stress and Anxiety-Sleep Relationship", date: "2026-04-07", readTime: "7 min read", excerpt: "How stress affects sleep and techniques to calm your mind before bed..." },
+        { id: "8", slug: "natural-supplements-herbs-better-sleep", title: "Natural Supplements and Herbs for Better Sleep", date: "2026-04-08", readTime: "8 min read", excerpt: "Exploring melatonin, valerian root, and other natural sleep aids..." },
+        { id: "9", slug: "shift-work-sleep-strategies-working-non-traditional-hours", title: "Shift Work Sleep Strategies: Working Non-Traditional Hours", date: "2026-04-09", readTime: "10 min read", excerpt: "Tips for maintaining healthy sleep patterns with irregular work schedules..." },
+        { id: "10", slug: "sleep-aging-changes-sleep-patterns-older-adults", title: "Sleep and Aging: Changes in Sleep Patterns for Older Adults", date: "2026-04-10", readTime: "9 min read", excerpt: "How sleep needs change with age and how to maintain quality rest..." },
+        { id: "11", slug: "children-teen-sleep-needs-parenting-tips", title: "Children and Teen Sleep Needs: Parenting Tips", date: "2026-04-11", readTime: "8 min read", excerpt: "Understanding sleep requirements for different age groups and establishing bedtime routines..." },
+        { id: "12", slug: "dreams-nightmares-meaning-interpretation", title: "Dreams and Nightmares: Meaning and Interpretation", date: "2026-04-12", readTime: "7 min read", excerpt: "Exploring the science behind dreams and how to manage nightmares..." }
+      ]
+    },
     // Add more subcategories as needed...
   }
   
@@ -937,6 +1001,22 @@ export default function SubcategoryPage() {
     const timer6 = setTimeout(() => {
       setLoadedArticles([0, 1, 2, 3, 4, 5, 6, 7]);
     }, 1000);
+    
+    const timer7 = setTimeout(() => {
+      setLoadedArticles([0, 1, 2, 3, 4, 5, 6, 7, 8]);
+    }, 1200);
+    
+    const timer8 = setTimeout(() => {
+      setLoadedArticles([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    }, 1400);
+    
+    const timer9 = setTimeout(() => {
+      setLoadedArticles([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    }, 1600);
+    
+    const timer10 = setTimeout(() => {
+      setLoadedArticles([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
+    }, 1800);
 
     return () => {
       clearTimeout(timer);
@@ -945,6 +1025,10 @@ export default function SubcategoryPage() {
       clearTimeout(timer4);
       clearTimeout(timer5);
       clearTimeout(timer6);
+      clearTimeout(timer7);
+      clearTimeout(timer8);
+      clearTimeout(timer9);
+      clearTimeout(timer10);
     };
   }, [subcategoryId]);
 

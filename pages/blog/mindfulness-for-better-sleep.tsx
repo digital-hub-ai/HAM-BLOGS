@@ -1,280 +1,198 @@
-import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useState } from 'react';
 
-const BlogPost = () => {
+export default function MindfulnessForBetterSleep() {
   const router = useRouter();
-  const [bookmarked, setBookmarked] = useState(false);
-  const [showNextArticle, setShowNextArticle] = useState(false);
-
-  useEffect(() => {
-    const bookmarks = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('blogBookmarks') || '[]') : [];
-    if (bookmarks.includes(router.asPath)) {
-      setBookmarked(true);
-    }
-  }, [router.asPath]);
+  const [isBookmarked, setIsBookmarked] = useState(false);
 
   const toggleBookmark = () => {
-    if (typeof window === 'undefined') return;
-    
-    const bookmarks = JSON.parse(localStorage.getItem('blogBookmarks') || '[]');
-    let updatedBookmarks;
-    
-    if (bookmarked) {
-      updatedBookmarks = bookmarks.filter((bookmark: string) => bookmark !== router.asPath);
-    } else {
-      updatedBookmarks = [...bookmarks, router.asPath];
-    }
-    
-    localStorage.setItem('blogBookmarks', JSON.stringify(updatedBookmarks));
-    setBookmarked(!bookmarked);
+    setIsBookmarked(!isBookmarked);
   };
 
-  const nextArticles = [
-    { title: "Developing a Regular Mindfulness Habit", slug: "/blog/developing-regular-mindfulness-habit" },
-    { title: "Breathing Techniques for Stress Relief", slug: "/blog/breathing-techniques-for-stress-relief" },
-    { title: "Body Scan Meditation: A Complete Guide", slug: "/blog/body-scan-meditation-guide" }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50">
       <Head>
-        <title>Mindfulness for Better Sleep - Sleep Improvement Techniques</title>
-        <meta name="description" content="Techniques to quiet your mind and prepare for restful sleep using mindfulness practices." />
-        <link rel="canonical" href="https://www.hamblogs.tech/blog/mindfulness-for-better-sleep" />
-        <meta property="og:title" content="Mindfulness for Better Sleep" />
-        <meta property="og:description" content="Techniques to quiet your mind and prepare for restful sleep using mindfulness practices." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.hamblogs.tech/blog/mindfulness-for-better-sleep" />
+        <title>Mindfulness for Better Sleep: Techniques for Restful Nights | Ham Blogs</title>
+        <meta name="description" content="Discover mindfulness techniques that promote better sleep quality and help you achieve restful nights naturally." />
+        <link rel="canonical" href="https://ham-blogs.vercel.app/blog/mindfulness-for-better-sleep" />
       </Head>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 py-12">
-        <header className="mb-12 text-center">
-          <button 
-            onClick={() => window.history.back()} 
-            className="inline-flex items-center text-yellow-400 hover:text-yellow-300 mb-6"
-          >
-            <span className="mr-2">←</span> Back to Articles
-          </button>
+      <article className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        <header className="mb-10">
+          <nav className="mb-6">
+            <Link href="/" className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200">Home</Link>
+            <span className="mx-2 text-gray-500">/</span>
+            <Link href="/blog" className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200">Blog</Link>
+            <span className="mx-2 text-gray-500">/</span>
+            <Link href="/category/wellness" className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200">Wellness</Link>
+            <span className="mx-2 text-gray-500">/</span>
+            <Link href="/category/wellness/meditation" className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200">Meditation</Link>
+            <span className="mx-2 text-gray-500">/</span>
+            <span className="text-gray-700">Mindfulness for Better Sleep</span>
+          </nav>
           
-          <div className="flex justify-between items-start mb-6">
-            <div>
-              <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-medium mb-4">
-                Mindfulness
-              </span>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-                Mindfulness for Better Sleep
-              </h1>
-            </div>
-            <button
+          <div className="flex justify-between items-start">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Mindfulness for Better Sleep: Techniques for Restful Nights</h1>
+            
+            <button 
               onClick={toggleBookmark}
-              className={`p-3 rounded-full ${bookmarked ? 'bg-yellow-400 text-gray-900' : 'bg-gray-700 text-yellow-400'} hover:scale-105 transition-transform duration-200`}
-              aria-label={bookmarked ? "Remove bookmark" : "Bookmark this article"}
+              className={`p-2 rounded-full ${isBookmarked ? 'text-yellow-500' : 'text-gray-400'} hover:bg-gray-100 transition-colors duration-200`}
+              aria-label={isBookmarked ? "Remove bookmark" : "Bookmark this article"}
             >
-              {bookmarked ? '★' : '☆'}
+              {isBookmarked ? (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                  <path fillRule="evenodd" d="M6.32 2.577a49.255 49.255 0 0 1 11.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 0 1-1.085.67L12 18.089l-7.165 3.583A.75.75 0 0 1 3.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93Z" clipRule="evenodd" />
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                </svg>
+              )}
             </button>
           </div>
-
-          <div className="flex flex-wrap justify-center gap-6 mb-8">
-            <div className="flex items-center text-gray-300">
-              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-              </svg>
-              7 min read
-            </div>
-            <div className="flex items-center text-gray-300">
-              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
-              </svg>
-              January 2, 2026
-            </div>
+          
+          <div className="flex flex-wrap items-center text-gray-600 mb-6">
+            <span className="mr-4">📅 February 20, 2026</span>
+            <span className="mr-4">⏱️ 8 min read</span>
+            <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Wellness</span>
+            <span className="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm ml-2">Meditation</span>
+            <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm ml-2">Sleep</span>
           </div>
         </header>
 
-        <main className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 mb-12">
-          <div className="prose prose-lg prose-invert max-w-none">
-            <p className="lead text-xl text-gray-200 mb-8">
-              Sleep problems affect millions of people worldwide, with racing thoughts, anxiety, and stress being common culprits. Mindfulness practices offer gentle, effective ways to calm your mind and prepare your body for restful sleep without relying on medications or sleep aids.
-            </p>
+        <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+          <img 
+            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+            alt="Person sleeping peacefully in a calm bedroom"
+            className="w-full h-64 object-cover rounded-lg mb-4"
+          />
+          <p className="text-gray-600 italic">Achieving restful sleep through mindfulness practices</p>
+        </div>
 
-            <h2 className="text-2xl font-bold text-white mb-4 mt-10">The Sleep-Mindfulness Connection</h2>
-            <p>
-              When you're struggling to sleep, your mind often races with thoughts about the day's events, tomorrow's responsibilities, or unresolved concerns. This mental chatter activates your sympathetic nervous system, making it difficult to transition into the parasympathetic state needed for sleep.
-            </p>
-
-            <p>
-              Mindfulness practices help shift your attention away from thought narratives and into present-moment awareness. By focusing on immediate sensory experiences rather than mental content, you can calm the nervous system and create optimal conditions for sleep.
-            </p>
-
-            <h2 className="text-2xl font-bold text-white mb-4 mt-10">Preparation for Sleep Mindfulness</h2>
-            <p>
-              To maximize the effectiveness of mindfulness for sleep:
-            </p>
-
-            <ul className="list-disc pl-6 mb-6 space-y-2">
-              <li>Create a consistent bedtime routine that includes mindfulness practice</li>
-              <li>Dim lights at least an hour before bed to support melatonin production</li>
-              <li>Keep electronic devices out of the bedroom or in airplane mode</li>
-              <li>Keep the room cool, dark, and comfortable</li>
-              <li>Set aside 10-20 minutes before sleep for your practice</li>
-            </ul>
-
-            <h2 className="text-2xl font-bold text-white mb-4 mt-10">Mindful Breathing for Sleep</h2>
-            <p>
-              Conscious breathing is one of the simplest and most effective techniques for sleep preparation:
-            </p>
-
-            <ol className="list-decimal pl-6 mb-6 space-y-2">
-              <li>Lie comfortably in bed with your spine straight but relaxed</li>
-              <li>Close your eyes and take a few natural breaths</li>
-              <li>Simply observe your breath without trying to change it</li>
-              <li>Notice the sensation of air entering and leaving your nostrils</li>
-              <li>Feel your chest and belly rise and fall with each breath</li>
-              <li>When your mind wanders (and it will), gently return attention to your breath</li>
-              <li>Continue for 5-15 minutes or until you feel drowsy</li>
-            </ol>
-
-            <h2 className="text-2xl font-bold text-white mb-4 mt-10">Progressive Muscle Relaxation</h2>
-            <p>
-              This technique combines mindfulness with physical relaxation:
-            </p>
-
-            <ol className="list-decimal pl-6 mb-6 space-y-2">
-              <li>Starting with your toes, tense the muscles for 3-5 seconds</li>
-              <li>Release the tension and notice the sensation of relaxation</li>
-              <li>Move systematically up through your body: feet, calves, thighs, hips, abdomen, chest, hands, arms, shoulders, neck, and face</li>
-              <li>As you release tension in each area, focus on the contrast between tension and relaxation</li>
-              <li>After completing the full body, take a few moments to feel your entire body in a state of relaxation</li>
-            </ol>
-
-            <h2 className="text-2xl font-bold text-white mb-4 mt-10">Mindful Body Scanning</h2>
-            <p>
-              A modified version of body scanning works excellently for sleep:
-            </p>
-
-            <ol className="list-decimal pl-6 mb-6 space-y-2">
-              <li>Lie comfortably in bed and close your eyes</li>
-              <li>Bring attention to the top of your head, noticing any sensations</li>
-              <li>Slowly move your attention down through your body: face, neck, shoulders, arms, hands, chest, abdomen, hips, legs, and feet</li>
-              <li>Don't try to change anything – just observe what's there</li>
-              <li>If you notice tension, breathe into that area and imagine it melting away</li>
-              <li>Continue until you feel your whole body sinking into the bed</li>
-            </ol>
-
-            <h2 className="text-2xl font-bold text-white mb-4 mt-10">Mindful Awareness of Mental Activity</h2>
-            <p>
-              When thoughts arise during sleep preparation, use this technique:
-            </p>
-
-            <ol className="list-decimal pl-6 mb-6 space-y-2">
-              <li>Notice that your mind is active without judging it</li>
-              <li>Imagine thoughts as clouds passing through the sky of your consciousness</li>
-              <li>Don't engage with the content of thoughts – just observe them arising and passing</li>
-              <li>Return attention to a physical sensation, like your breath or the feeling of your body against the bed</li>
-              <li>If thoughts return, acknowledge them again and return to physical awareness</li>
-            </ol>
-
-            <h2 className="text-2xl font-bold text-white mb-4 mt-10">Sleep Visualization</h2>
-            <p>
-              Gentle visualization can help redirect attention away from stimulating thoughts:
-            </p>
-
-            <ul className="list-disc pl-6 mb-6 space-y-2">
-              <li>Imagine a peaceful scene, like a calm lake or gentle stream</li>
-              <li>Picture yourself in a safe, comfortable place</li>
-              <li>Visualize tension leaving your body like leaves floating down a river</li>
-              <li>Imagine a soft, warm light surrounding your body and inducing relaxation</li>
-              <li>Keep the imagery simple and soothing rather than elaborate or exciting</li>
-            </ul>
-
-            <h2 className="text-2xl font-bold text-white mb-4 mt-10">Tips for Success</h2>
-            <p>
-              Here are strategies to make mindfulness practices more effective for sleep:
-            </p>
-
-            <ul className="list-disc pl-6 mb-6 space-y-2">
-              <li>Don't try too hard – the effort to fall asleep can be counterproductive</li>
-              <li>Approach the practice with gentle curiosity rather than forcing</li>
-              <li>Remember that falling asleep during practice is perfectly fine</li>
-              <li>If you're frustrated, take a break and try again another night</li>
-              <li>Consistency matters more than perfection – even a few minutes can be beneficial</li>
-              <li>Combine mindfulness with other sleep hygiene practices for best results</li>
-            </ul>
-
-            <h2 className="text-2xl font-bold text-white mb-4 mt-10">Creating Your Nightly Ritual</h2>
-            <p>
-              Consider establishing a consistent mindfulness routine before sleep:
-            </p>
-
-            <ul className="list-disc pl-6 mb-6 space-y-2">
-              <li>Start with gentle stretching or yoga poses</li>
-              <li>Practice 5-10 minutes of mindful breathing or body scanning</li>
-              <li>End with gratitude for the day's experiences</li>
-              <li>Keep the lighting dim and atmosphere calm</li>
-              <li>Gradually reduce stimulation as bedtime approaches</li>
-            </ul>
-
-            <p>
-              Remember, mindfulness for sleep is not about achieving a blank mind but about developing a gentle, accepting relationship with whatever arises. With patience and practice, these techniques can help you transition more easily from wakefulness to restful sleep.
-            </p>
-          </div>
-        </main>
-
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 mb-12">
-          <h3 className="text-2xl font-bold text-white mb-6">About Sleep and Mindfulness</h3>
-          <p className="text-gray-300 mb-4">
-            Research has shown that mindfulness practices can significantly improve sleep quality by reducing rumination, anxiety, and hyperarousal that often interfere with rest. Regular practice can help regulate sleep patterns and improve sleep efficiency.
+        <div className="prose prose-lg prose-indigo max-w-none">
+          <p className="text-xl text-gray-700 mb-6">
+            In our fast-paced world, getting quality sleep has become increasingly challenging for many people. 
+            Racing thoughts, stress, and overstimulation from screens and daily pressures often make it difficult 
+            to wind down at night. Mindfulness techniques offer a natural and effective approach to preparing 
+            your mind and body for restful sleep.
           </p>
-          <p className="text-gray-300">
-            Mindfulness approaches to sleep are particularly valuable because they address the root causes of sleep difficulties without side effects.
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Understanding the Sleep-Mindfulness Connection</h2>
+          <p className="text-gray-700 mb-6">
+            Sleep difficulties often stem from an overactive mind that continues processing the day's events, 
+            worrying about tomorrow, or replaying conversations. Mindfulness addresses this by teaching us 
+            to observe our thoughts without judgment, allowing them to pass naturally rather than engaging 
+            with them. This practice helps shift our nervous system from the alert "fight-or-flight" mode 
+            to the relaxed "rest-and-digest" state that's conducive to sleep.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Mindful Bedtime Preparation</h2>
+          <p className="text-gray-700 mb-4">
+            Creating a mindful transition to bedtime can significantly improve your sleep quality. Consider 
+            incorporating these practices into your evening routine:
+          </p>
+
+          <ul className="list-disc pl-6 mb-6 space-y-2">
+            <li className="text-gray-700"><strong>Dim the lights:</strong> Gradually reduce lighting to signal to your brain that it's time to wind down.</li>
+            <li className="text-gray-700"><strong>Put away electronics:</strong> Turn off screens at least one hour before bed to reduce blue light exposure.</li>
+            <li className="text-gray-700"><strong>Create a ritual:</strong> Develop a calming routine such as gentle stretching, journaling, or reading.</li>
+            <li className="text-gray-700"><strong>Practice gratitude:</strong> Reflect on three positive things from your day to shift your focus away from stressors.</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Mindfulness Techniques for Sleep</h2>
+          <p className="text-gray-700 mb-4">
+            Several specific mindfulness techniques can help calm your mind and prepare your body for sleep:
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Body Scan Meditation</h3>
+          <p className="text-gray-700 mb-4">
+            Starting from your toes and moving upward, systematically focus on each part of your body. 
+            Notice any tension or sensations without trying to change them, simply acknowledging their 
+            presence. This technique helps release physical tension accumulated during the day and 
+            brings awareness to areas of stress.
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Breath Awareness</h3>
+          <p className="text-gray-700 mb-4">
+            Focus on your natural breathing pattern without trying to control it. Simply observe the 
+            sensation of air entering and leaving your nostrils, or the rise and fall of your chest. 
+            If your mind wanders to thoughts or worries, gently redirect your attention back to your breath.
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Progressive Muscle Relaxation</h3>
+          <p className="text-gray-700 mb-4">
+            Tense and then relax each muscle group in sequence, starting from your toes and working up 
+            to your head. Hold tension for 5 seconds, then release and notice the contrast between 
+            tension and relaxation. This technique helps release physical stress stored in the muscles.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Dealing with Midnight Awakenings</h2>
+          <p className="text-gray-700 mb-4">
+            If you wake up in the middle of the night and can't fall back asleep, avoid checking 
+            the time or your phone. Instead, try these mindfulness approaches:
+          </p>
+
+          <ol className="list-decimal pl-6 mb-6 space-y-2">
+            <li className="text-gray-700"><strong>Stay in bed:</strong> Remain in your sleeping position with your eyes closed.</li>
+            <li className="text-gray-700"><strong>Focus on breathing:</strong> Use slow, rhythmic breathing to calm your nervous system.</li>
+            <li className="text-gray-700"><strong>Use imagery:</strong> Visualize a peaceful scene like a calm lake or gentle rain.</li>
+            <li className="text-gray-700"><strong>Practice self-compassion:</strong> If sleep doesn't come immediately, accept this without frustration.</li>
+          </ol>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Creating a Mindful Sleep Environment</h2>
+          <p className="text-gray-700 mb-4">
+            Your physical environment plays a crucial role in supporting mindful sleep:
+          </p>
+
+          <ul className="list-disc pl-6 mb-6 space-y-2">
+            <li className="text-gray-700"><strong>Temperature:</strong> Keep your bedroom cool (around 65°F or 18°C) for optimal sleep conditions.</li>
+            <li className="text-gray-700"><strong>Darkness:</strong> Use blackout curtains or an eye mask to eliminate light disruptions.</li>
+            <li className="text-gray-700"><strong>Quiet:</strong> Consider white noise machines or earplugs if ambient sounds disturb you.</li>
+            <li className="text-gray-700"><strong>Scent:</strong> Use calming aromatherapy like lavender to promote relaxation.</li>
+            <li className="text-gray-700"><strong>Comfort:</strong> Invest in a quality mattress and pillows that support your body's needs.</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Consistency and Patience</h2>
+          <p className="text-gray-700 mb-4">
+            Like any skill, developing a mindful approach to sleep takes time and consistency. Don't 
+            expect immediate results – it may take several weeks of regular practice to notice 
+            significant improvements in your sleep quality. The key is to approach this practice 
+            with patience and self-compassion, recognizing that some nights will be better than others.
+          </p>
+
+          <p className="text-gray-700 mt-8">
+            Remember, mindfulness for sleep is not about forcing yourself to fall asleep, but rather 
+            about creating the optimal conditions for sleep to occur naturally. By regularly 
+            incorporating these techniques into your evening routine, you'll gradually train your mind 
+            to transition more easily from the busyness of the day to the restfulness of sleep. 
+            Over time, you may find that not only do you fall asleep more easily, but you also 
+            experience deeper, more restorative rest that leaves you refreshed and energized for 
+            the day ahead.
           </p>
         </div>
 
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 mb-12">
-          <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>
-          <div className="space-y-4">
-            <Link href="/blog/body-scan-meditation-guide" className="block p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
-              <h4 className="text-lg font-semibold text-yellow-400">Body Scan Meditation: A Complete Guide</h4>
-              <p className="text-gray-300">Step-by-step instructions for this powerful awareness technique.</p>
-            </Link>
-            <Link href="/blog/breathing-techniques-for-stress-relief" className="block p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
-              <h4 className="text-lg font-semibold text-yellow-400">Breathing Techniques for Stress Relief</h4>
-              <p className="text-gray-300">Essential breathing exercises to calm your mind and reduce anxiety.</p>
-            </Link>
-            <Link href="/blog/mindfulness-in-daily-activities" className="block p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
-              <h4 className="text-lg font-semibold text-yellow-400">Mindfulness in Daily Activities</h4>
-              <p className="text-gray-300">Integrate mindfulness into routine tasks like walking, cleaning, and working.</p>
-            </Link>
-          </div>
-        </div>
-
-        <div className="text-center">
-          <button 
-            onClick={() => setShowNextArticle(!showNextArticle)}
-            className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-medium mb-6"
-          >
-            Show Next Article
-          </button>
-
-          {showNextArticle && (
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 inline-block">
-              <h4 className="text-lg font-semibold text-white mb-3">Continue Reading</h4>
-              <ul className="space-y-2">
-                {nextArticles.map((article, index) => (
-                  <li key={index}>
-                    <Link href={article.slug} className="text-yellow-400 hover:text-yellow-300">
-                      {article.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+        <footer className="mt-12 pt-8 border-t border-gray-200">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+            <div className="mb-4 sm:mb-0">
+              <h3 className="font-semibold text-gray-900 mb-2">Categories:</h3>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Wellness</span>
+                <span className="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Meditation</span>
+                <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Sleep</span>
+                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Mindfulness</span>
+              </div>
             </div>
-          )}
-        </div>
-      </div>
+            <button 
+              onClick={() => router.back()}
+              className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-200"
+            >
+              Back to Previous Page
+            </button>
+          </div>
+        </footer>
+      </article>
     </div>
   );
-};
-
-export default BlogPost;
+}
