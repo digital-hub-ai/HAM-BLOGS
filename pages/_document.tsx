@@ -48,9 +48,8 @@ export default function Document() {
         <meta name="HandheldFriendly" content="true" />
         <meta name="MobileOptimized" content="320" />
         
-        {/* Telegram Mini App Verification Code */}
-        <meta name="monetag" content="5c844fb179b9a983b54573c99cd9a620" />
-        
+
+ 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={siteUrl} />
@@ -80,9 +79,7 @@ export default function Document() {
         <meta name="application-name" content="HAM BLOGS" />
         <meta name="msapplication-TileColor" content="#111827" />
         
-        {/* Telegram Mini App Verification Code - Required for monetization */}
-        {/* Insert your specific Telegram verification code here */}
-        {/* Example: Add the actual verification meta tag when you receive it from Telegram */}
+
         
         {/* Google Analytics */}
         <Script
@@ -101,22 +98,7 @@ export default function Document() {
           }}
         />
         
-        {/* Telegram Monetag Advertising Code - Main Tag */}
-        <Script
-          src="https://quge5.com/88/tag.min.js"
-          strategy="afterInteractive"
-          data-zone="201912"
-          async
-        />
-        
-        {/* Telegram Monetag Advertising Code - Pungent tag In-Page Push */}
-        <Script
-          id="pungent-tag-script"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `(function(s){s.dataset.zone='10462230',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))`
-          }}
-        />
+
         
         {/* Fonts with proper loading */}
         <link
